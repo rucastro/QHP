@@ -1,0 +1,134 @@
+<div class="size-chart-content">
+    <div class="size-chart-text">
+        <h4>Measuring Guide</h4>
+        <p>To choose the correct size for you, measure your body as follows:</p>
+        <h5>Neck</h5>
+        <p>Measure around the middle of your neck (at the Adam's apple), keeping the tape a bit loose.</p>
+        <h5>Chest</h5>
+        <p>Measure under your arms around the fullest part of your chest.</p>
+        <h5>Waist</h5>
+        <p>Measure around your natural waistline, keeping the tape a bit loose.</p>
+        <h5>Arm Length</h5>
+        <p>Bend your elbow 90 degrees and place your hand on your hip. Hold the tape at the center back of your neck. Measure across your shoulder to your elbow and down to your wrist. The total length is your sleeve length.</p>
+    </div>
+    <div class="size-chart-image">
+        <img src="/images/sizecharts/menstops.png" alt="Men's Tops" />
+    </div>
+</div>
+
+<div class="size-chart-measurements">
+    <h4>Measurements</h4>
+    <!--
+    Toggle Units (Optional)
+    The value of data-action must equal show-unit
+    Each button with data-action="show-unit" must have an id which corresponds with the data-unit value in the col tags
+    The first button will always be the default unit first shown in the table
+    You may use as many units as you need, no restriction applies
+    -->
+    <div class="size-chart-show-unit-buttons">
+        <button data-action="show-unit" id="inches" class="size-chart-unit-button">Inches</button>
+        <button data-action="show-unit" id="cms" class="size-chart-unit-button">Centimeters</button>
+    </div>
+
+    <!--
+    Keep table markup simple, don't use colspan if you want to toggle between different units
+    It does not matter in which order you put your inches and cms columns
+    You can create multiple tables but they must have the same structure, i.e. the way in which you order the column units
+    -->
+    <div class="size-chart-table-wrapper">
+        <table class="size-chart-table">
+            <colgroup>
+                <col></col>
+                <col data-unit="inches"></col>
+                <col data-unit="cms"></col>
+                <col data-unit="inches"></col>
+                <col data-unit="cms"></col>
+                <col data-unit="inches"></col>
+                <col data-unit="cms"></col>
+                <col data-unit="inches"></col>
+                <col data-unit="cms"></col>
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>size (us)</th>
+                    <th>chest (inches)</th>
+                    <th>chest (cms)</th>
+                    <th>neck (inches)</th>
+                    <th>neck (cms)</th>
+                    <th>waist (inches)</th>
+                    <th>waist (cms)</th>
+                    <th>arm length (inches)</th>
+                    <th>arm length (cms)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>XS</td>
+                    <td>32 - 34</td>
+                    <td>81 - 86</td>
+                    <td>13 - 13.5</td>
+                    <td>33 - 34</td>
+                    <td>26 - 28</td>
+                    <td>66 - 71</td>
+                    <td>31 - 32</td>
+                    <td>79 - 81</td>
+                </tr>
+                <tr>
+                    <td>S</td>
+                    <td>35 - 37</td>
+                    <td>89 - 94</td>
+                    <td>14 - 14.5</td>
+                    <td>36 - 37</td>
+                    <td>29 - 31</td>
+                    <td>74 - 79</td>
+                    <td>32 - 33</td>
+                    <td>81 - 84</td>
+                </tr>
+                <tr>
+                    <td>M</td>
+                    <td>38 - 40</td>
+                    <td>97 - 102</td>
+                    <td>15 - 15.5</td>
+                    <td>38 - 39</td>
+                    <td>32 - 34</td>
+                    <td>81 - 86</td>
+                    <td>33 - 34</td>
+                    <td>84 - 86</td>
+                </tr>
+                <tr>
+                    <td>L</td>
+                    <td>41 - 43</td>
+                    <td>104 - 109</td>
+                    <td>16 - 16.5</td>
+                    <td>41 - 42</td>
+                    <td>35 - 37</td>
+                    <td>89 - 94</td>
+                    <td>34 - 35</td>
+                    <td>86 - 89</td>
+                </tr>
+                <tr>
+                    <td>XL</td>
+                    <td>44 - 46</td>
+                    <td>112 - 117</td>
+                    <td>17 - 17.5</td>
+                    <td>43 - 44</td>
+                    <td>38 - 40</td>
+                    <td>97 - 102</td>
+                    <td>35 - 36</td>
+                    <td>89 - 91.5</td>
+                </tr>
+                <tr>
+                    <td>XXL</td>
+                    <td>47 - 49</td>
+                    <td>119 - 124.5</td>
+                    <td>18 - 18.5</td>
+                    <td>46 - 47</td>
+                    <td>41 - 43</td>
+                    <td>104 - 109</td>
+                    <td>36 - 36.5</td>
+                    <td>91.5 - 93</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

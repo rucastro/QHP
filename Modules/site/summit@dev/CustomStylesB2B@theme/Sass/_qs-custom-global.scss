@@ -1,0 +1,37 @@
+/* Global Views */
+.global-views-currency-selector {
+    margin: $sc-base-margin * 2;
+    @media (min-width: $screen-md-min) {
+        margin: 0;
+    }
+}
+.global-views-currency-selector-addon {
+    border-color: $sc-theme-border-color;
+    height: 50px;
+    line-height: 47px;
+    background-color: $sc-theme-color-tertiary;
+    border-top-left-radius: $sc-theme-border-radius;
+    border-bottom-left-radius: $sc-theme-border-radius;
+    @media (min-width: $screen-md-min) {
+        border-color: $sc-theme-border-color-light;
+        background-color: transparent;
+    }
+}
+.global-views-currency-selector-select {
+    border-color: $sc-theme-border-color;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    @media (min-width: $screen-md-min) {
+        border-color: $sc-theme-border-color-light;
+    }
+}
+.global-views-star-rating-review-total {
+    font-family: $sc-theme-secondary-font;
+}
+.global-views-back-to-top {
+    background: transparent;
+    border: none;
+}
+.global-views-modal-content-header-close {
+    color: $sc-theme-color-copy;
+}

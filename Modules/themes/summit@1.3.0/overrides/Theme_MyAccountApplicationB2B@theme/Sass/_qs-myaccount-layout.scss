@@ -1,0 +1,126 @@
+/*
+	© 2017 NetSuite Inc.
+	User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
+	provided, however, if you are an authorized user with a NetSuite account or log-in, you
+	may use this code subject to the terms that govern your access and use.
+*/
+
+.myaccount-layout {
+	@extend %sc-layout;
+}
+
+.myaccount-layout-container{
+	// Footer module will set a bottom padding with the size of the footer	(on Footer.View.js)
+	@extend .container;
+	clear: both;
+}
+
+.myaccount-layout-header {
+	@include box-shadow(3px 0px 6px $sc-color-secondary);
+  margin-bottom: $sc-base-margin * 5;
+}
+
+.myaccount-layout-row{
+	@extend .row;
+
+    #content {
+        padding-top: 0;
+    }
+}
+
+.myaccount-layout-main{
+	@extend .col-xs-12;
+	@extend .col-sm-9;
+
+	@media (min-width: $screen-sm-min){
+		margin-bottom: 70px;
+	}
+	.page-not-found {
+		overflow: hidden;
+	}
+}
+
+.myaccount-layout-footer {
+	@extend %sc-footer !optional;
+}
+
+.myaccount-layout-title{
+	margin-bottom: $sc-medium-margin;
+	display:none;
+
+	@media (min-width: $screen-sm-min){
+		display: block;
+		margin-top: $sc-medium-margin;
+	}
+}
+
+.myaccount-layout-no-javascript-msg {
+	@extend .message-warning;
+	width: 100%;
+}
+
+.myaccount-layout-side-nav{
+
+	@extend .col-sm-3;
+	display: none;
+
+	@media (min-width: $screen-sm-min){
+		display: block;
+	}
+}
+
+.force-hide-side-nav{
+
+	.myaccount-layout-side-nav{
+		display: none;
+	}
+
+	.myaccount-layout-title{
+		display: none;
+	}
+
+	.myaccount-layout-main{
+		@extend .col-sm-12;
+	}
+}
+
+.myaccount-layout-breadcrumb {
+	@extend .container;
+	//also see _qs-custom-theme.scss
+}
+
+.myaccount-layout-error-placeholder {}
+
+.myaccount-layout {
+	.invoice-paid-list-no-records {
+		@extend h5;
+		text-align: center;
+		padding:$sc-base-padding * 8 $sc-base-padding * 3 $sc-base-padding * 3 $sc-base-padding * 3;
+	}
+	@media (max-width: $screen-xs-max) {
+		/* MISC SPACING */
+		.caseManagement {
+			padding: $sc-base-margin * 5 0;
+		}
+		.Invoices,
+		.PaidInvoices {
+			padding-top: $sc-base-margin * 5;
+		}
+		.quote-list-empty-section,
+		.return-authorization-list-empty-section,
+		.reorder-items-list-empty-section,
+		.invoice-open-list-no-records,
+		.invoice-paid-list-no-records {
+			padding: $sc-base-padding * 3;
+		}
+		.AccountBalance .balance-actions {
+			margin-bottom: $sc-base-margin * 3;
+		}
+
+		/* Case Buttons */
+		.case-list-header-button-new {
+			margin-top: 0;
+			top: 50px;
+		}
+	}
+}

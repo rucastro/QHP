@@ -1,0 +1,31 @@
+{
+  "type": "object",
+  "subtab": {
+    "id": "infiniteScroll",
+    "title": "Infinite Scroll",
+    "group": "commerceSuiteSolution"
+  },
+  "properties": {
+    "infiniteScroll.enabled": {
+      "group": "commerceSuiteSolution",
+      "type": "boolean",
+      "subtab": "infiniteScroll",
+      "title": "Enable",
+      "default": true
+    },
+    "infiniteScroll.pageLoadLimit": {
+      "group": "commerceSuiteSolution",
+      "type": "integer",
+      "subtab": "infiniteScroll",
+      "title": "Page Load Limit",
+      "default": 3
+    },
+    "infiniteScroll.scrollTrigger": {
+      "group": "commerceSuiteSolution",
+      "type": "integer",
+      "subtab": "infiniteScroll",
+      "title": "Scroll Trigger",
+      "default": 300
+    }
+  }
+}

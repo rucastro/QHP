@@ -1,0 +1,11 @@
+{
+	"gulp": {
+		"javascript": [
+			"jquery.form.js"
+		]
+	,	"ssp-libraries": [
+			"jquery.form.js"
+		]
+	}
+,	"jshint": "false"
+}

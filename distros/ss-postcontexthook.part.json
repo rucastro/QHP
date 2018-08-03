@@ -1,0 +1,40 @@
+{
+    "id": "ss-postcontexthook",
+    "name": "SuiteSolution - EFCore",
+    "folders": {
+        "modules": "Modules",
+        "distribution": "bin/LocalDistribution",
+        "deploy": "bin/DeployDistribution",
+        "release": "bin/ReleaseDistribution"
+    },
+    "dependencies": [],
+    "modules": {
+        "efficiencies/Backbone.View.PostContextHook": "1.0.1",
+        "efficiencies/Backbone.PluginInstaller": "1.0.0"
+    },
+    "tasksConfig": {
+        "javascript": [
+            {
+                "entryPoint": "SC.Shopping.Starter",
+                "dependencies": [
+                    {"add": "Backbone.View.PostContextHook", "after": "Backbone.View.Plugins"},
+                    {"add": "Backbone.PluginInstaller", "after": "Backbone.View.PostContextHook"}
+                ]
+            },
+            {
+                "entryPoint": "SC.MyAccount.Starter",
+                "dependencies": [
+                    {"add": "Backbone.View.PostContextHook", "after": "Backbone.View.Plugins"},
+                    {"add": "Backbone.PluginInstaller", "after": "Backbone.View.PostContextHook"}
+                ]
+            },
+            {
+                "entryPoint": "SC.Checkout.Starter",
+                "dependencies": [
+                    {"add": "Backbone.View.PostContextHook", "after": "Backbone.View.Plugins"},
+                    {"add": "Backbone.PluginInstaller", "after": "Backbone.View.PostContextHook"}
+                ]
+            }
+        ]
+    }
+}

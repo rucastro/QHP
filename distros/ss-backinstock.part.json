@@ -1,0 +1,102 @@
+{
+  "id": "ss-backinstock",
+  "name": "SuiteSolution - BackInStock",
+  "folders": {
+    "modules": "Modules",
+    "distribution": "bin/LocalDistribution",
+    "deploy": "bin/DeployDistribution",
+    "release": "bin/ReleaseDistribution"
+  },
+  "dependencies": [
+      "elbrus-base",
+      "ss-efcore",
+      "ss-duplicatecustomermanagement"
+  ],
+  "modules": {
+    "efficiencies/BackInStockNotification": "2.0.2",
+    "efficiencies/BackInStockNotificationAdmin": "1.0.3"
+  },
+  "tasksConfig": {
+    "javascript": [
+      {
+        "entryPoint": "SC.Shopping.Starter",
+        "dependencies": [
+          "BackInStockNotification"
+        ]
+      },
+      {
+        "entryPoint": "SC.MyAccount.Starter",
+        "dependencies": [
+          "BackInStockNotificationAdministrator"
+        ]
+      },
+      {
+        "entryPoint": "SC.Checkout.Starter",
+        "dependencies": [
+
+        ]
+      }
+    ],
+    "ssp-libraries": {
+      "dependencies": [
+        "BackInStockNotification.Configuration",
+        "BackInStockNotification",
+        "BackInStockNotification.ServiceController"
+      ]
+    },
+    "sass": {
+      "applications": [
+        {
+          "name": "Shopping",
+          "dependencies": [
+            "BackInStockNotification"
+          ]
+        },
+        {
+          "name": "MyAccount",
+          "dependencies": [
+            "BackInStockNotificationAdmin"
+          ]
+        },
+        {
+          "name": "Checkout",
+          "dependencies": [
+          ]
+        }
+      ]
+    },
+    "backend-suitescript": {
+      "amdConfig": {
+        "paths": {
+          "Backbone.Validation": "backbone-validation.server.custom"
+        },
+        "shim": {
+          "Backbone.Validation": {
+            "exports": "Backbone.Validation"
+          }
+        },
+        "findNestedDependencies": true,
+        "map": {
+          "BackInStockNotification": {
+            "Application": "Application.Backend"
+          },
+          "BackInStockNotification.Configuration": {
+            "Configuration": "Configuration.Backend"
+          },
+          "SC.EventWrapper": {
+              "Application": "Application.Backend"
+          },
+          "ServiceController.Validations": {
+              "Application": "Application.Backend"
+          },
+          "ServiceController": {
+              "Application": "Application.Backend"
+          },
+          "Utils": {
+              "SC.Models.Init": "SC.Models.Init.Backend"
+          }
+        }
+      }
+    }
+  }
+}

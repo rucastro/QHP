@@ -1,0 +1,13 @@
+{
+  "gulp": {
+    "javascript": [
+      "JavaScript/*.js"
+    ],
+    "templates": [
+      "Templates/*"
+    ]
+  },
+  "overrides": {
+    "suitecommerce/Header@1.3.0/Templates/header_menu_myaccount.tpl": "Templates/header_menu_myaccount.tpl"
+  }
+}

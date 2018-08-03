@@ -1,0 +1,142 @@
+/*
+	© 2017 NetSuite Inc.
+	User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
+	provided, however, if you are an authorized user with a NetSuite account or log-in, you
+	may use this code subject to the terms that govern your access and use.
+
+*/
+
+/* SITE-WIDE */
+
+/* COLORS */
+
+$sc-theme-color: #4e5861;
+$sc-theme-color-light: #b6b6b6;
+$sc-theme-color-body-background: #292c2f; // body background color, home merch background color
+$sc-theme-color-content-background: #fff; // main content background color i.e. .main, .layout-container
+$sc-theme-color-background: #e4eff5; // background color for forms, messages
+$sc-theme-color-background-light: lighten($sc-theme-color-background, 3);
+$sc-theme-color-background-lightest: lighten($sc-theme-color-background, 5);
+$sc-theme-color-border: desaturate(darken($sc-theme-color-background-light, 8), 3); //for borders
+
+/* Highlight colors around the site, including buttons */
+$sc-theme-color-primary: #e94d29;
+$sc-theme-color-secondary: #339fcd;
+$sc-theme-color-tertiary: #fff;
+$sc-theme-color-quaternary: #33cdb5;
+$sc-theme-color-senary: #a0b8ca;
+
+/* Links */
+$sc-theme-color-link: $sc-theme-color-quaternary;
+$sc-theme-color-link-dark: desaturate(darken($sc-theme-color-quaternary, 17), 38);
+$sc-theme-color-link-hover: lighten($sc-theme-color-link, 10);
+$sc-theme-color-header-link: $sc-theme-color-light;
+$sc-theme-color-header-link-hover: #98a4af;
+$sc-theme-color-header-link-active: darken($sc-theme-color-header-link-hover, 6);
+
+/* Copy, footer background */
+$sc-theme-color-copy: #404040;
+$sc-theme-color-dark-copy: #1c2127; // logo, nav and search button background
+
+/* Forms */
+$sc-theme-input-color: #aab0b3; //input border color
+
+/* Button Background Colors */
+/* Controls the coloring of all the primary, secondary, tertiary, quarternary buttons */
+$sc-theme-cta-primary-color: $sc-theme-color-primary;
+$sc-theme-cta-primary-color-hover: saturate(lighten($sc-theme-color-primary, 4), 10);
+$sc-theme-cta-primary-color-active: desaturate(darken($sc-theme-color-primary, 5), 10);
+$sc-theme-cta-primary-color-disable: lighten($sc-theme-color-primary, 18);
+$sc-theme-cta-secondary-color: $sc-theme-color-senary;
+$sc-theme-cta-secondary-color-hover: saturate(lighten($sc-theme-color-secondary, 4), 4);
+$sc-theme-cta-secondary-color-active: darken($sc-theme-color-secondary, 6);
+$sc-theme-cta-tertiary-color: $sc-theme-color-secondary;
+$sc-theme-cta-tertiary-color-active: darken($sc-theme-color-senary, 6);
+$sc-theme-cta-text-color: $sc-theme-color-tertiary;
+$sc-theme-cta-quaternary-color: $sc-theme-color-light;
+$sc-theme-cta-quaternary-color-hover: $sc-theme-color-header-link-hover;
+$sc-theme-cta-quaternary-color-active: darken($sc-theme-cta-quaternary-color-hover, 6);
+
+
+/* FONTS */
+$sc-theme-primary-font: "Montserrat", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+/* SIZING */
+$sc-theme-site-max-width: 1600px;
+
+
+////////////////////////////////////////////////////////////////////////////////
+
+
+/* HEADER */
+$sc-theme-main-nav-height: 44px;
+$sc-theme-main-nav-mobile-height: 60px;
+$sc-theme-secondary-menu-height: 85px;
+$sc-theme-sidebar-size: 246px;
+$sc-theme-logo-top: 62px;
+$sc-theme-category-menu-height: 300px;
+$sc-theme-category-menu-level2-anchor-height: 0;
+$sc-theme-category-menu-padding: $sc-base-padding * 5;
+$sc-theme-category-menu-level2-width: 20%;
+
+////////////////////////////////////////////////////////////////////////////////
+
+
+/* HOME */
+
+/* img and carousel height */
+$sc-theme-home-section-height: 550px;
+$sc-theme-home-section-height-mobile: 300px;
+
+/* CTA sections - common styling on Video, Carousel and Infoblocks */
+$sc-theme-home-cta-background-color: transparentize($sc-theme-color-dark-copy, 0.1);
+$sc-theme-home-cta-width: 340px;
+$sc-theme-home-cta-title-size-mobile: $sc-h2-font-size;
+$sc-theme-home-cta-title-size: $sc-h1-font-size;
+$sc-theme-home-cta-title-color: $sc-theme-color-tertiary;
+$sc-theme-home-cta-text-color: $sc-theme-color;
+$sc-theme-home-cta-link-color: $sc-theme-color-primary;
+
+/* Top Hero Promotion */
+$sc-theme-hero-content-width: 20%;
+
+/* Infoblocks */
+$sc-theme-infoblock-height-mobile: $sc-theme-home-section-height-mobile;
+$sc-theme-infoblock-height-desktop: $sc-theme-home-section-height;
+
+/* Carousel */
+$sc-theme-carousel-content-width: 560px;
+$sc-theme-carousel-title-size: $sc-h1-font-size + 10px;
+
+
+////////////////////////////////////////////////////////////////////////////////
+
+/* FACETS */
+$sc-theme-facets-padding: 0;
+
+////////////////////////////////////////////////////////////////////////////////
+
+
+/* FOOTER */
+
+$sc-theme-footer-color: $sc-theme-color;
+$sc-theme-footer-bgr-color: $sc-theme-color-background;
+
+/* Multi-column Links */
+$sc-theme-footer-column-heading-size: $sc-h5-font-size;
+$sc-theme-footer-column-heading-color: $sc-theme-color-quaternary;
+$sc-theme-footer-column-link-size: 14px;
+$sc-theme-footer-column-link-size-mobile: $sc-h5-font-size;
+$sc-theme-footer-column-link-color: #416761;
+$sc-theme-footer-column-link-color-hover: $sc-theme-color-senary;
+
+/* Newsletter Signup */
+$sc-theme-footer-newsletter-size: $sc-base-font-size;
+$sc-theme-footer-newsletter-color: $sc-theme-color-quaternary;
+$sc-theme-footer-input-border-color: $sc-theme-footer-column-link-color;
+$sc-theme-footer-submit-color: $sc-theme-color-quaternary;
+$sc-theme-footer-submit-text-color: $sc-theme-footer-column-link-color;
+$sc-theme-footer-submit-text-size: $sc-base-font-size;
+
+/* Lower section with copyright and extra info */
+$sc-theme-footer-text-color: $sc-theme-footer-column-link-color;

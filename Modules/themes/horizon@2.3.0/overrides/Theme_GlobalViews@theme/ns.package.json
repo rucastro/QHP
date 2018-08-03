@@ -1,0 +1,21 @@
+{
+    "gulp": {
+        "javascript": [
+            "JavaScript/*.js"
+        ],
+        "sass": [
+            "Sass/**/*.scss"
+        ],
+        "templates": [
+            "Templates/*"
+        ]
+    },
+    "overrides": {
+        "suitecommerce/GlobalViews@1.4.0/Sass/_global-views-back-to-top.scss": "Sass/_qs-global-views-back-to-top.scss",
+        "suitecommerce/GlobalViews@1.4.0/Templates/global_views_breadcrumb.tpl": "Templates/qs_global_views_breadcrumb.tpl",
+        "suitecommerce/GlobalViews@1.4.0/Templates/global_views_pagination.tpl": "Templates/qs_global_views_pagination.tpl",
+        "suitecommerce/GlobalViews@1.4.0/Sass/_global-views-breadcrumb.scss": "Sass/_qs-global-views-breadcrumb.scss",
+        "suitecommerce/GlobalViews@1.4.0/Sass/_global-views-pagination.scss": "Sass/_qs-global-views-pagination.scss",
+        "suitecommerce/GlobalViews@1.4.0/Sass/_global-views-star-rating.scss": "Sass/_qs-global-views-star-rating.scss"
+    }
+}

@@ -1,0 +1,56 @@
+/*
+	© 2017 NetSuite Inc.
+	User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
+	provided, however, if you are an authorized user with a NetSuite account or log-in, you
+	may use this code subject to the terms that govern your access and use.
+*/
+
+.cart-item-actions-links {
+	margin-top: $sc-base-margin * 5;
+
+	@media (max-width: $screen-sm-min) {
+		margin-top: 0;
+	}
+}
+
+.cart-item-actions-links a {
+	padding: $sc-base-padding * 2;
+
+	&:first-child {
+		padding-left: 0;
+	}
+}
+
+.cart-item-actions-item-list-actionable-edit-button{
+	//@extend .transaction-line-views-cell-actionable-edit-button;
+	margin-top: 20px;
+}
+
+.cart-item-actions-item-list-actionable-edit-button-edit{
+	// @extend .transaction-line-views-cell-actionable-edit-button-edit;
+	// padding: 13px 16px;
+}
+
+.cart-item-actions-item-list-actionable-edit-button-drop{
+	@extend .transaction-line-views-cell-actionable-edit-button-drop;
+	padding: 13px 16px;
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+}
+
+.cart-item-actions-item-list-actionable-edit-content{
+	@extend .split-button-dropdown;
+    @extend .dropdown-menu;
+	padding: $sc-base-padding * 2 0;
+
+	li>a{
+		padding: $sc-base-padding * 2 $sc-base-padding * 3;
+	}
+}
+
+.cart-item-actions-item-list-actionable-edit-content-saveforlater {}
+
+.cart-item-actions-item-list-actionable-edit-content-remove-sb{
+	@extend .button-tertiary;
+	@extend .button-small;
+}

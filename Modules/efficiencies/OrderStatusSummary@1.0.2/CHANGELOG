@@ -1,0 +1,10 @@
+1.0.0
+- Initial Release (MontBlanc)
+
+1.0.1
+- Vinson Release
+- Requires the Models.Init module in files that uses Commerce API
+
+1.0.2
+- Elbrus Release
+- eslint fix

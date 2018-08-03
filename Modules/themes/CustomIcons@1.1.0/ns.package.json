@@ -1,0 +1,16 @@
+{
+	"gulp":{
+		"font-awesome": [
+			"Fonts/*"
+		],
+		"sass": [
+		  "Sass/*.scss"
+		]
+	},
+	"overrides": {
+		"third_parties/font-awesome@4.2.0-custom/fonts/fontawesome-webfont.eot": "Fonts/fontawesome-webfont-custom.eot",
+		"third_parties/font-awesome@4.2.0-custom/fonts/fontawesome-webfont.svg": "Fonts/fontawesome-webfont-custom.svg",
+		"third_parties/font-awesome@4.2.0-custom/fonts/fontawesome-webfont.ttf": "Fonts/fontawesome-webfont-custom.ttf",
+		"third_parties/font-awesome@4.2.0-custom/fonts/fontawesome-webfont.woff": "Fonts/fontawesome-webfont-custom.woff"
+	}
+}

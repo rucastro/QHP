@@ -1,0 +1,24 @@
+1.0.0
+- Initial Release
+
+1.1.0
+- Vinson Release
+- Migrate configuration to vinson 
+- Fixes next page increment even when no result for current page
+
+1.1.1
+- Update the Facets.Browse.View.Infinite.Scroll.js: push newly loaded items in Facets.Models
+
+1.2.0
+- Elbrus Release
+- Added InfiniteScroll.Model that holds the scroll details
+
+1.2.1
+- Update distro dependencies
+
+1.2.2
+- Infinite Scroll Enablement configuration
+
+1.2.3
+- Add: totalPage data in element '.facets-facet-browse-results'
+- Fix: Infinite scroll eslint issue

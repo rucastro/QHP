@@ -1,0 +1,110 @@
+/* maxi menu level 2
+   ----------------------------- */
+
+.header-menu-secondary-nav {
+  @include box-shadow(none);
+  background-color: $sc-theme-color-primary;
+  border-bottom: none;
+  padding-left: 0;
+}
+
+.header-menu-home-anchor,
+.header-menu-shop-anchor,
+.header-menu-search-link,
+.header-menu-search-link.active {
+  color: $sc-theme-color-tertiary;
+}
+
+
+.header-menu-level2 > li {
+  position: relative;
+  text-align: left;
+}
+
+.header-menu-level2-anchor {
+  font-size: $sc-small-font-size - 1;
+  padding: $sc-base-padding * 4 $sc-base-padding * 3 0 0;
+  position: relative;
+  margin-bottom: 0;
+  height: 50px;
+
+  @media (min-width: $screen-md-min) {
+    height: 65px;
+  }
+  @media (min-width: $screen-lg-min) {
+    height: 55px;
+  }
+}
+
+.header-menu-level2 li:hover > ul {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0.5s;
+}
+
+/* maxi menu level 3
+   ----------------------------- */
+.header-menu-level3 {
+  background-color: #312d2e;
+  border-bottom: 1px solid $sc-color-theme-border;
+  border-top: 1px solid $sc-color-theme-border;
+  border-left: 1px solid $sc-color-theme-border;
+  border-right: 1px solid $sc-color-theme-border;
+  padding: 0;
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  transition: 500ms ease;
+  -webkit-transition: 500ms ease;
+  @include box-shadow(0 6px 12px transparentize($sc-color-overlay, 1-0.175));
+  z-index: 1003;
+
+  > li {
+    float: none;
+    min-width: 200px;
+    position: relative;
+  }
+
+  .caret {
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-left: 4px solid;
+  }
+}
+
+.header-menu-level3 {
+  top: 100%;
+  left: 0;
+}
+
+.header-menu-level4 {
+  left: 100%;
+  top: 0;
+}
+
+.header-menu-level3-anchor,
+.header-menu-level4-anchor {
+  display: block;
+  border-bottom: 1px solid $sc-color-theme-border;
+  color: #fff;
+  font-size: $sc-small-font-size - 1;
+  font-weight: 500;
+  padding: $sc-base-padding * 2 $sc-base-padding * 4;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+/* container fix for maxi menu on desktop
+   ----------------------------- */
+.header-menu-level-container {
+
+  .caret {
+    position: absolute;
+    top: 25px;
+    right: 5px;
+  }
+}
+
+.header-menu-secondary-nav .open>[data-toggle="dropdown"] {
+  color: #fff;
+}

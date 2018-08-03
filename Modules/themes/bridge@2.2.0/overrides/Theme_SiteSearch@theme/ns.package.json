@@ -1,0 +1,17 @@
+{
+    "gulp": {
+        "javascript": [
+            "JavaScript/*.js"
+        ],
+        "sass": [
+            "Sass/*.scss"
+        ],
+        "templates": [
+            "Templates/*"
+        ]
+    },
+    "overrides": {
+        "suitecommerce/SiteSearch@2.1.2/Sass/_site-search.scss": "Sass/_qs-site-search.scss",
+        "suitecommerce/SiteSearch@2.1.2/Templates/site_search.tpl": "Templates/qs_site_search.tpl"
+    }
+}

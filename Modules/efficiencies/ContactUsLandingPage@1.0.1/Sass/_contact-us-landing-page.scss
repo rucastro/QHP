@@ -1,0 +1,113 @@
+/*
+	© 2015 NetSuite Inc.
+	User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
+	provided, however, if you are an authorized user with a NetSuite account or log-in, you
+	may use this code subject to the terms that govern your access and use.
+*/
+
+.contact-us-landing-page-container {
+	@extend .container;
+	padding-bottom: $sc-medium-margin;
+
+	@media (min-width: $screen-md-min) {
+		padding-left: $sc-base-padding * 7;
+		padding-right: $sc-base-padding * 7;
+	}
+}
+
+.contact-us-landing-page-header {
+	margin-bottom: $sc-medium-margin;
+}
+
+.contact-us-landing-page-header-image {
+	margin-top: $sc-base-margin * 3;
+}
+
+.contact-us-landing-page-header-cms {
+	margin-top: $sc-small-margin;
+}
+
+.contact-us-landing-page-content {}
+
+.contact-us-landing-page-content p {}
+
+.contact-us-landing-page-contact-info-blocks-container {
+	@extend .row;
+	margin-top: $sc-large-margin;
+	margin-bottom: $sc-large-margin;
+}
+
+.contact-us-landing-page-content .contact-us-landing-page-contact-info-block {
+	@extend .col-xs-6;
+	@extend .col-sm-3;
+	@extend .col-md-3;
+
+	@media (max-width: $screen-xs-min) {
+		width: 100%;
+	}
+}
+
+.contact-us-landing-page-contact-info-block {
+	border-right: 1px solid $sc-color-theme-border;
+
+	&:last-child {
+		border-right: 0;
+	}
+
+	@media (max-width: $screen-sm-min) {
+		margin-bottom: $sc-medium-margin;
+	}
+}
+
+.contact-us-landing-page-contact-info-block-content {
+	text-align: center;
+	padding: 0 $sc-base-padding * 2;
+}
+
+.contact-us-landing-page-contact-info-block-image {
+	margin-bottom: $sc-small-margin;
+}
+
+.contact-us-landing-page-contact-info-block-title {
+	font-size: $sc-h4-font-size;
+	font-weight: $sc-font-weight-bold;
+	margin-bottom: $sc-small-margin;
+}
+
+.contact-us-landing-page-contact-info-block-text {
+	font-size: 14px;
+	line-height: 1.5;
+}
+
+.contact-us-landing-page-additional-contact-info-blocks-container {
+	@extend .row;
+	background: $sc-color-theme-background-light;
+	padding: $sc-base-padding * 10 $sc-base-padding * 4;
+}
+
+.contact-us-landing-page-additional-contact-info-block {
+	@extend .col-xs-6;
+	@extend .col-sm-6;
+	@extend .col-md-6;
+	text-align: center;
+
+	@media (max-width: $screen-xs-min) {
+		width: 100%;
+	}
+
+	&:nth-child(odd) {
+		clear: both;
+	}
+
+	margin-top: $sc-small-margin * 3;
+	margin-bottom: $sc-small-margin * 3;
+}
+
+.contact-us-landing-page-additional-contact-info-block-title {
+	font-weight: $sc-font-weight-bold;
+}
+
+.contact-us-landing-page-additional-contact-info-block-title,
+.contact-us-landing-page-additional-contact-info-block-text {
+	line-height: 1.8;
+}

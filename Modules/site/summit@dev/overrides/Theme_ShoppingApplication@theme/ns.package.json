@@ -1,0 +1,19 @@
+{
+    "gulp": {
+        "configuration": [
+            "Configuration/**/*.json"
+        ],
+        "javascript": [
+            "JavaScript/*"
+        ],
+        "templates": [
+            "Templates/*"
+        ],
+        "sass": [
+            "Sass/**/*.scss"
+        ]
+    },
+    "overrides": {
+        "suitecommerce/ShoppingApplication@4.0.0/Templates/shopping_layout.tpl": "Templates/shopping_layout.tpl"
+    }
+}

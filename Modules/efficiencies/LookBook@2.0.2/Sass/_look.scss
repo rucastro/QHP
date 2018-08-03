@@ -1,0 +1,68 @@
+/*
+    © 2015 NetSuite Inc.
+    User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
+    provided, however, if you are an authorized user with a NetSuite account or log-in, you
+    may use this code subject to the terms that govern your access and use.
+*/
+
+.look-layout-container {
+  @extend .container;
+  margin-bottom: $sc-medium-margin;
+}
+
+.look-container {
+  @extend .row;
+}
+
+.look-divider-desktop {
+  @extend .product-details-full-divider-desktop;
+  margin: $sc-small-margin 0;
+}
+
+.look-subtitle {
+  text-transform: none;
+  margin-bottom: $sc-small-margin;
+}
+
+.look-image {
+  @extend .center-block;
+}
+
+.look-main-image {
+  @extend .col-md-5;
+  /* hide the slider pagination as there's only ever going to be 2 images max */
+  & .bx-pager {
+    display: none;
+  }
+}
+
+.look-items-container {
+  @extend .col-md-7;
+  margin-top: $sc-medium-margin;
+  @media (min-width: $screen-md-min) {
+    margin-top: 0;
+  }
+}
+
+.look-details {
+  @extend .product-reviews-center-container;
+  margin: $sc-small-margin 0;
+  padding: $sc-small-margin * 3;
+}
+
+.look-details-title {
+  margin-bottom: $sc-medium-margin;
+}
+
+.look-gallery-prev-icon {
+  @extend .home-gallery-prev-icon;
+}
+
+.look-gallery-next-icon {
+  @extend .home-gallery-next-icon;
+}
+
+/* CMS */
+.look-cms-intro {
+  margin-bottom: $sc-small-margin;
+}

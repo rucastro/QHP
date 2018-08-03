@@ -1,0 +1,487 @@
+/*
+    © 2017 NetSuite Inc.
+    User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
+    provided, however, if you are an authorized user with a NetSuite account or log-in, you
+    may use this code subject to the terms that govern your access and use.
+*/
+
+#site-header {
+    margin-bottom: 0;
+    box-shadow: none;
+
+}
+
+.shopping-layout,
+.myaccount-layout {
+    #site-header.fixed-header {
+        @media(min-width: $screen-md-min) {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            max-width: $sc-theme-site-max-width;
+            z-index: 100;
+        }
+    }
+}
+
+.header-message {
+    padding: 0;
+    background-color: $sc-color-theme-background;
+    text-align:center;
+
+    .global-views-message {
+        @extend .container;
+        margin-bottom:0px;
+        @media (min-width: $screen-md-min) {
+            padding:$sc-base-padding*3;
+            margin-left:-$sc-base-margin*6;
+            margin-right:-$sc-base-margin*6;
+        }
+    }
+}
+
+.header-main-wrapper {
+    position: relative;
+    background-color: transparentize($sc-color-dark-copy, 0.2);
+}
+
+.header-main-nav {
+    min-height: $sc-theme-main-nav-mobile-height;
+
+    @media (min-width: $screen-md-min) {
+        min-height: $sc-theme-main-nav-height;
+        padding-left: $sc-base-margin * 6;
+    }
+}
+
+.header-content {
+    @extend .clearfix;
+    padding: $sc-base-padding * 2 $sc-base-padding * 2 0;
+    background-color: $sc-theme-color-dark-copy;
+
+    @media (min-width: $screen-md-min) {
+        padding: 0;
+        background-color: transparent;
+    }
+}
+///////////////////////////////////////////////////////////////
+//header logo
+
+.header-logo-wrapper {
+    float: left;
+    width: 40%; //aims to show xs nav on one line, will vary depending on logo
+
+    @media(min-width: $screen-xs-min) {
+        padding-left: $sc-base-padding * 2;
+        width: auto;
+    }
+
+    @media(min-width: $screen-md-min) {
+        position: absolute;
+        z-index: 1;
+        top: $sc-theme-logo-top;
+        padding-left: 0;
+    }
+}
+
+///////////////////////////////////////////////////////////////
+//header sidebar toggle
+.header-sidebar-toggle-wrapper {
+    margin: 12px 0;
+    float: left;
+    padding-left: $sc-base-padding * 2;
+
+    @media(min-width: $screen-md-min) {
+        display: none;
+    }
+}
+
+.header-sidebar-toggle {
+    background: $sc-color-dark-copy;
+    width: $sc-target-size-mobile;
+    height: $sc-target-size-mobile;
+    text-align:center;
+    border: solid 1px $sc-color-theme;
+
+    @media (min-width: $screen-md-min) {
+        line-height: $sc-target-size;
+        min-width: $sc-target-size;
+    }
+}
+
+.header-sidebar-toggle-icon {
+    @extend .fa;
+    @extend %fa-bars;
+    color: $sc-color-theme;
+    font-size: 24px;
+    margin-top:2px;
+}
+
+///////////////////////////////////////////////////////////////
+//main nav positioning
+
+.header-right-menu {
+    display:flex;
+    float: right;
+    padding-bottom: $sc-base-padding * 2;
+    font-size: $sc-smallest-font-size;
+
+    & .storelocator-accesspoints-headerlink {
+        padding-right: $sc-base-padding * 2;
+    }
+
+    & .storelocator-accesspoints-headerlink-link-icon {
+        @media (min-width: $screen-md-min) {
+            display: none;
+        }
+    }
+
+    @media (min-width: $screen-md-min) {
+        margin: 0;
+        padding-bottom: 0;
+    }
+}
+
+.header-right-menu-options {
+    li {
+        display: inline-block;
+        padding-left: $sc-base-padding*3;
+
+        a {
+            @extend %header-link;
+        }
+    }
+
+    @media (max-width: $screen-md-min) {
+        display: none;
+    }
+}
+
+.header-menu-profile,
+.header-menu-quote,
+.header-menu-settings {
+    float: left;
+    display: none;
+
+    @media (min-width: $screen-md-min) {
+        display: block;
+    }
+}
+
+.header-menu-storelocator {
+    float: left;
+}
+
+.header-menu-settings {
+    position: relative;
+}
+
+.header-menu-settings-dropdown-title {
+    margin-bottom: $sc-small-margin;
+}
+
+.header-menu-cart {
+    float: left;
+    position: relative;
+    border: 1px solid $sc-color-secondary;
+
+    @media (min-width: $screen-md-min) {
+        margin-left: $sc-base-margin * 4;
+        border: none;
+    }
+}
+.header-menu-search-icon,
+.header-menu-searchmobile-icon {
+    @extend .fa;
+    @extend %fa-search;
+    @extend .fa-flip-horizontal;
+    color: $sc-theme-color-light;
+}
+
+.header-menu-searchmobile-icon{
+    color: $sc-color-theme;
+    font-size: $sc-h3-font-size;
+    line-height: $sc-target-size-mobile;
+    min-width: $sc-target-size-mobile;
+
+    @media (min-width: $screen-md-min) {
+        line-height: $sc-target-size;
+        min-width: $sc-target-size;
+    }
+}
+
+.header-menu-searchmobile {
+    float: left;
+    margin-right: $sc-small-margin;
+
+    @media (min-width: $screen-md-min) {
+        display: none;
+    }
+}
+
+%header-link {
+    display: block;
+    min-width: $sc-target-size-mobile;
+    height: $sc-target-size-mobile;
+    line-height: $sc-target-size-mobile;
+    color: $sc-theme-color-header-link;
+    text-align: center;
+    position: relative;
+    text-transform: uppercase;
+
+    @media (min-width: $screen-md-min) {
+        min-width: $sc-target-size;
+        height: $sc-target-size;
+        line-height: $sc-target-size;
+    }
+}
+
+%header-link:hover, %header-link:focus {
+    color: $sc-theme-color-header-link-hover;
+}
+%header-link:active {
+    color: $sc-theme-color-header-link-active;
+}
+
+.header-menu-settings-link,
+.header-menu-cart-link,
+.header-menu-searchmobile-link
+{
+    @extend %header-link;
+}
+
+.header-menu-searchmobile-link {
+    overflow: hidden;
+}
+
+///////////////////////////////////////////////////////////////
+//main nav styles
+
+.header-menu-cart-link {
+    overflow: hidden;
+    color: $sc-color-tertiary;
+
+    &:hover, &:active, &:focus {
+        color: $sc-color-tertiary;
+    }
+}
+
+.header-menu-cart-link-enabled{
+    .header-menu-cart-icon{
+        color: $sc-color-tertiary;
+    }
+}
+
+.header-menu-cart-legend {
+    padding: 0 $sc-base-padding * 3 0 0;
+    float:right;
+    display: none;
+
+    @media(min-width: $screen-md-min) {
+        display: inline;
+    }
+}
+
+.header-menu-cart-icon {
+    @extend .fa;
+    @extend %fa-shopping-cart;
+    font-size: $sc-h3-font-size;
+    line-height: $sc-target-size-mobile;
+    min-width: $sc-target-size-mobile;
+    color: $sc-color-theme;
+
+    @media(min-width: $screen-md-min) {
+        line-height: $sc-target-size;
+        min-width: $sc-target-size;
+    }
+}
+
+.header-menu-settings-icon {
+    font-size: $sc-h4-font-size;
+    @extend .fa;
+    @extend %fa-globe;
+}
+
+.header-menu-settings-carret {
+    margin-left: $sc-base-margin;
+    @extend .fa;
+    @extend %fa-angle-down;
+}
+
+///////////////////////////////////////////////////////////////
+//secondary nav styles
+
+.header-secondary-wrapper {
+    background-color: $sc-color-dark-copy;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: - $sc-theme-sidebar-size;
+    width: $sc-theme-sidebar-size;
+
+    @media (min-width: $screen-md-min) {
+        position: relative;
+        top: auto;
+        bottom: auto;
+        left: auto;
+        width: auto;
+        height: $sc-theme-secondary-menu-height;
+    }
+}
+
+///////////////////////////////////////////////////////////////
+//header settings
+
+.header-menu-settings-dropdown {
+    display: none;
+    position: absolute;
+    z-index: 1001;
+    background: $sc-color-tertiary;
+    padding: $sc-base-padding * 6;
+    left: -130px;
+    box-shadow: 0 6px 12px transparentize($sc-color-overlay, 1-0.175);
+    border: 1px solid $sc-color-theme-border;
+    width: 335px;
+
+    &:before {
+        position: absolute;
+        top: -7px;
+        right: 165px;
+        display: inline-block;
+        border-right: 7px solid transparent;
+        border-bottom: 7px solid $sc-color-theme-border;
+        border-left: 7px solid transparent;
+        border-bottom-color: transparentize($sc-color-overlay, 1-0.2);
+        content: '';
+    }
+
+    &:after {
+        position: absolute;
+        top: -6px;
+        right: 166px;
+        display: inline-block;
+        border-right: 6px solid transparent;
+        border-bottom: 6px solid $sc-color-tertiary;
+        border-left: 6px solid transparent;
+        content: '';
+    }
+}
+
+.open .header-menu-settings-dropdown {
+    display: block;
+}
+.header-site-search {
+    display: none;
+    width: 100%;
+
+    .site-search-button-submit {
+        height: 50px;
+    }
+}
+.header-menu-cart-dropdown{
+    background-color: $sc-color-secondary;
+
+    &:hover {
+        background-color: $sc-color-secondary-hover;
+    }
+
+    .open > [data-toggle="dropdown"] {
+        color: $sc-color-tertiary;
+    }
+}
+.header-sidebar-overlay{}
+
+.header-subheader {
+    background:$sc-color-theme-background-light;
+    display:none;
+    text-align:right;
+    font-size:$sc-base-font-size;
+    color: $sc-color-secondary;
+    border-top:1px solid $sc-color-theme-border;
+    border-bottom:1px solid $sc-color-theme-border;
+    @media(min-width: $screen-sm-min) {
+        display: none;
+    }
+}
+
+.header-subheader-container {
+    //@extend .container;
+    padding-right:$sc-base-padding*3;
+}
+
+.header-subheader-options {
+    padding-top: $sc-base-padding * 2;
+    padding-bottom: $sc-base-padding * 2;
+
+    li {
+        display:inline;
+        padding-left:$sc-base-padding*3;
+    }
+}
+
+.header-subheader-settings-link {
+    display:inline;
+    color:$sc-color-secondary;
+}
+
+.header-subheader-settings {
+    position:relative;
+}
+
+.header-left-content {
+    display: none;
+
+    & p,
+    & blockquote,
+    & ul li,
+    & ol li {
+        font-size: 12px;
+    }
+
+    & p,
+    & h1,
+    & h2,
+    & h3,
+    & blockquote,
+    & ul li,
+    & ol li {
+        color: $sc-color-theme-light;
+    }
+
+    @media(min-width: $screen-md-min) {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        float: left;
+        height: $sc-theme-main-nav-height;
+    }
+}
+
+/* Store Locator Link */
+.header-menu-locator-mobile {
+    display:block;
+    margin-right: $sc-small-margin;
+    @media(min-width: $screen-md-min) {
+        display: none;
+    }
+
+    & .storelocator-accesspoints-headerlink-link {
+        float:none;
+    }
+
+    & .storelocator-accesspoints-headerlink-link-icon {
+        color: $sc-theme-color;
+        @media(min-width: $screen-xs-min) {
+            float:none;
+            font-size:25px;
+            margin-right:$sc-base-margin;
+            position:relative;
+        }
+    }
+
+    & .storelocator-accesspoints-headerlink-link-text {
+        @media(min-width: $screen-sm-min) {
+            display: none;
+        }
+    }
+}

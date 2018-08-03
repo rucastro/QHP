@@ -1,0 +1,18 @@
+
+.checkoutfieldmanagement-text-line {
+    @extend .control-group;
+}
+
+.checkoutfieldmanagement-text-label {
+    @extend .input-label;
+}
+
+.checkoutfieldmanagement-text-input {
+    @extend .input-large;
+}
+
+.checkoutfieldmanagement-text-help {
+    @extend .input-help;
+}
+
+.checkoutfieldmanagement-text-control-container {}

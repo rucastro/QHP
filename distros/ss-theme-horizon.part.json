@@ -1,0 +1,107 @@
+{
+  "id": "ss-theme-horizon",
+  "name": "SuiteSolution Theme Horizon - Elbrus",
+  "dependencies": ["elbrus-base"],
+  "modules": {
+      "themes/ThemesConfiguration": "1.0.1",
+      "themes/CustomIcons": "1.1.0",
+      "themes/horizon@2.3.0/CustomStyles": "theme",
+      "themes/horizon@2.3.0/CustomJS": "theme",
+      "themes/horizon@2.3.0/overrides/Theme_BaseSassStyles": "theme",
+      "themes/horizon@2.3.0/overrides/Theme_Cart": "theme",
+      "themes/horizon@2.3.0/overrides/Theme_Facets": "theme",
+      "themes/horizon@2.3.0/overrides/Theme_Footer": "theme",
+      "themes/horizon@2.3.0/overrides/Theme_GlobalViews": "theme",
+      "themes/horizon@2.3.0/overrides/Theme_Header": "theme",
+      "themes/horizon@2.3.0/overrides/Theme_Home": "theme",
+      "themes/horizon@2.3.0/overrides/Theme_ItemRelations": "theme",
+      "themes/horizon@2.3.0/overrides/Theme_ProductDetails": "theme",
+      "themes/horizon@2.3.0/overrides/Theme_ProductViews": "theme",
+      "themes/horizon@2.3.0/overrides/Theme_MyAccountApplication": "theme",
+      "themes/horizon@2.3.0/overrides/Theme_OrderWizard": "theme",
+      "themes/horizon@2.3.0/overrides/Theme_ProductReviews": "theme",
+      "themes/horizon@2.3.0/overrides/Theme_ErrorManagement": "theme",
+      "themes/horizon@2.3.0/overrides/Theme_ShoppingApplication": "theme"
+  },
+  "tasksConfig": {
+    "javascript": [
+      {
+        "entryPoint": "SC.Shopping.Starter",
+        "dependencies": [
+          "QS.Home.View",
+          "QS.Categories.Thumbnail",
+          "QS.Header.View",
+          "QS.GlobalViews.Breadcrumb.View",
+          "QS.Footer.View",
+          "QS.Footer.Simplified.View",
+          "QS.ItemRelations.SC.Configuration",
+          "QS.ErrorManagement.PageNotFound.View",
+          "QS.SC.Shopping.Layout"
+        ]
+      },
+      {
+        "entryPoint": "SC.MyAccount.Starter",
+        "dependencies": [
+          "QS.Home.View",
+          "QS.Categories.Thumbnail",
+          "QS.Header.View",
+          "QS.Footer.View",
+          "QS.Footer.Simplified.View",
+          "QS.ItemRelations.SC.Configuration"
+        ]
+      },
+      {
+        "entryPoint": "SC.Checkout.Starter",
+        "dependencies": [
+          "QS.Home.View",
+          "QS.Categories.Thumbnail",
+          "QS.Header.View",
+          "QS.Footer.View",
+          "QS.Footer.Simplified.View",
+          "QS.ItemRelations.SC.Configuration"
+        ]
+      }
+    ],
+    "sass": {
+      "applications": [
+        {
+          "name": "Shopping",
+          "dependencies": [
+            "Theme_BaseSassStyles",
+            "Theme_Footer",
+            "Theme_Header",
+            "Theme_Home",
+            "CustomStyles",
+            "Theme_Facets",
+            "Theme_GlobalViews",
+            "CustomIcons"
+          ]
+        },
+        {
+          "name": "MyAccount",
+          "dependencies": [
+            "Theme_BaseSassStyles",
+            "Theme_Footer",
+            "Theme_Header",
+            "CustomStyles",
+            "Theme_MyAccountApplication",
+            "CustomIcons"
+          ]
+        },
+        {
+          "name": "Checkout",
+          "dependencies": [
+            "Theme_BaseSassStyles",
+            "Theme_Footer",
+            "Theme_Header",
+            "CustomStyles",
+            "CustomIcons"
+          ]
+        }
+      ]
+    },
+    "ssp-libraries": {
+      "dependencies": []
+    }
+  }
+}

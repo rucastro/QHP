@@ -1,0 +1,54 @@
+{
+    "id": "site-qs-b2c-bridge",
+    "name": "Site QS Temp Placeholder - Bridge Theme",
+    "dependencies": ["qs-b2c","ss-theme-bridge"],
+    "endpoint": "true",
+    "modules": {
+
+    },
+    "tasksConfig": {
+        "javascript": [
+            {
+                "entryPoint": "SC.Shopping.Starter",
+                "dependencies": [
+
+                ]
+            },
+            {
+                "entryPoint": "SC.MyAccount.Starter",
+                "dependencies": [
+
+                ]
+            },
+            {
+                "entryPoint": "SC.Checkout.Starter",
+                "dependencies": [
+
+                ]
+            }
+        ],
+        "ssp-libraries": {
+            "dependencies": [
+            ]
+        },
+        "sass": {
+            "applications": [
+                {
+                    "name": "Shopping",
+                    "dependencies": [
+                    ]
+                },
+                {
+                    "name": "MyAccount",
+                    "dependencies": [
+                    ]
+                },
+                {
+                    "name": "Checkout",
+                    "dependencies": [
+                    ]
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "type": "object",
+    "subtab": {
+        "id": "quickStart",
+        "title": "Quick Start",
+        "group": "commerceSuiteSolution"
+    }
+}

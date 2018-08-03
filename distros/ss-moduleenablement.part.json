@@ -1,0 +1,26 @@
+{
+  "id": "ss-moduleenablement",
+  "name": "ModuleEnablement",
+  "dependencies": ["elbrus-base", "ss-generalconfig"],
+  "folders": {
+    "modules": "Modules",
+    "distribution": "bin/LocalDistribution",
+    "deploy": "bin/DeployDistribution",
+    "release": "bin/ReleaseDistribution"
+  },
+  "modules": {
+    "efficiencies/ModuleEnablement": "1.2.1"
+  },
+  "tasksConfig": {
+    "javascript": [
+      {
+        "entryPoint": "SC.Shopping.Starter",
+        "dependencies": [
+          {"add": "QuantityPricing.Enablement", "before": "QuantityPricing"},
+          {"add": "ProductDetails.AddToQuote.Enablement", "after": "ProductDetailToQuote"},
+          "GiftWrap.Enablement"
+        ]
+      }
+    ]
+  }
+}

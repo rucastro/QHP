@@ -1,0 +1,41 @@
+{
+  "id": "ss-sizechart",
+  "name": "SizeChart",
+  "dependencies": [
+    "elbrus-base"
+  ],
+  "folders": {
+    "modules": "Modules",
+    "distribution": "bin/LocalDistribution",
+    "deploy": "bin/DeployDistribution",
+    "release": "bin/ReleaseDistribution"
+  },
+  "modules": {
+    "efficiencies/SizeChart": "2.0.0"
+  },
+  "tasksConfig": {
+    "javascript": [
+      {
+        "entryPoint": "SC.Shopping.Starter",
+        "dependencies": [
+          "SizeChart"
+        ]
+      }
+    ],
+    "ssp-libraries": {
+      "dependencies": [
+        "SizeChart.EntryPoint"
+      ]
+    },
+    "sass": {
+      "applications": [
+        {
+          "name": "Shopping",
+          "dependencies": [
+            "SizeChart"
+          ]
+        }
+      ]
+    }
+  }
+}

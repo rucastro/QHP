@@ -1,0 +1,9 @@
+
+.checkoutfieldmanagement-required {
+    display: block;
+    margin-top: $sc-medium-margin;
+}
+
+.checkoutfieldmanagement-required-marker {
+    @extend .input-required;
+}

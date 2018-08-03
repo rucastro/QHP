@@ -1,0 +1,17 @@
+{
+    "type": "object",
+    "subtab": {
+        "id": "lookBook",
+        "title": "Look Book",
+        "group": "commerceSuiteSolution"
+    },
+    "properties": {
+        "lookBook.displayLookBookSlide": {
+            "group": "commerceSuiteSolution",
+            "type": "boolean",
+            "subtab": "lookBook",
+            "title": "Display Look Book Slide",
+            "default": true
+        }
+    }
+}

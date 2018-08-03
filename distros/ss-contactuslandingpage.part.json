@@ -1,0 +1,40 @@
+{
+    "id": "ss-contactuslandingpage",
+    "name": "ContactUsLandingPage",
+    "dependencies": [
+        "elbrus-base",
+        "ss-generalconfig"
+    ],
+    "folders": {
+        "modules": "Modules",
+        "distribution": "bin/LocalDistribution",
+        "deploy": "bin/DeployDistribution",
+        "release": "bin/ReleaseDistribution"
+    },
+    "modules": {
+        "efficiencies/ContactUsLandingPage": "1.0.1"
+    },
+    "tasksConfig": {
+        "javascript": [
+            {
+                "entryPoint": "SC.Shopping.Starter",
+                "dependencies": [
+                    "ContactUsLandingPage"
+                ]
+            }
+        ],
+        "ssp-libraries": {
+            "dependencies": []
+        },
+        "sass": {
+            "applications": [
+                {
+                    "name": "Shopping",
+                    "dependencies": [
+                        "ContactUsLandingPage"
+                    ]
+                }
+            ]
+        }
+    }
+}

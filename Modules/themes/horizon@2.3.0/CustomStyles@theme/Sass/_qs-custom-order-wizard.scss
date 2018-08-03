@@ -1,0 +1,75 @@
+/*
+	© 2017 NetSuite Inc.
+	User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
+	provided, however, if you are an authorized user with a NetSuite account or log-in, you
+	may use this code subject to the terms that govern your access and use.
+*/
+
+/* ORDER WIZARD */
+/* All order wizard modules that have customised CSS */
+
+/* Address */
+.order-wizard-address-module-title{
+    font-size: $sc-h4-font-size;
+}
+.order-wizard-address-module-single {
+    .address-details {
+        @media(min-width: $screen-sm-min) {
+            padding-left: 0 !important;
+        }
+    }
+}
+.order-wizard-address-module-address-container {
+    background: transparent;
+}
+
+/* Cart Summary */
+.order-wizard-cart-summary-item-quantity-subtotal,
+.order-wizard-cart-summary-grid-right{
+    color: $sc-color-senary;
+}
+.order-wizard-cart-summary-title{
+    background: transparent;
+    border-bottom: 1px solid $sc-color-theme-border;
+}
+.order-wizard-cart-summary-container{
+    border: none;
+    box-shadow:none;
+    -webkit-box-shadow:none;
+}
+.order-wizard-cart-summary-grid-float,
+.order-wizard-cart-summary-subtotal-label{
+    font-weight: $sc-font-weight-normal;
+}
+
+/* Cart Items */
+.order-wizard-cartitems-module-accordion-head-toggle,
+.order-wizard-cartitems-module-accordion-body,
+.order-wizard-cartitems-module-edit-cart-label{
+    border: none;
+}
+.order-wizard-cartitems-module-accordion-container-table-header-quantity,
+.order-wizard-cartitems-module-accordion-container-table-header-totalprice,
+.order-wizard-cartitems-module-accordion-container-table-header-amount {
+    text-transform: uppercase;
+}
+.order-wizard-cartitems-module-edit-cart-link{
+    @extend .button-small;
+    @extend .button-secondary;
+    font-size:$sc-base-font-size;
+}
+
+/* Payment Method */
+.order-wizard-paymentmethod-giftcertificates-module-expander-head-toggle,
+.order-wizard-paymentmethod-selector-module-options {
+    background-color: $sc-color-theme-background-lightest !important;
+    border: none !important;
+}
+.order-wizard-paymentmethod-selector-module-header {
+    font-size: $sc-h4-font-size;
+}
+
+/* Submit Button */
+.order-wizard-submitbutton-container {
+	background: none !important;
+}

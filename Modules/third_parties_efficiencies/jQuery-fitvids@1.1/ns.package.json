@@ -1,0 +1,8 @@
+{
+  "gulp": {
+    "javascript": [
+      "jQuery-fitvids.js"
+    ]
+  }
+,	"jshint": "false"
+}

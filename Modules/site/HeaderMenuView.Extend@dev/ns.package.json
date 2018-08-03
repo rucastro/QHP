@@ -1,0 +1,16 @@
+{
+  "gulp": {
+    "javascript": [
+      "JavaScript/*.js"
+    ],
+    "templates": [
+      "Templates/*"
+    ],
+    "sass": [
+      "Sass/**/*.scss"
+    ]
+  },
+  "overrides": {
+    "suitecommerce/Header@1.3.0/Templates/header_menu.tpl": "Templates/qs_header_menu.tpl"
+  }
+}

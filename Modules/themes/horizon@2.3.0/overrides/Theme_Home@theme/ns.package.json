@@ -1,0 +1,24 @@
+{
+    "gulp": {
+        "javascript": [
+            "JavaScript/*"
+        ],
+        "images": [
+            "Images/*"
+        ],
+        "templates": [
+            "Templates/*"
+        ],
+        "sass": [
+            "Sass/**/*.scss"
+        ],
+        "configuration": [
+            "Configuration/*.json"
+        ]
+    },
+    "overrides": {
+        "suitecommerce/Home@2.2.0/Configuration/Home.json": "Configuration/QSHome.json",
+        "suitecommerce/Home@2.2.0/Sass/_home.scss": "Sass/_qs-home.scss",
+        "suitecommerce/Home@2.2.0/Templates/home.tpl": "Templates/qs_home.tpl"
+    }
+}

@@ -1,0 +1,90 @@
+{
+    "id": "ss-theme-summit",
+    "name": "SuiteSolution Theme Summit - Elbrus",
+    "dependencies": ["elbrus-base"],
+    "modules": {
+        "themes/ThemesConfiguration": "1.0.1",
+        "themes/CustomIcons": "1.1.0",
+        "themes/summit@1.3.0/CustomStyles": "theme",
+        "themes/summit@1.3.0/overrides/Theme_BaseSassStyles": "theme",
+        "themes/summit@1.3.0/overrides/Theme_Cart": "theme",
+        "themes/summit@1.3.0/overrides/Theme_Footer": "theme",
+        "themes/summit@1.3.0/overrides/Theme_Header": "theme",
+        "themes/summit@1.3.0/overrides/Theme_Home": "theme",
+        "themes/summit@1.3.0/overrides/Theme_ProductDetails": "theme",
+        "themes/summit@1.3.0/overrides/Theme_Transaction.Line.Views": "theme",
+        "themes/summit@1.3.0/overrides/Theme_ErrorManagement": "theme",
+        "themes/summit@1.3.0/overrides/Theme_ShoppingApplication": "theme"
+    },
+    "tasksConfig": {
+        "javascript": [{
+                "entryPoint": "SC.Shopping.Starter",
+                "dependencies": [
+                    "QS.Home.View",
+                    "QS.Footer.View",
+                    "QS.Footer.Simplified.View",
+                    "QS.ErrorManagement.PageNotFound.View",
+                    "QS.SC.Shopping.Layout"
+                ]
+            },
+            {
+                "entryPoint": "SC.MyAccount.Starter",
+                "dependencies": [
+                    "QS.Home.View",
+                    "QS.Footer.View",
+                    "QS.Footer.Simplified.View"
+                ]
+            },
+            {
+                "entryPoint": "SC.Checkout.Starter",
+                "dependencies": [
+                    "QS.Home.View",
+                    "QS.Footer.View",
+                    "QS.Footer.Simplified.View"
+                ]
+            }
+        ],
+        "sass": {
+            "applications": [{
+                    "name": "Shopping",
+                    "dependencies": [
+                        "CustomStyles",
+                        "Theme_BaseSassStyles",
+                        "Theme_Header",
+                        "Theme_Home",
+                        "Theme_Footer",
+                        "Theme_Cart",
+                        "Theme_ProductDetails",
+                        "Theme_Transaction.Line.Views",
+                        "CustomIcons"
+                    ]
+                },
+                {
+                    "name": "MyAccount",
+                    "dependencies": [
+                        "CustomStyles",
+                        "Theme_BaseSassStyles",
+                        "Theme_Header",
+                        "Theme_Footer",
+                        "Theme_Transaction.Line.Views",
+                        "CustomIcons"
+                    ]
+                },
+                {
+                    "name": "Checkout",
+                    "dependencies": [
+                        "CustomStyles",
+                        "Theme_BaseSassStyles",
+                        "Theme_Header",
+                        "Theme_Footer",
+                        "Theme_Transaction.Line.Views",
+                        "CustomIcons"
+                    ]
+                }
+            ]
+        },
+        "ssp-libraries": {
+            "dependencies": []
+        }
+    }
+}

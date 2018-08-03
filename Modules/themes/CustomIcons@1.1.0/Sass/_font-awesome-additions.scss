@@ -1,0 +1,21 @@
+/* variables with unicode ref */
+$fa-var-snapchat: "\f2ab";
+$fa-var-snapchat-ghost: "\f2ac";
+$fa-var-snapchat-square: "\f2ad";
+$fa-var-tripadvisor: "\f262";
+$fa-var-amazon: "\f270";
+$fa-var-etsy: "\f2d7";
+$fa-var-imdb: "\f2d8";
+$fa-var-whatsapp: "\f232";
+$fa-var-shopping-basket: "\f291";
+
+/* class using content property to inject glyph into element */
+%#{$fa-css-prefix}-snapchat:before { content: $fa-var-snapchat; }
+%#{$fa-css-prefix}-snapchat-ghost:before { content: $fa-var-snapchat-ghost; }
+%#{$fa-css-prefix}-snapchat-square:before { content: $fa-var-snapchat-square; }
+%#{$fa-css-prefix}-tripadvisor:before { content: $fa-var-tripadvisor; }
+%#{$fa-css-prefix}-amazon:before { content: $fa-var-amazon; }
+%#{$fa-css-prefix}-etsy:before { content: $fa-var-etsy; }
+%#{$fa-css-prefix}-imdb:before { content: $fa-var-imdb; }
+%#{$fa-css-prefix}-whatsapp:before { content: $fa-var-whatsapp; }
+%#{$fa-css-prefix}-shopping-basket:before { content: $fa-var-shopping-basket; }

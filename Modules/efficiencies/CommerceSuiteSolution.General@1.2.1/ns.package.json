@@ -1,0 +1,8 @@
+{
+    "gulp": {
+        "configuration": [
+            "CommerceSuiteSolution.json",
+            "QuickStart.json"
+        ]
+    }
+}

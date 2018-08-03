@@ -1,0 +1,36 @@
+/*
+	© 2017 NetSuite Inc.
+	User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
+	provided, however, if you are an authorized user with a NetSuite account or log-in, you
+	may use this code subject to the terms that govern your access and use.
+*/
+
+.header-site-search {
+	display: none;
+	position: relative;
+	z-index: 5;
+
+	@media (min-width: $screen-md-min) {
+		border-top: 1px solid $sc-color-theme-border;
+	}
+
+	& .nav-search {
+		background-color: $sc-color-tertiary;
+	}
+	& .nav-search-input-icon {
+		height: 20px;
+	}
+	& .itemssearcher-input {
+		padding: $sc-base-padding*3;
+		height: 16px;
+		@media (min-width: $screen-md-min){
+			width: calc(100% - 80px);
+	    	width: expression(100% - 80px);/* IE-OLD */
+	    }
+	}
+	& .itemssearcher-input:focus{
+		outline:none;
+		outline-style:none;
+		box-shadow:none;
+	}
+}

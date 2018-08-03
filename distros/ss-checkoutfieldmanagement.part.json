@@ -1,0 +1,44 @@
+{
+  "id": "ss-checkoutfieldmanagement",
+  "name": "SS - Checkout Field Management",
+  "dependencies": [
+    "elbrus-base"
+  ],
+  "folders": {
+    "modules": "Modules",
+    "distribution": "bin/LocalDistribution",
+    "deploy": "bin/DeployDistribution",
+    "release": "bin/ReleaseDistribution"
+  },
+  "modules": {
+    "efficiencies/CheckoutFieldManagement": "2.0.0"
+  },
+  "tasksConfig": {
+    "javascript": [
+      {
+        "entryPoint": "SC.Checkout.Starter",
+        "dependencies": [
+          {
+            "add": "CheckoutFieldManagement",
+            "before": "OrderWizard"
+          }
+        ]
+      }
+    ],
+    "ssp-libraries": {
+      "dependencies": [
+        "CheckoutFieldManagement.ServiceController"
+      ]
+    },
+    "sass": {
+      "applications": [
+        {
+          "name": "Checkout",
+          "dependencies": [
+            "CheckoutFieldManagement"
+          ]
+        }
+      ]
+    }
+  }
+}

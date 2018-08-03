@@ -1,0 +1,22 @@
+
+.checkoutfieldmanagement-checkbox-line {
+    @extend .control-group;
+}
+
+.checkoutfieldmanagement-checkbox-label {
+    @extend .input-label;
+    font-weight: $sc-font-weight-normal;
+}
+
+.checkoutfieldmanagement-checkbox-input {
+    @extend .input-large;
+    display: inline-block;
+    min-width: auto;
+    width: auto;
+}
+
+.checkoutfieldmanagement-checkbox-help {
+    @extend .input-help;
+}
+
+.checkoutfieldmanagement-checkbox-control-container {}

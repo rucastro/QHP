@@ -1,0 +1,63 @@
+{
+  "id": "ss-giftwrap",
+  "name": "GiftWrap",
+  "dependencies": [
+    "elbrus-base",
+    "ss-postcontexthook"
+  ],
+  "folders": {
+    "modules": "Modules",
+    "distribution": "bin/LocalDistribution",
+    "deploy": "bin/DeployDistribution"
+  },
+  "modules": {
+    "efficiencies/GiftWrap": "2.1.2"
+  },
+  "tasksConfig": {
+    "javascript": [
+      {
+        "entryPoint": "SC.Shopping.Starter",
+        "dependencies": [
+          {
+            "add": "GiftWrap",
+            "before": "ProductDetails"
+          }
+        ]
+      },
+      {
+        "entryPoint": "SC.MyAccount.Starter",
+        "dependencies": [
+          "GiftWrap"
+        ]
+      },
+      {
+        "entryPoint": "SC.Checkout.Starter",
+        "dependencies": [
+          "GiftWrap"
+        ]
+      }
+    ],
+    "ssp-libraries": {
+      "dependencies": [
+        "Application.Events.Once",
+        "GiftWrap.EntryPoint"
+      ]
+    },
+    "sass": {
+      "applications": [
+        {
+          "name": "Shopping",
+          "dependencies": [
+            "GiftWrap"
+          ]
+        },
+        {
+          "name": "MyAccount",
+          "dependencies": [
+            "GiftWrap"
+          ]
+        }
+      ]
+    }
+  }
+}

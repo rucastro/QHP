@@ -1,0 +1,40 @@
+{
+  "id": "ss-lookbook",
+  "name": "LookBook",
+  "folders": {
+    "modules": "Modules",
+    "distribution": "bin/LocalDistribution",
+    "deploy": "bin/DeployDistribution",
+    "release": "bin/ReleaseDistribution"
+  },
+  "dependencies": ["elbrus-base", "ss-generalconfig", "ss-efcore"],
+  "modules": {
+    "efficiencies/LookBook": "2.0.2"
+  },
+  "tasksConfig": {
+    "javascript": [
+      {
+        "entryPoint": "SC.Shopping.Starter",
+        "dependencies": [
+          "ItemDetails.LookItems",
+          "LookBook"
+        ]
+      }
+    ],
+    "ssp-libraries": {
+      "dependencies": [
+        "LookBook.EntryPoint"
+      ]
+    },
+    "sass": {
+      "applications": [
+        {
+          "name": "Shopping",
+          "dependencies": [
+            "LookBook"
+          ]
+        }
+      ]
+    }
+  }
+}

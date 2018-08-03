@@ -1,0 +1,18 @@
+{
+    "gulp": {
+        "templates": [
+            "Templates/*"
+        ],
+        "sass": [
+            "Sass/*.scss"
+        ]
+    },
+    "overrides": {
+        "suitecommerce/ProductDetails@1.0.0/Sass/_product-details-full.scss": "Sass/_qs-product-details-full.scss",
+        "suitecommerce/ProductDetails@1.0.0/Sass/_product-details-quickview.scss": "Sass/_qs-product-details-quickview.scss",
+        "suitecommerce/ProductDetails@1.0.0/Sass/_product-details-quantity.scss": "Sass/_qs-product-details-quantity.scss",
+        "suitecommerce/ProductDetails@1.0.0/Sass/_product-details-information.scss": "Sass/_qs-product-details-information.scss",
+        "suitecommerce/ProductDetails@1.0.0/Templates/product_details_full.tpl": "Templates/qs_product_details_full.tpl",
+        "suitecommerce/ProductDetails@1.0.0/Templates/product_details_quickview.tpl": "Templates/qs_product_details_quickview.tpl"
+    }
+}

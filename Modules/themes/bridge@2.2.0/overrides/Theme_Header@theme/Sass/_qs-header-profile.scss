@@ -1,0 +1,147 @@
+/*
+	© 2017 NetSuite Inc.
+	User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
+	provided, however, if you are an authorized user with a NetSuite account or log-in, you
+	may use this code subject to the terms that govern your access and use.
+*/
+
+.header-profile {
+	background-color: $sc-theme-navlinks-bgr-color;
+	@media (min-width: $screen-md-min){
+		background-color: transparent;
+	}
+}
+
+.header-profile-welcome-link,
+.header-profile-login-link,
+.header-profile-register-link,
+.header-profile-loading-link {
+	@extend %header-link;
+}
+
+.header-profile-welcome-icon {
+	@media (min-width: $screen-md-min){
+		display: none;
+	}
+}
+
+.header-profile-welcome-carret-icon,
+.header-profile-login-icon,
+.header-profile-register-icon,
+.header-profile-loading-icon {
+	@extend %header-icon;
+}
+
+.header-profile-list-item {
+	display: inline-block;
+	margin: 0 $sc-small-margin 0 $sc-base-margin*3;
+	@media (min-width: $screen-md-min){
+		margin: 0 $sc-small-margin;
+	}
+}
+
+.header-profile-list-item.open {
+	& .header-profile-welcome-link {
+		@extend %header-link:active;
+	}
+}
+
+//////////////////////////////////////////////////////////
+//login register
+
+.header-profile-menu-login{
+	color: $sc-color-theme;
+}
+
+.header-profile-menu-login-container{
+	margin-right:$sc-base-margin;
+}
+
+.header-profile-menu-login li{
+	display:inline-block;
+}
+
+.header-profile-login-icon{
+	@extend .icon-sign-in;
+}
+
+.header-profile-register-icon{
+	@extend .icon-user;
+}
+
+.header-profile-login-text,
+.header-profile-register-text,
+.storelocator-accesspoints-headerlink-link-text,
+.requestquote-accesspoints-headerlink-text,
+.quickorder-accesspoints-headerlink-text {
+    text-transform: uppercase;
+	margin: 0 $sc-small-margin;
+}
+
+//////////////////////////////////////////////////////////
+//my account menu
+.header-profile-welcome-name{
+	display: block;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+
+	@media (min-width: $screen-md-min){
+		display: inline;
+	}
+}
+
+.header-profile-welcome-icon{
+	@extend .icon-user;
+	color: $sc-theme-header-link-color;
+}
+
+.header-profile-welcome-carret-icon{
+	@extend .icon-angle-down;
+	color: $sc-theme-header-link-color;
+	padding-left: 7px;
+}
+
+.header-profile-welcome-name-wrapper-mobile {
+	display: block;
+	@media (min-width: $screen-md-min) {
+		display: none;
+	}
+}
+
+.header-profile-menu-myaccount-container {
+	@extend .header-menu-level-container;
+	width: auto;
+	right: 0;
+}
+
+.header-profile-list-item.open ~ .header-profile-menu-myaccount-container {
+	display: block;
+	.header-profile-menu-myaccount {
+		@extend .header-menu-level-categories;
+		padding-top: $sc-base-padding*2;
+		&:after { // arrow pointing to link in menu
+			position: absolute;
+			top: -5px;
+			right: -595px;
+			margin-left: -6.5px;
+			border-right: 6px solid transparent;
+			border-bottom: 6px solid $sc-color-tertiary;
+			border-left: 6px solid transparent;
+			content: '';
+			z-index: 9999;
+			display: none;
+
+			@media (min-width: $screen-lg-min) {
+				display: block;
+			}
+		}
+	}
+}
+
+
+//////////////////////////////////////////////////////////
+
+.header-profile-loading-icon{
+	@extend .icon-cog;
+}

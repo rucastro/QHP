@@ -1,0 +1,16 @@
+1.0.0
+- Initial Release (Denali)
+
+1.0.1
+- Updated forgot password link.
+
+1.0.2
+- Vinson Release
+- Fixes undefined Configuration.publish
+
+1.0.3
+- Elbrus Release
+- eslint fix
+
+1.0.4
+- Update distro dependencies

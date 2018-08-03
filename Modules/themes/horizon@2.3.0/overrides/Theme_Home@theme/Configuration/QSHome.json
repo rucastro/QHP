@@ -1,0 +1,179 @@
+{
+	"type": "object",
+	"subtab": {
+        "id": "home",
+        "title": "Home",
+        "description": "Home",
+        "group": "layout"
+    },
+	"properties": {
+	    "home.hero": {
+	      "group": "layout"
+	    , "subtab": "home"
+	    , "type": "array"
+	    , "title": "Hero banner"
+	    , "description": "Hero banner, plus overlaid text and link to click through to."
+	    , "items": {
+	        "type": "object"
+	      , "properties": {
+	          "title": {
+	            "type": "string"
+	          , "title": "Title"
+	          },
+	          "text": {
+	            "type": "string"
+	          , "title": "Text"
+	          },
+	          "image": {
+	            "type": "string",
+	            "title": "Image Url"
+	          },
+	          "linktext": {
+	            "type": "string"
+	          , "title": "Link Text"
+	          },
+	          "href": {
+	            "type": "string"
+	          , "title": "Link Location"
+	          }
+	        }
+	      },
+	      "default": [
+	        {
+	          "title": "Winter is coming"
+	        , "text": ""
+	        , "image": "img/horizon-hero.jpg"
+	        , "linktext" : "Shop Now"
+	        , "href": "#"
+	        }
+	      ]
+	    },
+		"home.infoblock": {
+	      "group": "layout"
+	    , "subtab": "home"
+	    , "type": "array"
+	    , "title": "Infoblocks"
+	    , "description": "Infoblock banners that link through to specified areas. Will accept any number of lines but the first two will span 50% of the viewport on larger screens and subsequent banners will span the entire width."
+	    , "items": {
+	        "type": "object"
+	      , "properties": {
+	          "title": {
+	            "type": "string"
+	          , "title": "Title"
+	          },
+	          "text": {
+	            "type": "string"
+	          , "title": "Text"
+	          },
+	          "image": {
+	            "type": "string"
+	          , "title": "Image URL"
+	          },
+	          "color": {
+	            "type": "string"
+	          , "title": "Background Color"
+	          },
+	          "linktext": {
+	            "type": "string"
+	          , "title": "Link Text"
+	          },
+	          "href": {
+	            "type": "string"
+	          , "title": "Link Location"
+	          }
+	        }
+	      },
+	      "default": [
+	        {
+	          "title": "New Arrivals"
+	        , "text": ""
+	        , "image": "img/horizon-infoblock1.jpg"
+	        , "color": "#a3b9ce"
+	        , "linktext": "Shop Now"
+	        , "href": "#"
+	        },
+	        {
+	          "title": "New in Women's Outerwear"
+	        , "text": ""
+	        , "image": "img/horizon-infoblock2.jpg"
+	        , "color": "#a3b9ce"
+	        , "linktext": "Shop Now"
+	        , "href": "#"
+	        },
+	        {
+	          "title": "Camp Kitchen"
+	        , "text": ""
+	        , "image": "img/horizon-infoblock3.jpg"
+	        , "color": "#a3b9ce"
+	        , "linktext": "Shop Now"
+	        , "href": "#"
+	        }
+	      ]
+	    },
+	    "home.carouselImages": {
+	      "group": "layout"
+		, "subtab": "home"
+	    , "type": "array"
+	    , "title": "Carousel images"
+		, "docRef": "bridgehead_4666978268"
+	    , "description": "Carousel image Urls, plus overlaid text and link to click through to."
+	    , "items": {
+	        "type": "object"
+	      , "properties": {
+	          "title": {
+	            "type": "string"
+	          ,	"title": "Title"
+	          },
+	          "text": {
+	            "type": "string"
+	          ,	"title": "Text"
+	          },
+	          "image": {
+	            "type": "string"
+	          ,  "title": "Image Url"
+	          },
+	          "linktext": {
+	            "type": "string"
+	          ,	"title": "Link Text"
+	          },
+	          "href": {
+	            "type": "string"
+	          ,	"title": "Link Location"
+	          }
+	        }
+	      },
+	      "default": [
+	        {
+	          "title": "20% off all goggles"
+	        , "text": ""
+	        , "image": "img/horizon-carousel-home-1.jpg"
+	        , "linktext": "Shop Now"
+	        , "href": "#"
+	        },
+	        {
+	          "title": "Winter Lookbook"
+	        , "text": ""
+	        , "image": "img/horizon-carousel-home-2.jpg"
+	        , "linktext" : "View Now"
+	        , "href": "#"
+	        },
+	        {
+	          "title": "20% off select tents"
+	        , "text": ""
+	        , "image": "img/horizon-carousel-home-3.jpg"
+	        , "linktext": "Shop Now"
+	        , "href": "#"
+	        }
+	      ]
+	    },
+	    "home.announcement": {
+	      "group": "layout"
+	    , "subtab": "home"
+	    , "type": "string"
+	    , "translate": true
+	    , "title": "Announcement"
+	    , "description": "Short piece of plain text."
+	    , "default": "UPGRADE FROM FREE 2-DAY TO NEXT-DAY SHIPPING WHEN YOU SPEND $25"
+	    }
+	}
+}

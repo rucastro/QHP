@@ -1,0 +1,36 @@
+{
+    "type": "object",
+    "group": {
+        "id": "localizationPatch",
+        "title": "Localization Patches",
+        "description": "Configuration for localization patches. See Confluence documentation for more details. https://confluence.corp.netsuite.com/display/SUIT/Localization+for+AUS+and+UK."
+    },
+    "properties": {
+        "localizationPatch.locale": {
+            "type": "string",
+            "group": "localizationPatch",
+            "title": "Select Locale",
+            "description": "Select the locale to use.",
+            "enum": [
+                "-- Select --",
+                "enGB",
+                "enAU"
+            ],
+            "multiselect": false
+        },
+        "localizationPatch.hideTaxLine": {
+            "type": "boolean",
+            "group": "localizationPatch",
+            "title": "Hide tax line in summaries",
+            "description": "Hide tax line in summaries",
+            "default": true
+        },
+        "localizationPatch.hideHandlingLine": {
+            "type": "boolean",
+            "group": "localizationPatch",
+            "title": "Hide handling line in summaries",
+            "description": "Hide handling line in summaries",
+            "default": true
+        }
+    }
+}

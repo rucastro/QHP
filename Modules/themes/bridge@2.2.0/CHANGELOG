@@ -1,0 +1,24 @@
+1.0.0
+- Initial Release
+
+2.0.0
+- Elbrus Release
+
+2.0.1
+- Spacing improvements on merchandising zones
+- Centre the titles on the CMS home page zones - undoing a recent blanket change to left align CMS text which changed the home page to no longer match the design
+- Fix the checkout breadcrumb which isn't usually shown so issues not noticed until we've added the Lead Form to replace the Register link (when setup)
+- Override fixes
+- fix issue: Not updating of carousel images names including the header logo when a theme is used on first deploy
+
+2.1.0
+- Add data touchpoint and hashtag to footer links and social media links
+
+2.1.1
+- Add data target to footer links and social media links
+- Correct Quick Order mobile view icon
+
+2.2.0
+- Re-designed header
+- New feature including config to fix header to top of screen on scroll
+- Updates for CustomerSegments compatibility

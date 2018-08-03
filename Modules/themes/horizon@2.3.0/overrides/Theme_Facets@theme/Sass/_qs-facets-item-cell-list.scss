@@ -1,0 +1,137 @@
+/*
+	© 2017 NetSuite Inc.
+	User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
+	provided, however, if you are an authorized user with a NetSuite account or log-in, you
+	may use this code subject to the terms that govern your access and use.
+*/
+
+.facets-item-cell-list {
+	@extend .row;
+	@extend .item-cell;
+}
+
+.facets-item-cell-list-quick-view-wrapper {
+	@extend .item-cell-quick-view-wrapper;
+}
+
+.facets-item-cell-list-quick-view-link {
+	@extend .item-cell-quick-view-link;
+}
+
+.facets-item-cell-list-left {
+	@extend .col-xs-5;
+	@extend .col-sm-3;
+	@extend .col-md-3;
+}
+
+.facets-item-cell-list-right {
+	@extend .col-xs-7;
+	@extend .col-sm-4;
+	@extend .col-md-3;
+
+	.item-views-price {
+		text-align:left;
+	}
+
+	.cart-add-to-cart-button-container {
+		padding-left: 0;
+		padding-right: 0;
+		width: 100%;
+		float: none;
+		@media (min-width: $screen-md-min) {
+			width: 50%;
+		}
+	}
+}
+
+.facets-item-cell-list-image-wrapper {
+	position:relative;
+	text-align:center;
+}
+
+.facets-item-cell-list-anchor {}
+
+.facets-item-cell-list-quick-view-icon {}
+
+.facets-item-cell-list-name {}
+
+.facets-item-cell-list-add-to-cart {}
+
+.facets-item-cell-list-add-to-cart-itemid {}
+
+.facets-item-cell-list-add-to-cart-quantity {
+	@extend .input-medium;
+
+	width: 100%;
+	min-width: 0;
+	outline: none;
+	color: $sc-theme-color;
+	background-color: $sc-color-theme-background-light;
+	border: 1px solid $sc-color-theme-background-light;
+
+	@media (min-width: 1464px) {
+		width: 200px;
+		display: inline-block;
+		margin-right: $sc-base-margin;
+	}
+}
+
+.facets-item-cell-list-add-to-cart-button {
+	@extend .button-primary;
+	@extend .button-medium;
+
+	@media (max-width: 1464px) {
+		width: 100%;
+	}
+}
+
+.facets-item-cell-list-stock {}
+
+.facets-item-cell-list-details {
+	@extend .col-xs-12;
+	@extend .col-sm-5;
+	@extend .col-md-6;
+	text-align: left;
+
+	@media (min-width: $screen-md) {
+		padding-right: $sc-base-padding*11;
+	}
+
+	@media (max-width: $screen-sm) {
+		display: none;
+	}
+}
+
+.facets-item-cell-list-image {
+	width:100%;
+	height:auto;
+}
+
+.facets-item-cell-list-title {
+	@extend .item-cell-title;
+	text-align:left;
+}
+
+.facets-item-cell-list-price {
+	@extend .small-price;
+	margin-bottom:$sc-small-margin;
+}
+
+.facets-item-cell-list-rating {
+	text-align:center;
+	display: inline-block;
+}
+
+.facets-item-cell-list .item-details-option-color-tiles-container {
+	@extend .color-picker-sm;
+}
+
+.facets-item-cell-list .item-details-option-color-label {
+	display:none;
+}
+
+.facets-item-cell-list {
+	.global-views-star-rating-area {
+		margin-bottom:$sc-small-margin;
+	}
+}

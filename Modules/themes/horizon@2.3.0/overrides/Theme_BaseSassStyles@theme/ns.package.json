@@ -1,0 +1,24 @@
+{
+    "gulp": {
+        "sass": [
+            "Sass/**/*.scss"
+        ]
+    },
+    "overrides": {
+        "suitecommerce/BaseSassStyles@2.0.0/Sass/_main-variables.scss": "Sass/_qs-main-variables.scss",
+        "suitecommerce/BaseSassStyles@2.0.0/Sass/atoms/_typography.scss": "Sass/atoms/_qs-typography.scss",
+        "suitecommerce/BaseSassStyles@2.0.0/Sass/atoms/_buttons.scss": "Sass/atoms/_qs-buttons.scss",
+        "suitecommerce/BaseSassStyles@2.0.0/Sass/atoms/_spacing.scss": "Sass/atoms/_qs-spacing.scss",
+        "suitecommerce/BaseSassStyles@2.0.0/Sass/atoms/_icons.scss": "Sass/atoms/_qs-icons.scss",
+        "suitecommerce/BaseSassStyles@2.0.0/Sass/variables/_colors.scss": "Sass/variables/_qs-colors.scss",
+        "suitecommerce/BaseSassStyles@2.0.0/Sass/variables/_sizing.scss": "Sass/variables/_qs-sizing.scss",
+        "suitecommerce/BaseSassStyles@2.0.0/Sass/variables/_typography.scss": "Sass/variables/_qs-typography.scss",
+        "suitecommerce/BaseSassStyles@2.0.0/Sass/variables/_variables.scss": "Sass/variables/_qs-theme.scss",
+        "suitecommerce/BaseSassStyles@2.0.0/Sass/molecules/_search.scss": "Sass/molecules/_qs-search.scss",
+        "suitecommerce/BaseSassStyles@2.0.0/Sass/molecules/_breadcrumb.scss": "Sass/molecules/_qs-breadcrumb.scss",
+        "suitecommerce/BaseSassStyles@2.0.0/Sass/molecules/_item-cells.scss": "Sass/molecules/_qs-item-cells.scss",
+        "suitecommerce/BaseSassStyles@2.0.0/Sass/molecules/_accordions.scss": "Sass/molecules/_qs_accordions.scss",
+        "suitecommerce/BaseSassStyles@2.0.0/Sass/molecules/_expands.scss": "Sass/molecules/_qs-expands.scss",
+        "suitecommerce/BaseSassStyles@2.0.0/Sass/molecules/_information_cards.scss": "Sass/molecules/_qs-information_cards.scss"
+    }
+}

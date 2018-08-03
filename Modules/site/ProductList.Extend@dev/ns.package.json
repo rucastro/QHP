@@ -1,0 +1,16 @@
+{
+  "gulp": {
+    "javascript": [
+      "JavaScript/*.js"
+    ],
+    "templates": [
+      "Templates/*.tpl"
+    ]
+  },
+  "overrides": {
+    "suitecommerce/ProductList@3.0.0/Templates/product_list_lists.tpl": "Templates/product_list_lists.tpl",
+    "suitecommerce/ProductList@3.0.0/Templates/product_list_control_single.tpl": "Templates/product_list_control_single.tpl",
+    "suitecommerce/ProductList@3.0.0/Templates/product_list_control.tpl": "Templates/product_list_control.tpl",
+    "suitecommerce/ProductList@3.0.0/JavaScript/ProductList.Utils.js": "JavaScript/ProductList.Utils.Extend.js"
+  }
+}

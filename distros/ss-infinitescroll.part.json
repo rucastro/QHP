@@ -1,0 +1,40 @@
+{
+  "id": "ss-infinitescroll",
+  "name": "InfiniteScroll",
+  "dependencies": [
+    "elbrus-base",
+    "ss-generalconfig"
+  ],
+  "folders": {
+    "modules": "Modules",
+    "distribution": "bin/LocalDistribution",
+    "deploy": "bin/DeployDistribution",
+    "release": "bin/ReleaseDistribution"
+  },
+  "modules": {
+    "efficiencies/InfiniteScroll": "1.2.3"
+  },
+  "tasksConfig": {
+    "javascript": [
+      {
+        "entryPoint": "SC.Shopping.Starter",
+        "dependencies": [
+          "Facets.Browse.View.InfiniteScroll"
+        ]
+      }
+    ],
+    "ssp-libraries": {
+      "dependencies": []
+    },
+    "sass": {
+      "applications": [
+        {
+          "name": "Shopping",
+          "dependencies": [
+            "InfiniteScroll"
+          ]
+        }
+      ]
+    }
+  }
+}

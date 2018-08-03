@@ -1,0 +1,166 @@
+{
+    "type": "object",
+    "subtab": {
+        "id": "home",
+        "title": "Home",
+        "description": "Home",
+        "group": "layout"
+    },
+    "properties": {
+        "home.carouselBgrImg": {
+            "group": "layout",
+            "subtab": "home",
+            "type": "string",
+            "title": "Carousel Text Background",
+            "description": "Enter the URL location of the background image that sits underneath the text and button but overlaid on top of the main carousel image (optional).",
+            "default": "img/carousel_background.png"
+        },
+        "home.carouselImages": {
+            "group": "layout",
+            "subtab": "home",
+            "type": "array",
+            "docRef": "bridgehead_4666978268",
+            "title": "Carousel images",
+            "description": "Carousel image Urls, plus overlaid text and link to click through to.",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "title": {
+                        "type": "string",
+                        "title": "Title"
+                    },
+                    "text": {
+                        "type": "string",
+                        "title": "Text"
+                    },
+                    "image": {
+                        "type": "string",
+                        "title": "Image Url"
+                    },
+                    "linktext": {
+                        "type": "string",
+                        "title": "Link Text"
+                    },
+                    "href": {
+                        "type": "string",
+                        "title": "Link Location"
+                    }
+                }
+            },
+            "default": [{
+                    "title": "Clearance",
+                    "text": "up to 40% off on select items",
+                    "image": "img/summit-carousel-home-1.jpg",
+                    "linktext": "Shop Now",
+                    "href": "#"
+                },
+                {
+                    "title": "Preserves",
+                    "text": "Making Jams, Curds and Bottled Fruits",
+                    "image": "img/summit-carousel-home-2.jpg",
+                    "linktext": "Find Out How",
+                    "href": "#"
+                },
+                {
+                    "title": "Trick-or-Treat!",
+                    "text": "Fun Halloween Cookie Cutting Set",
+                    "image": "img/summit-carousel-home-3.jpg",
+                    "linktext": "More",
+                    "href": "#"
+                }
+            ]
+        },
+        "home.infoblock": {
+            "group": "layout",
+            "subtab": "home",
+            "type": "array",
+            "title": "Infoblocks",
+            "description": "Infoblock banners that link through to specified areas. Will accept any number of lines but the section was designed for 5 blocks with the fifth being a larger size.",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "title": {
+                        "type": "string",
+                        "title": "Title"
+                    },
+                    "text": {
+                        "type": "string",
+                        "title": "Text"
+                    },
+                    "image": {
+                        "type": "string",
+                        "title": "Background Image URL"
+                    },
+                    "color": {
+                        "type": "string",
+                        "title": "Background Color"
+                    },
+                    "href": {
+                        "type": "string",
+                        "title": "Link Location"
+                    }
+                }
+            },
+            "default": [{
+                    "title": "Shop Food",
+                    "text": "",
+                    "image": "img/infoblock1.jpg",
+                    "color": "#a3b9ce",
+                    "href": "#"
+                },
+                {
+                    "title": "Shop Outdoor",
+                    "text": "",
+                    "image": "img/infoblock2.jpg",
+                    "color": "#789bb0",
+                    "href": "#"
+                }
+            ]
+        },
+        "home.freeTextTitle": {
+            "group": "layout",
+            "subtab": "home",
+            "type": "string",
+            "translate": true,
+            "title": "Free Text Title",
+            "description": "Title for free text section.",
+            "default": "Baking Tools & Accessories"
+        },
+        "home.freeText": {
+            "group": "layout",
+            "subtab": "home",
+            "type": "string",
+            "translate": true,
+            "nsType": "textarea",
+            "title": "Free Text",
+            "description": "Can accept HTML tags.",
+            "default": "<p>We’ve got all your baking equipment sorted so you can easily perfect your signature bake from start to finish. Avoid lumpy mixture with our great quality range of blenders, food mixers and processors. Watch your creations rise to the occasion in our top quality cake tins and cases and add the finishing touches with our huge range of cake decorating equipment.<br/>If there are any leftovers, don’t forget to take a look at our storage section too! If preserves are more your thing, get stuck into making your own with all the essentials for the job. We’ve got Kilner jars, jam pans, starter kits and gorgeous labels to turn your creation into the perfect gift.</p>"
+        },
+        "home.freeTextImages": {
+            "group": "layout",
+            "subtab": "home",
+            "type": "array",
+            "title": "Free Text Images",
+            "description": "Images to display with the free text.",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "image": {
+                        "type": "string",
+                        "title": "Image",
+                        "description": ""
+                    },
+                    "href": {
+                        "type": "string",
+                        "title": "URL",
+                        "description": ""
+                    }
+                }
+            },
+            "default": [{
+                "image": "img/pastries.jpg",
+                "href": "#"
+            }]
+        }
+    }
+}

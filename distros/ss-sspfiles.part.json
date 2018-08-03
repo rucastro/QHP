@@ -1,0 +1,14 @@
+{
+    "id": "ss-sspfiles",
+    "name": "SuiteSolution - EFCore",
+    "folders": {
+        "modules": "Modules",
+        "distribution": "bin/LocalDistribution",
+        "deploy": "bin/DeployDistribution",
+        "release": "bin/ReleaseDistribution"
+    },
+    "dependencies": [],
+    "modules": {
+        "efficiencies/SSPFiles": "4.0.2"
+    }
+}

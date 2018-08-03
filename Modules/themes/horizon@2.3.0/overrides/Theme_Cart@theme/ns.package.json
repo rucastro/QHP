@@ -1,0 +1,17 @@
+{
+    "gulp": {
+        "sass": [
+            "Sass/**/*.scss"
+        ],
+        "templates": [
+            "Templates/*"
+        ]
+    },
+    "overrides": {
+        "suitecommerce/Cart@4.0.0/Templates/cart_summary.tpl": "Templates/qs_cart_summary.tpl",
+        "suitecommerce/Cart@4.0.0/Sass/_cart-add-to-cart-button.scss": "Sass/_qs-cart-add-to-cart-button.scss",
+        "suitecommerce/Cart@4.0.0/Sass/_cart-detailed.scss": "Sass/_qs-cart-detailed.scss",
+        "suitecommerce/Cart@4.0.0/Sass/_cart.scss": "Sass/_qs-cart.scss",
+        "suitecommerce/Cart@4.0.0/Sass/_cart-summary.scss": "Sass/_qs-cart-summary.scss"
+    }
+}

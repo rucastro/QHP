@@ -1,0 +1,81 @@
+/*
+    © 2015 NetSuite Inc.
+    User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
+    provided, however, if you are an authorized user with a NetSuite account or log-in, you
+    may use this code subject to the terms that govern your access and use.
+*/
+
+.item-details-size-chart-link {
+    @media (max-width: $screen-sm-min) {
+        margin-top: $sc-medium-margin;
+        display: block;
+    }
+}
+
+.size-chart {
+    @extend .container-fluid;
+    h2 {
+        margin-bottom: $sc-small-margin;
+    }
+    h4, h5 {
+        margin: $sc-small-margin 0 $sc-base-margin 0;
+    }
+    p {
+        line-height: 1.2;
+    }
+    button:focus {
+        outline: 0;
+    }
+}
+
+.size-chart-content {
+    @extend .row;
+}
+
+.size-chart-text {
+    @extend .col-md-9;
+    margin-bottom: $sc-medium-margin;
+}
+
+.size-chart-image {
+    @extend .col-md-3;
+    margin-bottom: $sc-medium-margin;
+    img {
+        @extend .center-block;
+    }
+}
+
+.size-chart-show-unit-buttons {
+    margin: $sc-small-margin 0;
+}
+
+.size-chart-unit-button {
+    @extend .button-secondary;
+    @extend .button-small;
+}
+
+.size-chart-unit-button-active {
+    @extend .button-tertiary;
+    @extend .button-small;
+    &:hover {
+        background-color: $sc-color-tertiary !important;
+        color: $sc-color-secondary !important;
+    }
+}
+
+.size-chart-table-responsive, /* needed for legacy */
+.size-chart-table-wrapper {
+    @extend .table-responsive;
+}
+
+.size-chart-table {
+    @extend .table;
+    @extend .table-striped;
+    & > tbody > tr:hover {
+        color: #FFFFFF;
+        background-color: $sc-color-secondary;
+    }
+    & thead {
+        text-transform: uppercase;
+    }
+}

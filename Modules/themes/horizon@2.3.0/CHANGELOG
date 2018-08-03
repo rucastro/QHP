@@ -1,0 +1,49 @@
+1.0.0
+- Initial Release
+
+1.0.1
+- CustomJS@theme: added new KEY : VALUE pair in tab object to display thumbnail images in navigation
+- CustomStyle@theme: Added .product-detail-to-quote-add-to-quote styles for PDP
+- ThemeFooter@theme: Fix spacing issues on mobile for checkout and myaccount
+- ThemeHeader@theme: Uppercase logo
+- ThemeHome@theme:
+    Update merchandising zone to match other product sliders
+    Change infoblocks to use background image and improve code
+    Fix infoblocks height issue with Firefox
+    Change Carousel text for mobile view to sit under image
+    Renamed images to generic naming
+    Replace video with flat image
+- Theme_MyAccountApplication@theme: Styling tidy up
+
+
+2.0.0
+- Elbrus Release
+
+2.0.1
+- Spacing improvements on merchandising zones
+- Centre the titles on the CMS home page zones - undoing a recent blanket change to left align CMS text which changed the home page to no longer match the design
+- Fix the checkout breadcrumb which isn't usually shown so issues not noticed until we've added the Lead Form to replace the Register link (when setup)
+- Override fixes
+- fix issue: Not updating of carousel images names including the header logo when a theme is used on first deploy
+
+2.1.0
+- Add data touchpoint and hashtag to footer links and social media links
+- Wrong link to store locator
+
+2.1.1
+- Add data target to footer links and social media links
+- Extra variables to tweak level 2 category dropdown
+- Search bar button size fix
+- Minicart hover color update, arrow color fix
+- No facets on PLP overlapping issue fixed
+- Padding updated on facets with new variable for altering
+- Header and reviews overlapping fix
+- PDP tabs alignment fix
+- Safari subcategory dropdown fix
+
+2.2.0
+- New feature including config to fix header to top of screen on scroll
+- Updates for CustomerSegments compatibility
+
+2.3.0
+- New module to fix search results dropdown accessibility when fixed header is enabled

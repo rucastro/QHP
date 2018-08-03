@@ -1,0 +1,60 @@
+{
+  "id": "ss-contactus",
+  "name": "Contact Us",
+  "dependencies": ["elbrus-base", "ss-generalconfig"],
+  "folders": {
+    "modules": "Modules",
+    "distribution": "bin/LocalDistribution",
+    "deploy": "bin/DeployDistribution",
+    "release": "bin/ReleaseDistribution"
+  },
+  "modules": {
+    "efficiencies/ContactUs": "1.6.1"
+  },
+  "tasksConfig": {
+    "javascript": [
+      {
+        "entryPoint": "SC.Shopping.Starter",
+        "dependencies": [
+          "ContactUs"
+        ]
+      },
+      {
+        "entryPoint": "SC.MyAccount.Starter",
+        "dependencies": []
+      },
+      {
+        "entryPoint": "SC.Checkout.Starter",
+        "dependencies": [
+          "ContactUs"
+        ]
+      }
+    ],
+    "ssp-libraries": {
+      "dependencies": [
+        "ContactUs.Model",
+        "ContactUs.ServiceController"
+      ]
+    },
+    "sass": {
+      "applications": [
+        {
+          "name": "Shopping",
+          "dependencies": [
+            "ContactUs"
+          ]
+        },
+        {
+          "name": "MyAccount",
+          "dependencies": []
+        },
+        {
+          "name": "Checkout",
+          "dependencies": [
+            "ContactUs"
+          ]
+        }
+      ]
+    }
+  }
+}

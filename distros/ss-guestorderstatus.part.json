@@ -1,0 +1,83 @@
+{
+  "id": "ss-guestorderstatus",
+  "name": "GuestOrderStatus",
+  "dependencies": ["elbrus-base", "ss-efcore"],
+  "folders": {
+    "modules": "Modules",
+    "distribution": "bin/LocalDistribution",
+    "deploy": "bin/DeployDistribution",
+    "release": "bin/ReleaseDistribution"
+  },
+  "modules": {
+    "efficiencies/GuestOrderStatus": "1.3.1",
+    "efficiencies/OrderStatusSummary": "1.0.2"
+  },
+  "tasksConfig": {
+    "javascript": [
+      {
+        "entryPoint": "SC.Shopping.Starter",
+        "dependencies": [
+          "GuestOrderStatus"
+        ]
+      }
+    ],
+    "ssp-libraries": {
+      "dependencies": [
+        "GuestOrderStatus.EntryPoint"
+      ]
+    },
+    "sass": {
+      "applications": [
+        {
+          "name": "Shopping",
+          "dependencies": [
+            "GuestOrderStatus"
+          ]
+        }
+      ]
+    },
+    "backend-suitescript": {
+      "amdConfig": {
+        "paths": {
+          "Backbone.Validation": "backbone-validation.server.custom"
+        },
+        "shim": {
+          "Backbone.Validation": {
+            "exports": "Backbone.Validation"
+          }
+        },
+        "findNestedDependencies": true,
+        "map": {
+          "GuestOrderStatus.Model": {
+            "Application": "Application.Backend",
+            "SC.Models.Init": "SC.Models.Init.Backend"
+          },
+          "OrderStatusSummary.Model": {
+            "Application": "Application.Backend",
+            "SC.Models.Init": "SC.Models.Init.Backend"
+          },
+          "EF - GOS - SL - Guest Order Status Service": {
+            "Application": "Application.Backend",
+            "SC.Models.Init": "SC.Models.Init.Backend"
+          },
+          "SC.EventWrapper": {
+            "Application": "Application.Backend",
+            "SC.Models.Init": "SC.Models.Init.Backend"
+          },
+          "ServiceController.Validations": {
+            "Application": "Application.Backend",
+            "SC.Models.Init": "SC.Models.Init.Backend"
+          },
+          "ServiceController": {
+            "Application": "Application.Backend",
+            "SC.Models.Init": "SC.Models.Init.Backend"
+          },
+          "Utils": {
+            "Application": "Application.Backend",
+            "SC.Models.Init": "SC.Models.Init.Backend"
+          }
+        }
+      }
+    }
+  }
+}

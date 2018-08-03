@@ -1,0 +1,29 @@
+/*
+	© 2017 NetSuite Inc.
+	User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
+	provided, however, if you are an authorized user with a NetSuite account or log-in, you
+	may use this code subject to the terms that govern your access and use.
+*/
+
+.cart-add-to-cart-button-button{
+	@extend .button-primary;
+    padding: 0 $sc-base-padding * 2;
+    line-height: $sc-target-size-mobile - 2px;
+
+    @media (min-width: $screen-md-min) {
+        min-width: 160px;
+        margin-top: $sc-base-margin * 3;
+    }
+
+    @media (min-width: $screen-lg-min) {
+        width: 100%;
+    }
+}
+
+.cart-add-to-cart-button {
+	position: static;
+}
+
+.cart-add-to-cart-button-container {
+	@extend .col-sm-6;
+}

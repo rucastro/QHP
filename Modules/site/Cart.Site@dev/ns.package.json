@@ -1,0 +1,10 @@
+{
+    "gulp": {
+        "templates": [
+            "Templates/*.tpl"
+        ]
+    },
+    "overrides": {
+        "suitecommerce/Cart@4.0.0/Templates/cart_summary.tpl": "Templates/cart_summary.tpl"
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "gulp": {
+        "sass": [
+            "Sass/*.scss"
+        ],
+        "templates": [
+            "Templates/*"
+        ]
+    },
+    "overrides": {
+        "suitecommerce/OrderWizard@3.0.0/Templates/order_wizard_step.tpl": "Templates/qs_order_wizard_step.tpl",
+        "suitecommerce/OrderWizard@3.0.0/Sass/_order-wizard-step.scss": "Sass/_qs-order-wizard-step.scss"
+    }
+}

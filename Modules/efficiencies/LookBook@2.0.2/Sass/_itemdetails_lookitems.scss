@@ -1,0 +1,47 @@
+/*
+    © 2015 NetSuite Inc.
+    User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
+    provided, however, if you are an authorized user with a NetSuite account or log-in, you
+    may use this code subject to the terms that govern your access and use.
+*/
+
+.itemdetails-lookitems-container {
+  position: relative;
+}
+
+.itemdetails-lookitems-header {
+  padding-top: $sc-medium-margin;
+  padding-bottom: $sc-medium-margin;
+}
+
+.itemdetails-lookitems-row {
+  @extend .container-fluid;
+}
+
+.itemdetails-lookitems-cell {
+  text-align: center;
+  & .look-item {
+    padding: 0 10px;
+  }
+}
+
+// carousel/slider
+
+.itemdetails-lookitems-prev-icon {
+  @extend .product-details-full-carousel-prev;
+}
+
+.itemdetails-lookitems-next-icon {
+  @extend .product-details-full-carousel-next;
+}
+
+// start bx-slider specifics
+
+.itemdetails-lookitems-row {
+  & .bx-wrapper,
+  & .bx-viewport {
+    min-height: 320px !important;
+  }
+}
+
+// end bx-slider specifics

@@ -1,0 +1,119 @@
+/* Item Views */
+.item-views-cell-navigable-item-amount-value {
+    font-size: 14px;
+}
+
+.product-line-sku-container {
+    margin: 10px 0;
+}
+
+/* Product Views Option Tile */
+.product-views-option-tile {
+    margin: $sc-base-margin * 4 0;
+}
+
+.product-views-option-tile-label {
+    @extend h4;
+    font-weight: $sc-font-weight-light;
+    margin-bottom: $sc-base-margin;
+
+    span {
+        font-weight: $sc-font-weight-light;
+    }
+}
+
+.product-views-option-tile-picker {
+    margin-bottom: $sc-base-margin * 2;
+}
+
+/* Stock */
+.product-line-stock-msg-out {
+    margin: 0;
+    padding: 0;
+}
+
+/* RELATED ITEMS */
+/* RECENTLY VIEWED */
+.item-relations-related,
+.recently-viewed-items {
+    & h3 {
+        @extend h1;
+        margin-bottom: $sc-medium-margin;
+        // margin-left: 53px; Indent to coincide with Staff Picks position in design
+    }
+}
+
+/*
+MERCHANDISING ZONE ITEM
+Rewrites the classes in the suitecommerce/Merchandising module:
+_merchandising-zone-cell-templates.scss
+*/
+.merchandising-zone-container,
+.item-relations-related-row,
+.recently-viewed-items {
+    & .bx-wrapper {
+        max-width: 968px; // this overrides the value added in the inline css
+    }
+}
+
+.merchandising-zone-cell-template,
+.item-relations-cell,
+.recently-viewed-cell-item {
+    /* slideWidth: 228 in SC.Configuration.js
+    doesn't seem to be configurable in the ERP backend */
+    width: 242px !important; // this is meant to override the value in SC.Config and must have !important
+    &:hover .item-relations-related-item-thumbnail {
+        background-color: $sc-theme-color-lightest;
+    }
+    &:hover .item-relations-related-item-text {
+        background-color: $sc-theme-color-lightest;
+        border-bottom: 4px solid $sc-theme-color-link;
+    }
+
+    .item-relations-related-item-text {
+        width: 210px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: $sc-base-padding*4 $sc-base-padding $sc-base-padding*2;
+        border-bottom: 4px solid transparent;
+    }
+    .product-views-price-lead {
+        text-align: left;
+        color: $sc-theme-color-copy !important;
+        font-size: 16px !important;
+        font-family: $sc-theme-primary-font;
+        font-weight: $sc-font-weight-normal;
+    }
+    .product-views-price {
+        text-align: left !important;
+    }
+    .item-relations-related-item-rate {
+        width: 92px;
+        margin: 0 !important;
+        text-align: left !important;
+        display: flex !important;
+    }
+    .item-relations-related-item-thumbnail {
+        display: inline;
+        min-height: $sc-theme-cell-img-height !important;
+        & img {
+            height: $sc-theme-cell-img-height !important;
+            width: $sc-theme-cell-img-width !important;
+        }
+    }
+    .item-relations-related-item-title {
+        text-align: left !important;
+        color: $sc-theme-color-link;
+        font-size: 16px;
+        &:hover {
+            color: $sc-theme-color-link-hover;
+            text-decoration: underline;
+        }
+    }
+    .global-views-star-rating {
+        // remove center alignment
+        margin: 0 !important;
+        display: block !important;
+    }
+
+}

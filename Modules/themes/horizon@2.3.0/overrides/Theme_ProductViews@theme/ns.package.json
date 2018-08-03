@@ -1,0 +1,15 @@
+{
+    "gulp": {
+        "templates": [
+            "Templates/*"
+        ],
+        "sass": [
+            "Sass/*.scss"
+        ]
+    },
+    "overrides": {
+        "suitecommerce/ProductViews@1.0.0/Templates/product_views_option_dropdown.tpl": "Templates/qs_product_views_option_dropdown.tpl",
+        "suitecommerce/ProductViews@1.0.0/Templates/product_views_price.tpl": "Templates/qs_product_views_price.tpl",
+        "suitecommerce/ProductViews@1.0.0/Sass/_product-views-price.scss": "Sass/_qs-product-views-price.scss"
+    }
+}

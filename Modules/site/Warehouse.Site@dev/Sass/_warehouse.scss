@@ -1,0 +1,118 @@
+
+/**
+Temporary Hide Delivery Method and Items on the right
+**/
+
+.order-wizard-shipmethod-module {
+  display: none;
+}
+
+.order-wizard-showshipments-module-shipping-details-method {
+  display: none;
+}
+
+
+
+.order-wizard-warehouse-module {
+@extend .order-wizard-shipmethod-module;
+
+  display: block !important;
+}
+
+.order-wizard-warehouse-module-parent {
+@extend .order-wizard-shipmethod-module;
+
+  display: block !important;
+}
+
+.order-wizard-warehouse-title {
+@extend .order-wizard-shipmethod-module-title;
+}
+
+.order-wizard-warehouse-module-message {
+@extend .order-wizard-shipmethod-module-message;
+
+width: 100%;
+margin-bottom: 20px;
+font-size: 16px;
+}
+
+.order-wizard-warehouse-header {
+background: #fff;
+padding: 5px;
+padding-left: 20px;
+padding-top: 15px;
+}
+
+.order-wizard-warehouse-header h3 {
+float: left;
+width: 50%;
+padding-top: 5px;
+color: #66625A;
+}
+
+.order-wizard-warehouse-header-delivery-method {
+@extend .order-wizard-paymentmethod-selector-module-options;
+}
+
+.order-wizard-warehouse-body {
+margin-top: 20px;
+background: #fff;
+min-height: 300px;
+}
+
+.order-wizard-warehouse-body .transaction-line-views-cell-navigable-item-quantity-label,
+.order-wizard-warehouse-body .transaction-line-views-cell-navigable-item-unit-price-label,
+.order-wizard-warehouse-body .transaction-line-views-cell-navigable-item-amount-label {
+  display: inline-block;
+}
+
+.order-wizard-warehouse-header-delivery-method {
+width: 300px;
+}
+
+
+.transaction-line-views-cell-navigable-details .warehouse-transaction-line-views-cell-navigable-item-unit-price-label {
+  @extend .transaction-line-views-cell-navigable-item-unit-price-label;
+
+  display: inline-block;
+}
+
+.warehouse-transaction-line-views-cell-navigable-item-reason-value,
+.warehouse-transaction-line-views-cell-navigable-item-quantity-value,
+.warehouse-transaction-line-views-cell-navigable-item-ship-option {
+  @extend .column-type-quantity;
+
+  display: inline-block;
+}
+
+.warehouse-transaction-line-views-cell-navigable-item-quantity-label {
+  @extend .transaction-line-views-cell-navigable-item-quantity-label;
+
+  display: inline-block;
+}
+
+
+.warehouse-transaction-line-views-cell-navigable-item-ship-option {
+  margin-left: 10px;
+  border-radius: 7px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 12px;
+}
+
+.ship-all-to-here {
+  background: #1474d7;
+  color: #ffffff;
+}
+
+.distribute-shipping {
+  background: transparent;
+  color: #1474d7;
+  text-decoration: underline;
+  font-size: 13px;
+}
+
+.transaction-line-views-cell-navigable-item-image {
+   min-width: 200px;
+}

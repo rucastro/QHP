@@ -1,0 +1,39 @@
+{
+  "type": "object",
+  "subtab": {
+    "id": "hashtagGallery",
+    "title": "Hashtag Gallery",
+    "group": "commerceSuiteSolution"
+  },
+  "properties": {
+    "hashtagGallery.displayUser": {
+      "group": "commerceSuiteSolution",
+      "type": "boolean",
+      "subtab": "hashtagGallery",
+      "title": "Display user",
+      "default": true
+    },
+    "hashtagGallery.displayCaption": {
+      "group": "commerceSuiteSolution",
+      "type": "boolean",
+      "subtab": "hashtagGallery",
+      "title": "Display caption",
+      "default": true
+    },
+    "hashtagGallery.minimumToDisplayModule": {
+      "group": "commerceSuiteSolution",
+      "type": "integer",
+      "subtab": "hashtagGallery",
+      "title": "Minimum number to display",
+      "description": "0 shows even if no photos",
+      "default": 0
+    },
+    "hashtagGallery.resultsPerPage": {
+      "group": "commerceSuiteSolution",
+      "type": "integer",
+      "subtab": "hashtagGallery",
+      "title": "Results per page",
+      "default": 8
+    }
+  }
+}

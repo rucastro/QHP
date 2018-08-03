@@ -1,0 +1,47 @@
+{
+  "type": "object",
+  "group": {
+    "id": "warehouse",
+    "title": "Warehouse Configuration",
+    "description": "Warehouse Solution Configs"
+  },
+  "properties": {
+    "warehouse.enablePriorityShipping": {
+      "group": "warehouse",
+      "type": "boolean",
+      "title": "Enable Priority Shipping",
+      "description": "Click to enable Priority Shipping",
+      "default": false
+    },
+    "warehouse.priorityShippingCarrierName": {
+      "group": "warehouse",
+      "type": "string",
+      "title": "Priority Shipping Carrier Name",
+      "description": "Shipping Name for Priority Shipping"
+    },
+    "warehouse.priorityShippingWeightThreshold": {
+      "group": "warehouse",
+      "type": "string",
+      "title": "Priority Shipping Weight Threshold",
+      "description": "Minimum Weight to Trigger Priority Shipping"
+    },
+    "warehouse.priorityShippingItem": {
+      "group": "warehouse",
+      "type": "string",
+      "title": "Priority Shipping Item",
+      "description": "Shipping Item / Method for Priority Shipping"
+    },
+    "warehouse.priorityShippingCarrier": {
+      "group": "warehouse",
+      "type": "string",
+      "title": "Priority Shipping Carrier",
+      "description": "Shipping Carrier for Priority Shipping"
+    },
+    "warehouse.shippingMethod": {
+      "group": "warehouse",
+      "type": "string",
+      "title": "Dummy Shipping Method",
+      "description": "Shipping Method to be Set before placing the order"
+    }
+  }
+}

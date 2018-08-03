@@ -1,0 +1,53 @@
+{
+    "type": "object",
+    "subtab": {
+        "id": "errorManagementPageNotFound",
+        "title": "404 Page Not Found Page",
+        "group": "commerceSuiteSolution"
+    },
+    "properties": {
+        "errorManagementPageNotFound.pageNotFoundBgrImg": {
+            "group": "commerceSuiteSolution",
+            "subtab": "errorManagementPageNotFound",
+            "type": "string",
+            "title": "Background Image",
+            "description": "Enter the URL location of the background image that sits underneath the text and button but overlaid on top of the main page not found image (optional).",
+            "default": "img/summit-page-not-found.jpg"
+        },
+        "errorManagementPageNotFound.bkgdColor": {
+            "group": "commerceSuiteSolution",
+            "subtab": "errorManagementPageNotFound",
+            "type": "string",
+            "title": "Background Color",
+            "default": "#a3b9ce"
+        },
+        "errorManagementPageNotFound.title": {
+            "group": "commerceSuiteSolution",
+            "subtab": "errorManagementPageNotFound",
+            "type": "string",
+            "title": "Title",
+            "default": "404 <br><span>page not found</span>"
+        },
+        "errorManagementPageNotFound.text": {
+            "group": "commerceSuiteSolution",
+            "subtab": "errorManagementPageNotFound",
+            "type": "string",
+            "title": "Text",
+            "default": ""
+        },
+        "errorManagementPageNotFound.btnText": {
+            "group": "commerceSuiteSolution",
+            "subtab": "errorManagementPageNotFound",
+            "type": "string",
+            "title": "Button Text",
+            "default": "Go Home"
+        },
+        "errorManagementPageNotFound.btnHref": {
+            "group": "commerceSuiteSolution",
+            "subtab": "errorManagementPageNotFound",
+            "type": "string",
+            "title": "Href",
+            "default": "#"
+        }
+    }
+}

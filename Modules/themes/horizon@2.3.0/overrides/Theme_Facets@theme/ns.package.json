@@ -1,0 +1,49 @@
+{
+    "gulp": {
+        "javascript": [
+            "JavaScript/*"
+        ],
+        "images": [
+            "Images/*"
+        ],
+        "templates": [
+            "Templates/*"
+        ],
+        "sass": [
+            "Sass/**/*.scss"
+        ],
+        "configuration": [
+            "Configuration/*.json"
+        ]
+    },
+    "overrides": {
+        "suitecommerce/Facets@2.4.0/Templates/facets_facet_browse.tpl": "Templates/qs_facets_facet_browse.tpl",
+        "suitecommerce/Facets@2.4.0/Templates/facets_browse_category_heading.tpl": "Templates/qs_facets_browse_category_heading.tpl",
+        "suitecommerce/Facets@2.4.0/Templates/facets_item_cell_grid.tpl": "Templates/qs_facets_item_cell_grid.tpl",
+        "suitecommerce/Facets@2.4.0/Templates/facets_item_cell_table.tpl": "Templates/qs_facets_item_cell_table.tpl",
+        "suitecommerce/Facets@2.4.0/Templates/facets_item_cell_list.tpl": "Templates/qs_facets_item_cell_list.tpl",
+        "suitecommerce/Facets@2.4.0/Templates/facets_faceted_navigation.tpl": "Templates/qs_facets_faceted_navigation.tpl",
+        "suitecommerce/Facets@2.4.0/Templates/facets_faceted_navigation_item.tpl": "Templates/qs_facets_faceted_navigation_item.tpl",
+        "suitecommerce/Facets@2.4.0/Templates/facets_item_list_show_selector.tpl": "Templates/qs_facets_item_list_show_selector.tpl",
+        "suitecommerce/Facets@2.4.0/Templates/facets_item_list_sort_selector.tpl": "Templates/qs_facets_item_list_sort_selector.tpl",
+        "suitecommerce/Facets@2.4.0/Templates/facets_faceted_navigation_item_range.tpl": "Templates/qs_facets_faceted_navigation_item_range.tpl",
+        "suitecommerce/Facets@2.4.0/Templates/facets_faceted_navigation_item_color.tpl": "Templates/qs_facets_faceted_navigation_item_color.tpl",
+
+        "suitecommerce/Facets@2.4.0/Sass/_facets-browse-category-heading.scss": "Sass/_qs-facets-browse-category-heading.scss",
+        "suitecommerce/Facets@2.4.0/Sass/_facets-category-cell.scss": "Sass/_qs-facets-category-cell.scss",
+        "suitecommerce/Facets@2.4.0/Sass/_facets-item-cell-table.scss": "Sass/_qs-facets-item-cell-table.scss",
+        "suitecommerce/Facets@2.4.0/Sass/_facets-faceted-navigation-item-range.scss": "Sass/_qs-facets-faceted-navigation-item-range.scss",
+        "suitecommerce/Facets@2.4.0/Sass/_facets-item-list-sort-selector.scss": "Sass/_qs-facets-item-list-sort-selector.scss",
+        "suitecommerce/Facets@2.4.0/Sass/_facets-item-list-show-selector.scss": "Sass/_qs-facets-item-list-show-selector.scss",
+        "suitecommerce/Facets@2.4.0/Sass/_facets-faceted-navigation-item.scss": "Sass/_qs-facets-faceted-navigation-item.scss",
+        "suitecommerce/Facets@2.4.0/Sass/_facets-facet-browse.scss": "Sass/_qs-facets-facet-browse.scss",
+        "suitecommerce/Facets@2.4.0/Sass/_facets-item-cell-grid.scss": "Sass/_qs-facets-item-cell-grid.scss",
+        "suitecommerce/Facets@2.4.0/Sass/_facets-item-cell-list.scss": "Sass/_qs-facets-item-cell-list.scss",
+        "suitecommerce/Facets@2.4.0/Sass/_facets-items-collection-view-cell.scss": "Sass/_qs-facets-items-collection-view-cell.scss",
+        "suitecommerce/Facets@2.4.0/Sass/_facets-faceted-navigation-item-color.scss": "Sass/_qs-facets-faceted-navigation-item-color.scss",
+        "suitecommerce/Facets@2.4.0/Sass/_facets-faceted-navigation.scss": "Sass/_qs-facets-faceted-navigation.scss",
+        "suitecommerce/Facets@2.4.0/Sass/_facets-item-list-display-selector.scss": "Sass/_qs-facets-item-list-display-selector.scss",
+        "suitecommerce/Facets@2.4.0/Sass/_facets-facets-display.scss": "Sass/_qs-facets-facets-display.scss"
+
+    }
+}

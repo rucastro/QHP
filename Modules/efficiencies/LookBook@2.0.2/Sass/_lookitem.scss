@@ -1,0 +1,67 @@
+/*
+    © 2015 NetSuite Inc.
+    User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
+    provided, however, if you are an authorized user with a NetSuite account or log-in, you
+    may use this code subject to the terms that govern your access and use.
+*/
+
+.look-item-row {
+  @extend .row;
+  margin-bottom: $sc-base-margin * 3;
+}
+
+.look-item-cell {
+  @extend .col-sm-4;
+  &:nth-child(3n+1) { /* a precautionary measure */
+    clear: left;
+  }
+}
+
+.look-item-description {
+  font-size: $sc-small-font-size;
+}
+
+.look-item {
+  @extend .facets-item-cell-grid;
+}
+
+.look-item-image-wrapper {
+  @extend .facets-item-cell-grid-image-wrapper;
+}
+
+.look-item-link-image {
+  @extend .facets-item-cell-grid-link-image !optional;
+}
+
+.look-item-image {
+  max-width: 100%;
+}
+
+.look-item-quick-view-wrapper {
+  @extend .facets-item-cell-grid-quick-view-wrapper;
+}
+
+.look-item-quick-view-link {
+  @extend .facets-item-cell-grid-quick-view-link;
+}
+
+.look-item-quick-view-icon {
+  @extend .facets-item-cell-grid-quick-view-icon !optional;
+}
+
+.look-item-details {
+  @extend .facets-item-cell-grid-details;
+}
+
+.look-item-title {
+  @extend .facets-item-cell-grid-title;
+}
+
+.look-item-price {
+  @extend .facets-item-cell-grid-price;
+}
+
+.look-item-stock {
+  display: inline-block;
+  float: right;
+}

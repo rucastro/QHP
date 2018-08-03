@@ -1,0 +1,239 @@
+/*
+    © 2017 NetSuite Inc.
+    User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
+    provided, however, if you are an authorized user with a NetSuite account or log-in, you
+    may use this code subject to the terms that govern your access and use.
+*/
+
+///////////////////////////////////////////////////////////////
+//header secondary nav
+.header-menu-secondary-nav {
+    margin: 0 $sc-base-margin * 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    @media (min-width: $screen-md-min) {
+        display: block;
+        margin: 0 $sc-base-margin * 4;
+    }
+}
+
+///////////////////////////////////////////////////////////////
+//header search
+
+.header-menu-search {
+    float: right;
+    order: 2;
+    padding-right: $sc-base-padding * 2;
+}
+
+.header-menu-search-link {
+    @extend .middle-title-navigable !optional;
+    font-size: $sc-h2-font-size;
+    background: none;
+    padding: $sc-base-padding * 2;
+    cursor: pointer;
+    position: relative;
+    line-height: 20px;
+    margin-top: 10px;
+    border: 1px solid grey;
+    @media (min-width: $screen-md-min) {
+        line-height: 65px;
+        margin-top: 0;
+        border: none;
+    }
+}
+.header-menu-search-link:focus {
+    outline: none;
+}
+.header-menu-search-link.active {
+    color: $sc-color-copy;
+}
+
+.header-menu-search-icon {
+    @extend .fa;
+    @extend %fa-search;
+}
+
+.header-menu-searchmobile-link {
+    margin-right: 0px;
+    cursor: pointer;
+    background-color: $sc-color-dark-copy;
+}
+
+///////////////////////////////////////////////////////////////
+//header maxi menu
+
+.header-menu-level1 {
+    display: none;
+
+    @media (min-width: $screen-md-min) {
+        display: block;
+        min-height: $sc-theme-secondary-menu-height;
+        text-align: center;
+        margin-left: 15%; //will otherwise sit on top of logo
+    }
+
+    @media (min-width: $screen-lg-min) {
+        margin-left: 0;
+    }
+}
+
+.header-menu-level1 > li {
+    display: inline-block;
+}
+
+.header-menu-level1-anchor {
+    display: block;
+    position: relative;
+    height: $sc-theme-secondary-menu-height;
+    line-height: $sc-theme-secondary-menu-height;
+    padding: 0 $sc-base-padding*2;
+    margin-right: $sc-base-margin;
+    color: $sc-color-tertiary;
+    font-weight:$sc-font-weight-semibold;
+    text-transform: uppercase;
+}
+
+.header-menu-level1-anchor:hover{
+    color: $sc-color-link-hover;
+}
+
+.open .header-menu-level1-anchor{
+    color: $sc-color-link-hover;
+}
+
+.header-menu-home-anchor,
+.header-menu-shop-anchor{
+    @extend .header-menu-level1-anchor;
+    color: $sc-color-tertiary;
+}
+
+//maxi menu level 2
+.header-menu-back {
+    display: none;
+}
+
+.header-menu-level2 {
+    height: $sc-theme-category-menu-height + 10; // add 10 for the horizontal scrollbar
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    overflow: hidden;
+    overflow-x: visible; // display horizontal scrollbar
+
+}
+
+.header-menu-level2 > li {
+    float: left;
+    width: $sc-theme-category-menu-level2-width;
+    padding: $sc-theme-category-menu-padding;
+    height: $sc-theme-category-menu-height + 10; // add 10 for the horizontal scrollbar
+    background-color: $sc-color-theme-background-light;
+    border-right: 1px solid $sc-color-tertiary;
+
+    @extend .animate;
+}
+
+.header-menu-level2-anchor {
+    text-transform: uppercase;
+    font-weight: $sc-font-weight-semibold;
+    color: $sc-color-theme;
+    padding-bottom: $sc-base-padding;
+    margin-bottom: $sc-base-margin * 2;
+    display: block;
+    text-align: left;
+    min-height: $sc-theme-category-menu-level2-anchor-height;
+
+    //@media (min-width: $screen-md-min) {
+    //  pointer-events: none;
+    //}
+}
+.header-menu-level2-anchor:hover {
+    color: $sc-color-theme;
+}
+
+//maxi menu level 3
+.header-menu-level3-anchor {
+    display: block;
+    padding: $sc-base-padding 0;
+    color: $sc-color-quaternary;
+}
+
+.header-menu-myaccount-anchor-level3.active {
+    color: $sc-color-copy;
+}
+
+//container fix for maxi menu on desktop
+.header-menu-push-icon, .header-menu-pop-icon {
+    display: none;
+}
+
+.header-menu-level-container {
+    //background-color: $sc-color-tertiary;
+    background-color: rgba($sc-color-overlay, 0.7);
+    //display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    //min-height: $sc-theme-category-menu-height;
+    z-index: 1003;
+    @include box-shadow(0 6px 12px transparentize($sc-color-overlay, 1-0.175));
+
+    transition: opacity 0.3s ease-out, visibility 0.3s ease-out;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+
+    > li {
+        @extend .container;
+    }
+}
+
+//maxi menu opened
+.open .header-menu-level-container {
+    display: block;
+    opacity: 1;
+    min-height: 310px;
+    visibility: visible;
+}
+
+.categories-thumbnail {
+    display: inline-block;
+}
+
+// Categories Animation
+// extended by .header-menu-level2
+.animate {
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.header-menu-level3 {
+    opacity: 0;
+}
+
+.animate:hover .header-menu-level3 {
+    position: relative;
+    opacity: 1;
+
+    @media (min-width: $screen-desktop) {
+        margin-top: -7em;
+    }
+    @media (min-width: $screen-lg-desktop) {
+        margin-top: -10em;
+    }
+}
+
+.header-menu-level3 {
+    .panel-body {
+        background-color: rgba(78,88,97,0.7);
+        margin-bottom: $sc-base-margin;
+    }
+}

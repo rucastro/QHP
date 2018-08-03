@@ -1,0 +1,9 @@
+ItemDetails.Full.View.LinkToReviews@dev
+1.0.0
+- Initial Release
+
+ProductDetails.Full.View.LinkToReviews@dev
+1.0.0
+- Elbrus Release
+- eslint fix
+- renamed from ItemDetails to ProductDetails

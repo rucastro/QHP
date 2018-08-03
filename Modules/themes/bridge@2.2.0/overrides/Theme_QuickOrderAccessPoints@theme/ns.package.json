@@ -1,0 +1,13 @@
+{
+    "gulp": {
+        "templates": [
+            "Templates/*"
+        ],
+        "sass": [
+            "Sass/**/*.scss"
+        ]
+    },
+    "overrides": {
+        "suitecommerce/QuickOrderAccessPoints@1.0.0/Templates/quickorder_accesspoints_headerlink.tpl": "Templates/qs_quickorder_accesspoints_headerlink.tpl"
+    }
+}

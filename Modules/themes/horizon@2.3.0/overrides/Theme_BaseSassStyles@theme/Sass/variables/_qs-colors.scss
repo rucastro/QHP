@@ -1,0 +1,110 @@
+/*
+    © 2017 NetSuite Inc.
+    User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
+    provided, however, if you are an authorized user with a NetSuite account or log-in, you
+    may use this code subject to the terms that govern your access and use.
+*/
+
+/*
+Ideally you should not need to edit any of these variables because they pull in values from
+Theme_BaseSassStyles/Sass/variables/_qs-theme.scss
+ */
+
+$sc-color-theme: $sc-theme-color;
+$sc-color-theme-light: $sc-theme-color-light;
+$sc-color-theme-background: $sc-theme-color-background;
+$sc-color-theme-background-light: $sc-theme-color-background-light;
+$sc-color-theme-background-lightest: $sc-theme-color-background-lightest;
+$sc-color-theme-border: $sc-theme-color-border; //for borders
+
+/* Colors */
+$sc-color-primary: $sc-theme-color-primary;
+$sc-color-secondary: $sc-theme-color-secondary;
+$sc-color-tertiary: $sc-theme-color-tertiary;
+$sc-color-quaternary: $sc-theme-color-quaternary;
+$sc-color-senary: $sc-theme-color-senary;
+
+/* Messages */
+/* These colors never vary across themes but can be changed if required */
+$sc-color-success: $sc-color-secondary;
+$sc-color-success-background: lighten($sc-color-success, 60%);
+$sc-color-warning: #8e7728;
+$sc-color-warning-background: lighten($sc-color-warning, 60%);
+$sc-color-error: #C33C48;
+$sc-color-error-background: lighten($sc-color-error, 60%);
+$sc-color-info: $sc-color-theme-light;
+$sc-color-info-background: $sc-color-theme-light;
+
+/* Button Background Colors */
+$sc-color-primary-hover: $sc-theme-cta-primary-color-hover;
+$sc-color-primary-active: $sc-theme-cta-primary-color-active;
+$sc-color-primary-disable: $sc-theme-cta-primary-color-disable;
+
+$sc-color-secondary-hover: $sc-theme-cta-secondary-color-hover;
+$sc-color-secondary-active: $sc-theme-cta-secondary-color-active;
+
+$sc-color-tertiary-hover: $sc-theme-cta-tertiary-color;
+$sc-color-tertiary-active: $sc-theme-cta-tertiary-color-active;
+
+/* Links */
+$sc-color-link: $sc-theme-color-link;
+$sc-color-link-dark: $sc-theme-color-link-dark;
+$sc-color-link-hover: lighten($sc-color-link, 10);
+
+$sc-color-dark-copy: $sc-theme-color-dark-copy;
+$sc-color-copy: $sc-theme-color-copy;
+$sc-color-light-copy: lighten($sc-color-copy, 22);
+
+//TODO: FIND OUT
+$sc-color-range-off: #dcdcdc; // neutral color, so can leave
+$sc-color-range-on: $sc-color-primary;
+
+//Stars
+$sc-color-star-filled: $sc-color-primary;
+$sc-color-star-empty: $sc-color-range-off;
+$sc-color-star-error: $sc-color-error;
+$sc-color-star-empty-disable: $sc-color-star-empty;
+$sc-color-input-state-error-shadow: desaturate($sc-color-error, 10%);
+
+// icons
+$sc-color-icon: $sc-color-tertiary;
+
+//Status
+$sc-color-status: $sc-color-primary;
+
+$sc-pusher-bg: $sc-color-theme-background-lightest;
+
+//Datepicker
+$sc-days-disabled: $sc-color-theme-background;
+
+//Color picker
+$sc-picker-white-border: $sc-color-theme-light;
+
+//Home Slide Theme
+$sc-color-slide-background: $sc-color-theme-background-light;
+
+//Bx Slider Colors
+$sc-color-bx-pager-background: $sc-color-theme;
+
+//Placeholder Colors
+$sc-color-placeholder: $sc-theme-input-color;
+//Quantity value
+$sc-color-quantity-value: $sc-color-theme-background-light;
+
+//Miscellaneous variables
+$sc-color-overlay: #000;
+$sc-color-gallery-icon-control: lighten($sc-color-secondary, 30);
+$sc-color-span-spinner-add-or-sub: $sc-color-theme;
+$sc-color-list-header-view-accordion-body-header: $sc-color-theme-background;
+$sc-color-wizard-confirmation-module: $sc-color-success-background;
+$sc-color-push-button-secondary-p: $sc-color-copy;
+$sc-color-typeahead-plugin-dropdown-menu: $sc-color-theme;
+$sc-color-focus: $sc-color-link;
+$sc-color-scroolbar: $sc-color-copy;
+
+/* don't think these should be variables as they are only called once in
+suitecommerce/SocialSharing@2.0.2/Sass/_social-sharing-flyout.scss */
+$sc-color-social-sharing-flyout-content-social-facebook-icon: #3b5998;
+$sc-color-social-sharing-flyout-content-social-twitter-icon: #00b6f1;
+$sc-color-social-sharing-flyout-content-social-google-icon: #dd4b38;
+$sc-color-social-sharing-flyout-content-social-pinterest-icon: #bd071d;

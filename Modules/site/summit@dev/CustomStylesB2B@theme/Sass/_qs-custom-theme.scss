@@ -1,0 +1,445 @@
+/*
+	Sitewide styles, to override existing styles or add new ones
+    Put CSS in here to make small tweaks instead of overriding whole files
+ */
+
+html,
+body {
+    font-family: $sc-theme-primary-font;
+    font-weight: $sc-font-weight-light;
+    background-color: $sc-theme-color-lightest;
+    color: $sc-theme-color-copy;
+    font-size: floor($sc-base-font-size * 0.94);
+}
+
+.container {
+    //background-color: $sc-theme-color-content;
+}
+.content-banner .container {
+    background-color: transparent; // fix issue caused by above color
+}
+
+a:hover,
+a:focus,
+a:active {
+    text-decoration: none;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: $sc-theme-secondary-font;
+}
+
+input:hover,
+input:focus,
+input:active,
+button:hover,
+button:focus,
+button:active {
+    outline: none;
+}
+
+
+/* LAYOUT */
+/* ADD PADDING-TOP WHEN FIXED HEADERS ENABLED */
+.shopping-layout {
+    .theme-has-fixed-header {
+        @media (min-width: $screen-md-min) {
+            padding-top: $sc-theme-header-height;
+        }
+    }
+}
+/* MYACCOUNT FIXED HEADER */
+// THIS APPROACH WAS USED INSTEAD OF ADDING MARKUP TO MYACCOUNT_LAYOUT.TPL
+.myaccount-layout {
+    .fixed-header + .myaccount-layout-breadcrumb {
+        @media (min-width: $screen-md-min) {
+            padding-top: $sc-theme-header-height + 35px;
+        }
+    }
+}
+
+/* Spacing */
+
+.shopping-layout-breadcrumb,
+.myaccount-layout-container,
+.checkout-layout-content,
+.cart,
+.cart-detailed,
+.error-management-internal-error,
+.error-management-page-not-found,
+.facets-facet-browse,
+.product-details-full,
+.productcompare-dashboard,
+.quick-order,
+.product-reviews-form,
+.product-reviews-form-preview,
+.product-reviews-form-confirmation,
+.cms-landing-page,
+.contact-us-container,
+.guest-order-status-layout-container,
+.look-layout-container,
+.lookbook-layout-container {
+    padding-left: $sc-theme-mobile-padding;
+    padding-right: $sc-theme-mobile-padding;
+    padding-top: $sc-base-padding*3;
+    background-color: $sc-theme-color-content;
+    border-radius: 0 0 $sc-theme-border-radius $sc-theme-border-radius;
+    //@include box-shadow(0 6px 12px transparentize(black, 1-0.05));
+
+    @media (min-width: $screen-md-min) {
+        padding-left: $sc-theme-desktop-padding;
+        padding-right: $sc-theme-desktop-padding;
+    }
+}
+
+.store-locator-main{
+    width: calc(100% - 20px);
+    padding: 0;
+    padding-bottom: $sc-theme-desktop-padding;
+}
+
+.quantity-pricing-table {
+    .quantity-pricing-quantities tr {
+        th {
+            text-align: left;
+        }
+    }
+    .quantity-pricing-prices tr {
+        td:first-child {
+            color: $sc-theme-color-primary;
+            text-align: left;
+        }
+        td:nth-child(2) {
+            text-align: right;
+        }
+    }
+    .quantity-pricing-prices .quantity-pricing-table-cell {
+        border-bottom: 1px solid $sc-theme-color-lightest;
+    }
+}
+
+.myaccount-layout-breadcrumb,
+.shopping-layout-breadcrumb,
+.checkout-layout-breadcrumb {
+    padding-top: $sc-theme-desktop-padding;
+    padding-left: 0;
+    font-family: $sc-theme-secondary-font;
+    text-transform: uppercase;
+    background-color: transparent !important;
+}
+
+.global-views-breadcrumb-item-active,
+.breadcrumb-item-active {
+    color: $sc-theme-color-copy;
+}
+
+.error-management-forbidden-error,
+.error-management-internal-error,
+.error-management-page-not-found {
+    padding-bottom: 50px;
+}
+
+.shopping-layout-header,
+.myaccount-layout-header,
+.checkout-layout-header {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    margin-bottom: 0;
+    background-color: transparent;
+}
+
+.checkout-layout-header {
+    background-color: $sc-main-nav-bgr-color;
+}
+
+.checkout-layout-breadcrumb {
+    @extend .container;
+}
+
+.checkout-layout-content{
+    @include border-radius($sc-theme-border-radius);
+    padding-top: $sc-theme-desktop-padding;
+    & .error-management-internal-error, .error-management-forbidden-error {
+        padding-right: 0px;
+        padding-left: 0px;
+        width:auto;
+    }
+    & .contact-us-container {
+        padding: 0;
+        width: 100%;
+        background-color: transparent;
+        border-radius: 0;
+    }
+}
+
+.login-register-header {
+    padding-top: $sc-theme-desktop-padding;
+}
+
+.login-register-body-colored {
+    padding: 0;
+    background-color: transparent;
+}
+
+/* Box styling */
+/* Box around content, slider products, related items, recently viewed, pdp */
+.box {
+    background-color: $sc-theme-color-content;
+    @include border-radius($sc-theme-border-radius);
+    //@include box-shadow(0 6px 12px transparentize(black, 1-0.05));
+}
+
+/* Search */
+.site-search-content-input {
+    @extend .nav-search-content-input;
+    .itemssearcher-input {
+        @media (min-width: $screen-md-min) {
+            border: 1px solid $sc-theme-input-color;
+            border-top-left-radius: $sc-theme-border-radius;
+            border-bottom-left-radius: $sc-theme-border-radius;
+        }
+    }
+    .itemssearcher-input:focus{
+        outline:none;
+        outline-style:none;
+        box-shadow:none;
+    }
+    .site-search-input-reset {
+        background-color: transparent;
+    }
+}
+
+/*
+MERCHANDISING ZONE ITEM
+Default merchandising template styling merchzone_default.txt
+*/
+.cms-content-merchzone {
+    aside {
+        @extend .container-fluid;
+        padding: $sc-base-padding * 2 0;
+    }
+    .row-fluid {
+        @extend .row;
+    }
+    %col {
+        position: relative;
+        min-height: 1px;
+        float: left;
+        margin: 0 10px 20px 10px;
+        @extend .box;
+        width: calc(50% - 20px); //width minus side margins
+    }
+    .span4 {
+        @extend %col;
+        @media (min-width: $screen-md-min) {
+            width: calc(33% - 20px); //width minus side margins
+        }
+    }
+    .span3 {
+        @extend %col;
+        @media (min-width: $screen-md-min) {
+            width: calc(25% - 20px); //width minus side margins
+        }
+    }
+    .item-cell {
+        text-align: center;
+        padding-top: 10px;
+    }
+    .thumbnail {
+        margin-bottom: 10px;
+    }
+    h5 {
+        font-weight: normal;
+        font-size: 16px;
+        padding: 15px 0 5px;
+        border-top: $sc-theme-border-light;
+    }
+    .item-cell-price { // use this class if adding price to template
+        font-size: 15px;
+        padding-bottom: $sc-base-padding * 2;
+        color: $sc-theme-color-copy;
+    }
+    .btn {
+        @extend .button-secondary;
+        @extend .button-small;
+    }
+}
+
+/* MISC */
+/* Not worth adding an extra file for */
+
+/* Product Slider */
+%product-slider {
+    @extend .large-title;
+    text-align: center;
+    font-size: 32px;
+}
+
+/* FACETS PAGE */
+.item-cell-title,
+.facets-item-cell-grid-details {
+    text-align: center;
+    .product-line-stock {
+        text-align: center;
+    }
+}
+.facets-item-cell-table {
+    .product-views-price,
+    .facets-item-cell-table-rating {
+        text-align: center;
+        .global-views-star-rating-container {
+            display: inline-block;
+        }
+    },
+    .product-line-stock {
+        text-align: center;
+    }
+}
+.facets-item-cell-list-title {
+    text-align: left;
+}
+
+/* Product Detail */
+.social-sharing-flyout-content-social-facebook,
+.social-sharing-flyout-content-social-twitter,
+.social-sharing-flyout-content-social-google,
+.social-sharing-flyout-content-social-pinterest  {
+    border: 1px solid $sc-theme-border-color-light;
+    color: $sc-theme-input-color;
+    font-family: $sc-theme-secondary-font;
+    @include border-radius($sc-theme-border-radius);
+}
+
+/* Infinite Scroll */
+.infinite-scroll-top {
+    background: $sc-color-theme;
+    bottom: $sc-medium-margin + 15;
+    @include border-radius($sc-theme-border-radius);
+}
+
+.infinite-scroll-top-icon {
+    color: $sc-color-tertiary;
+    position: relative;
+    top: 10px;
+}
+
+/* Cart */
+.cart-divider-row {
+    & td {
+        padding-bottom: $sc-base-padding * 2;
+    }
+}
+.cart-divider {
+    //@extend .item-views-cell-divider;
+    border: none;
+    @media (min-width: $screen-md-min){
+        border-bottom: $sc-theme-border-light;
+    }
+}
+
+/* Buttons Border Fix back to Default Tertiary */
+.product-detail-to-quote-add-to-quote-button,
+.product-detail-to-quote-loading,
+.product-list-control-button-wishlist,
+.product-list-control-single-button-wishlist {
+    border: 2px solid $sc-color-link;
+}
+
+/* Product Reviews on PDP */
+.product-reviews-center-container,
+.product-reviews-center-container-header {
+    padding: 0;
+    border: none;
+}
+
+.item-details-more-info-content-container {
+    @media (min-width: $screen-md-min) {
+        padding: 0;
+    }
+}
+
+h3.product-reviews-center-container-header-title { // targetting a specific element
+    @extend h2;
+}
+
+.product-reviews-center-container{
+    background: none;
+}
+
+/* CMS */
+.cms-content {
+    margin-top: $sc-base-margin * 3;
+    margin-bottom: $sc-base-margin * 3;
+    & h2 {
+        @extend %product-slider;
+        text-align: left;
+    }
+}
+
+.cms-content-text h1,
+.cms-content-text h2,
+.cms-content-text h3,
+.cms-content-text h4,
+.cms-content-text h5,
+.cms-content-text h6 {
+    // text-align: center;
+    font-family: $sc-theme-secondary-font;
+    text-transform: uppercase;
+}
+
+/* Error Pages */
+.error-management-forbidden-error, .error-management-internal-error, .error-management-page-not-found {
+    min-height: $sc-theme-error-height-mobile;
+    @media (min-width: $screen-md-min) {
+        min-height: $sc-theme-error-height-desktop;
+    }
+}
+
+/* Quick Order */
+.quick-order {
+    padding-left: 0;
+    padding-right: 0;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    margin-bottom: 25px;
+    border-bottom: $sc-theme-border-light;
+}
+
+.quick-order-divider {
+    margin-bottom: 7px;
+}
+
+.quick-order-expander-head {
+    border-top: none;
+}
+
+.quick-add-box-button {
+    padding-top: 11px;
+    padding-bottom: 11px;
+}
+
+/* MISC EFFICIENCIES MODULES STYLES */
+/* Landing Page Module Styles */
+.contact-us-landing-page-container {
+    background-color: $sc-theme-color-content;
+}
+.contact-us-landing-page-container,
+.about-us-container {
+    padding-top: 15px;
+}
+
+/* Back In Stock Module Styles */
+.back-in-stock-notification-placeholder {
+    .back-in-stock-notification-show-form-button {
+        @extend .button-secondary;
+        padding: $sc-base-padding * 4;
+        font-size: $sc-button-large-font-size;
+        font-weight:$sc-font-weight-bold;
+        width: 100%;
+    }
+}

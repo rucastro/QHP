@@ -1,0 +1,8 @@
+{
+    "type": "object",
+    "group": {
+        "id": "themes",
+        "title": "Themes",
+        "description": "Themes"
+    }
+}

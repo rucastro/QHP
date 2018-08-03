@@ -1,0 +1,182 @@
+/*
+	© 2017 NetSuite Inc.
+	User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
+	provided, however, if you are an authorized user with a NetSuite account or log-in, you
+	may use this code subject to the terms that govern your access and use.
+*/
+
+.footer-wrapper {
+    background: $sc-theme-footer-bgr-color;
+    color: $sc-theme-footer-color;
+    padding-top: $sc-base-margin * 3;
+    background-size: cover;
+    margin-bottom: -20px;
+}
+.footer-content {
+    @extend .container-fluid;
+    @extend .row;
+
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: $screen-desktop) {
+        padding-top: $sc-base-padding * 14;
+        display: block;
+    }
+
+    &.footer-simplified {
+        @media (min-width: $screen-desktop) {
+            padding-top: 0;
+        }
+    }
+}
+
+.footer-content-nav {
+    @extend .col-xs-12;
+    @extend .col-md-8;
+
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: $sc-base-margin * 5;
+    order: 2;
+    justify-content: center;
+
+    @media (min-width: $screen-desktop) {
+        margin-top: $sc-base-margin * 14;
+        justify-content: flex-start;
+        margin-top: 0;
+        order: 1;
+    }
+}
+.footer-content-nav-list {
+    @extend .col-xs-6;
+
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: $sc-base-margin * 4;
+
+    @media (min-width: $screen-sm-min) {
+        float: left;
+        width: auto;
+        border: none;
+        margin-bottom: $sc-base-margin * 8;
+    }
+
+}
+
+.footer-content-nav-list > li {
+    font-size: $sc-theme-footer-column-link-size-mobile;
+    padding-bottom: $sc-base-padding;
+    text-transform: uppercase;
+
+    @media (min-width: $screen-sm-min) {
+        display: list-item !important;
+        font-size: $sc-theme-footer-column-link-size;
+        height: auto !important;
+        visibility: visible !important;
+    }
+}
+
+.footer-column-heading {
+    color: $sc-theme-footer-column-heading-color;
+    display: list-item;
+    font-size: $sc-theme-footer-column-heading-size;
+    text-transform: uppercase;
+}
+
+.footer-column-link {
+    color: $sc-theme-footer-column-link-color;
+    &:hover,
+    &:focus {
+        color: $sc-theme-footer-column-link-color-hover;
+    }
+}
+
+.footer-content-newsletter {
+    @extend .col-xs-12;
+    @extend .col-md-4;
+
+    float: none;
+    font-size: $sc-h3-font-size;
+
+    & p {
+        padding: $sc-base-padding * 2;
+    }
+    & span {
+        color: $sc-color-primary;
+        font-weight: 700;
+    }
+    & h5 {
+        color: $sc-theme-footer-newsletter-color;
+    }
+    & .newsletter-suscription-form-input {
+        border: 1px solid $sc-theme-footer-input-border-color;
+        background-color: transparent;
+        color: $sc-theme-color-tertiary;
+        margin-bottom: 0;
+
+        @include placeholder {
+            color: $sc-theme-footer-submit-text-color;
+        }
+    }
+    & .newsletter-subscription-form-button-subscribe {
+        background-color: $sc-theme-footer-submit-color;
+        border: 1px solid $sc-theme-footer-submit-color;
+        color: $sc-theme-footer-submit-text-color;
+        font-weight: bold;
+        font-size: $sc-theme-footer-submit-text-size;
+        margin-bottom: 0;
+    }
+
+    @media (min-width: $screen-sm-min) {
+        float: right;
+    }
+
+    @media (max-width: $screen-sm-max) {
+        padding: 0;
+    }
+
+    @media (min-width: $screen-desktop) {
+        text-align: right;
+        padding-bottom: $sc-base-padding * 14;
+        float: right;
+    }
+}
+
+.footer-content-copyright {
+    @extend .col-md-6;
+    text-align: center;
+
+    @media (min-width: $screen-md-min) {
+		text-align: left;
+	}
+}
+
+.footer-extra-info {
+    @extend .col-md-6;
+    text-align: center;
+
+    span:nth-child(2) {
+        margin-left: 10px;
+    }
+
+    @media (min-width: $screen-md-min) {
+		text-align: right;
+	}
+}
+
+.footer-content-bottom {
+    @extend .col-md-12;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    overflow: auto;
+    text-align: center;
+    order: 3;
+    color: $sc-theme-footer-text-color;
+    @media (min-width: $screen-md-min) {
+        padding-top: 65px;
+        padding-bottom: 65px;
+    }
+}

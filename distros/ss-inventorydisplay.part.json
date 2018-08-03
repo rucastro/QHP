@@ -1,0 +1,39 @@
+{
+    "id": "ss-inventorydisplay",
+    "name": "Inventory Display",
+    "dependencies": ["elbrus-base", "ss-generalconfig"],
+    "folders": {
+        "modules": "Modules",
+        "distribution": "bin/LocalDistribution",
+        "deploy": "bin/DeployDistribution",
+        "release": "bin/ReleaseDistribution"
+    },
+    "modules": {
+        "efficiencies/InventoryDisplay": "4.0.2"
+    },
+    "tasksConfig": {
+        "javascript": [
+            {
+                "entryPoint": "SC.Shopping.Starter",
+                "dependencies": [
+                    "InventoryDisplay"
+                ]
+            }
+        ],
+        "sass": {
+            "applications": [
+                {
+                    "name": "Shopping",
+                    "dependencies": [
+                        "InventoryDisplay"
+                    ]
+                }
+            ]
+        },
+        "ssp-libraries": {
+            "dependencies": [
+                "InventoryDisplay.Configuration"
+            ]
+        }
+    }
+}

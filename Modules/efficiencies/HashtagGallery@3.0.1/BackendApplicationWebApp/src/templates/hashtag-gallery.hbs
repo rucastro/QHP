@@ -1,0 +1,79 @@
+<h3>Hashtag: {{hashtag}} - <small> {{count}} result(s) </small></h3>
+<ul class="color-code">
+    <li><img src="{{assetsPath}}img/hashtag_image_approved_small.png" alt="Published">Published</li>
+    <li><img src="{{assetsPath}}img/hashtag_image_rejected_small.png" alt="Rjeceted">Rejected</li>
+    <li><img src="{{assetsPath}}img/hashtag_image_error_small.png" alt="Pending Review">Pending Review</li>
+</ul>
+<nav>
+    <ul class="pager">
+        {{#if hasRefresh}}
+            <li><a data-action="refresh" href="#" class="pgBntG">Refresh</a></li>
+        {{/if}}
+        {{#if hasPrevious}}
+            <li class="previous {{#unless hasPrevious}}disabled{{/unless}}"><a data-action="prev" href="#" class="pgBntG"><span aria-hidden="true">&larr;</span>Newer</a></li>
+        {{/if}}
+        <li class="next {{#unless hasNext}}disabled{{/unless}}"><a data-action="next" href="#" class="pgBntG">Older <span aria-hidden="true">&rarr;</span></a></li>
+    </ul>
+</nav>
+<div class="row">
+    {{#each items}}
+    <div class="col-md-3">
+        <div class="thumbnail {{statusClass}}">
+            <p class="{{statusClass}} hashtag-status-icon"><img src="{{statusImg}}" alt="{{statusText}}"></p>
+            <img src="{{thumbnailAssetUrl}}" alt="" data-toggle="modal" data-target="#modal-{{externalid}}">
+            <div class="caption {{statusClass}}">
+                <h5>{{userName}}</h5>
+                <!-- <p class="{{statusClass}}"><img src="{{statusImg}}" alt="{{statusText}}"> {{statusText}}</p> -->
+                <!--<p class="thumb-caption">{{{caption}}}</p>-->
+                <a href="#" type="button" data-toggle="modal" data-target="#modal-{{externalid}}">
+                    View Details
+                </a>
+                <p>
+                    <a href="#"
+                       data-internalid="{{internalid}}"
+                       data-externalid="{{externalid}}"
+                       data-action="reject"
+                       class="hashtag-action-button pgBntG hashtag-rejected {{#if isRejected}}disabled{{/if}}"
+                       role="button">Reject
+                    </a>
+                    <a href="#"
+                       data-internalid="{{internalid}}"
+                       data-externalid="{{externalid}}"
+                       data-action="approve"
+                       class="hashtag-action-button pgBntB hashtag-approved {{#if isApproved}}disabled{{/if}}"
+                       role="button">Publish
+                    </a>
+                </p>
+            </div>
+        </div><!-- end .thumbnail -->
+
+        <div class="modal fade" id="modal-{{externalid}}">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h5 class="modal-title">Post by: {{userName}} <small> ({{userFullName}})</small></h5>
+                        <p><b>Date: </b>{{createdDate}}</p>
+                        <p><b>Link: </b><a href="{{link}}" target="_blank">{{link}}</a></p>
+                    </div>
+                    <div class="modal-body">
+                        <img class="img-responsive" src="{{assetUrl}}">
+                        <p class="hashtag-comment">{{caption}}</p>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div>
+    </div>
+    {{/each}}
+</div>
+<nav>
+    <ul class="pager">
+        {{#if hasRefresh}}
+            <li class=""><a data-action="refresh" href="#" class="pgBntG"><span aria-hidden="true">&larr;</span>Refresh</a></li>
+        {{/if}}
+        {{#if hasPrevious}}
+            <li class="previous {{#unless hasPrevious}}disabled{{/unless}}"><a data-action="prev" href="#" class="pgBntG"><span aria-hidden="true">&larr;</span>Newer</a></li>
+        {{/if}}
+        <li class="next {{#unless hasNext}}disabled{{/unless}}"><a data-action="next" href="#" class="pgBntG">Older <span aria-hidden="true">&rarr;</span></a></li>
+    </ul>
+</nav>

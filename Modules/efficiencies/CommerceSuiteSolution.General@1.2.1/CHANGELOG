@@ -1,0 +1,10 @@
+1.0.0
+- Initial Release
+
+1.2.0
+- Elbrus Release
+- Added quickstart config
+
+1.2.1
+- GlobalConfiguration renamed to CommerceSuiteSolution.General
+- Create distro for this module

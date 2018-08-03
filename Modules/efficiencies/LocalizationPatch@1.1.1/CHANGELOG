@@ -1,0 +1,11 @@
+1.0.0
+- Initial Release
+
+1.1.0
+- Elbrus Release
+- eslint fix
+
+1.1.1
+- distro update: fix issue where selected pick up store was not correctly displaying in the cart
+- Fix issue: Mini Cart summary error with localization
+- Fix issue: Bad use of parseFloat

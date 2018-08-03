@@ -1,0 +1,18 @@
+1.0.0
+- Initial Release
+
+2.0.0
+- Integration with StoreLocator and geolocation
+
+3.0.0
+- Vinson Release
+
+4.0.0
+- Elbrus Release
+- eslint fix
+
+4.0.1
+- Fix: matrix child item doesn't show right stock
+
+4.0.2
+- Update distro dependencies

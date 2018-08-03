@@ -1,0 +1,15 @@
+{
+  "gulp": {
+      "ssp-libraries": [
+        "SuiteScript/*.js"
+      ]
+  },
+  "overrides": {
+    "suitecommerce/CheckoutApplication@2.3.0/Internal/index-local.ssp": "SuiteScript/checkout-local.ssp",
+    "suitecommerce/CheckoutApplication@2.3.0/SuiteScript/checkout.ssp": "SuiteScript/checkout.ssp",
+    "suitecommerce/MyAccountApplication@3.1.0/Internal/index-local.ssp": "SuiteScript/my_account-local.ssp",
+    "suitecommerce/MyAccountApplication@3.1.0/SuiteScript/my_account.ssp": "SuiteScript/my_account.ssp",
+    "suitecommerce/ShoppingApplication@4.0.0/Internals/index-local.ssp": "SuiteScript/shopping-local.ssp",
+    "suitecommerce/ShoppingApplication@4.0.0/SuiteScript/shopping.ssp": "SuiteScript/shopping.ssp"
+  }
+}

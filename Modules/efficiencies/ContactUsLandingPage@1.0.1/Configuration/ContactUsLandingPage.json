@@ -1,0 +1,148 @@
+{
+    "type": "object",
+    "subtab": {
+        "id": "contactUsLandingPage",
+        "title": "Contact Us Page",
+        "group": "commerceSuiteSolution"
+    },
+    "properties": {
+        "contactUsLandingPage.enabled": {
+            "group": "commerceSuiteSolution",
+            "subtab": "contactUsLandingPage",
+            "type": "boolean",
+            "title": "Enabled",
+            "default": false
+        },
+        "contactUsLandingPage.pageUrl": {
+            "group": "commerceSuiteSolution",
+            "subtab": "contactUsLandingPage",
+            "type": "string",
+            "title": "Page URL",
+            "mandatory": true,
+            "requiredmsg": "Page URL is required.",
+            "default": "contact-us"
+        },
+        "contactUsLandingPage.browsersTitle": {
+            "group": "commerceSuiteSolution",
+            "subtab": "contactUsLandingPage",
+            "type": "string",
+            "title": "Browsers Title",
+            "mandatory": true,
+            "requiredmsg": "Browsers Title is required.",
+            "default": "Contact Us"
+        },
+        "contactUsLandingPage.pageHeading": {
+            "group": "commerceSuiteSolution",
+            "subtab": "contactUsLandingPage",
+            "type": "string",
+            "title": "Page Heading",
+            "mandatory": true,
+            "requiredmsg": "Page Heading is required.",
+            "default": "Contact Us"
+        },
+        "contactUsLandingPage.meta": {
+          "group": "commerceSuiteSolution",
+          "subtab": "contactUsLandingPage",
+          "type": "string",
+          "nsType": "textarea",
+          "title": "Meta Description"
+        },
+        "contactUsLandingPage.contactInfoBlocks": {
+            "group": "commerceSuiteSolution",
+            "subtab": "contactUsLandingPage",
+            "type": "array",
+            "title": "Contact Info Blocks",
+            "description": "Contact us informational blocks",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "title": {
+                        "type": "string",
+                        "title": "Title",
+                        "description": ""
+                    },
+                    "image": {
+                        "type": "string",
+                        "title": "Image URL",
+                        "description": ""
+                    },
+                    "text": {
+                        "type": "string",
+                        "title": "Text",
+                        "description": ""
+                    }
+                }
+            },
+            "default": [
+                {
+                    "title": "(888) 123-4567",
+                    "image": "img/qs-contact-icon-phone.png",
+                    "text": "Got a question? Give us a call from 9 AM to 9 PM EST"
+                },
+                {
+                    "title": "Email Us",
+                    "image": "img/qs-contact-icon-envelope.png",
+                    "text": "Questions? Feedback? Send us an email! <a href=\"mailto:info@companyname.com\">info@companyname</a>"
+                },
+                {
+                    "title": "Fax Us",
+                    "image": "img/qs-contact-icon-paper.png",
+                    "text": "You're old school...we like that. (888) 864-8564"
+                },
+                {
+                    "title": "Headquarters",
+                    "image": "img/qs-contact-icon-building.png",
+                    "text": "123 Main Street Suite 100 Austin, TX 78727"
+                }
+            ]
+        },
+        "contactUsLandingPage.additonalContactInfoBlocks": {
+            "group": "commerceSuiteSolution",
+            "subtab": "contactUsLandingPage",
+            "type": "array",
+            "title": "Additional Contact Info Blocks",
+            "description": "Additional Contact us informational blocks",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "title": {
+                        "type": "string",
+                        "title": "Title",
+                        "description": ""
+                    },
+                    "text": {
+                        "type": "string",
+                        "title": "Text",
+                        "description": ""
+                    }
+                }
+            },
+            "default": [
+                {
+                    "title": "For Corporate Customers",
+                    "text": "Call or email a specialist: <br>(888) 987-6543<br><a href=\"mailto:corporate@companyname.com\">corporate@companyname.com</a><br>Chat us from 9 AM to 9 PM EST"
+                },
+                {
+                    "title": "For Trading",
+                    "text": "Call or email a specialist:<br>(888) 987-6543<br><a href=\"mailto:trade@companyname.com\">trade@companyname.com</a>"
+                },
+                {
+                    "title": "For Retailers",
+                    "text": "<a href=\"mailto:wholesale@companyname.com\">Careers Page</a>"
+                },
+                {
+                    "title": "For Media and Press Inquiries",
+                    "text": "<a href=\"mailto:media@companyname.com\">media@companyname.com</a>"
+                },
+                {
+                    "title": "Visit a Showroom",
+                    "text": "<a href=\"#\">Showrooms Page</a>"
+                },
+                {
+                    "title": "Work Here",
+                    "text": "<a href=\"#\">Careers Page</a>"
+                }
+            ]
+        }
+    }
+}

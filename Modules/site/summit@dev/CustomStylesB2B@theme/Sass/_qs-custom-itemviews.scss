@@ -1,0 +1,106 @@
+/* Item Views */
+.item-views-cell-navigable-item-amount-value {
+    font-size: 14px;
+}
+
+.product-line-sku-container {
+    margin-top: 30px;
+}
+
+/* Product Views Option Tile */
+.product-views-option-tile-label {
+    text-transform: capitalize;
+    font-weight: normal;
+    font-family: $sc-theme-secondary-font;
+    margin-bottom:$sc-small-margin;
+    display: block;
+
+    span {
+        color: $sc-theme-color-header;
+        padding-left: $sc-base-padding;
+    }
+}
+
+.product-views-option-tile-picker {
+    margin-bottom:$sc-base-margin * 2;
+}
+
+/* RELATED ITEMS */
+/* RECENTLY VIEWED */
+.item-relations-related,
+.recently-viewed-items,
+.item-relations-correlated {
+    & h3 {
+        @extend %product-slider;
+    }
+}
+
+/*
+MERCHANDISING ZONE ITEM
+Rewrites the classes in the suitecommerce/Merchandising module:
+_merchandising-zone-cell-templates.scss
+*/
+.merchandising-zone-container,
+.item-relations-related-row,
+.recently-viewed-items,
+.item-relations-correlated-row {
+    & .bx-wrapper {
+        max-width: 1168px !important; // this overrides the value added in the inline css
+    }
+}
+
+.recently-viewed-items {
+     max-width: 1168px !important; // this overrides the value added in the inline css
+     margin: 0 auto;
+}
+
+.merchandising-zone-cell-template,
+.item-relations-cell,
+.recently-viewed-cell-item {
+    /* slideWidth: 228 in SC.Configuration.js
+    doesn't seem to be configurable in the ERP backend */
+    width: 272px !important; // this is meant to override the value in SC.Config and must have !important
+    margin-left: $sc-small-margin;
+    margin-right: $sc-small-margin;
+    padding-bottom: $sc-base-padding * 2;
+    &>div {
+        @extend .box;
+        padding-top: $sc-base-padding * 4;
+        padding-bottom: $sc-base-padding * 2;
+    }
+    .item-views-related-item-text {
+        width: 210px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: $sc-base-padding*4 $sc-base-padding $sc-base-padding*2;
+        border-bottom: 4px solid transparent;
+    }
+    .product-views-price-lead {
+        @extend .middle-price;
+    }
+    .item-relations-related-item-rate {
+        width: 92px;
+        margin: 0 !important;
+    }
+    .item-relations-related-item-thumbnail {
+        min-height: $sc-theme-cell-img-height !important;
+        margin-bottom: $sc-base-margin * 2;
+        display: inline-block;
+        & img {
+            height: $sc-theme-cell-img-height !important;
+            width: $sc-theme-cell-img-width !important;
+        }
+    }
+    .item-relations-related-item-title {
+        color: $sc-theme-color-link;
+        font-size: 16px;
+        margin-bottom: $sc-base-margin;
+        border-top: $sc-theme-border-light;
+        padding-top: $sc-base-padding * 3;
+        &:hover {
+            color: $sc-theme-color-link-hover;
+            text-decoration: underline;
+        }
+    }
+
+}

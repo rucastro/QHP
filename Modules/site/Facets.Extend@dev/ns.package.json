@@ -1,0 +1,17 @@
+{
+  "gulp": {
+    "javascript": [
+      "JavaScript/*.js"
+    ],
+    "templates": [
+      "Templates/*"
+    ],
+    "sass": [
+      "Sass/**/*.scss"
+    ]
+  },
+  "overrides": {
+    "suitecommerce/Facets@2.4.0/Templates/facets_faceted_navigation_item.tpl": "Templates/facets_faceted_navigation_item.tpl",
+    "suitecommerce/Facets@2.4.0/Templates/facets_facet_browse.tpl": "Templates/facets_facet_browse.tpl"
+  }
+}

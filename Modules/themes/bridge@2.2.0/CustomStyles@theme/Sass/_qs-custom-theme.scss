@@ -1,0 +1,388 @@
+/*
+	Sitewide styles, to override existing styles or add new ones
+    Put CSS in here to make small tweaks instead of overriding whole files
+ */
+
+// we need this for scs because there is no themes config
+@import url('https://fonts.googleapis.com/css?family=Rubik:300,300i,400,400i,500,500i|Roboto:400,700,300');
+
+html,
+body {
+    font-family: $sc-theme-primary-font;
+    background-color: $sc-theme-color-lightest;
+    color: $sc-theme-color-copy;
+}
+
+.container {
+    background-color: $sc-theme-color-tertiary;
+}
+.content-banner .container {
+    background-color: transparent; // fix issue caused by above color
+}
+
+a:hover,
+a:focus,
+a:active {
+    text-decoration: none;
+}
+
+input:hover,
+input:focus,
+input:active,
+button:hover,
+button:focus,
+button:active {
+    outline: none;
+}
+
+
+/* LAYOUT */
+/* ADD PADDING-TOP WHEN FIXED HEADERS ENABLED */
+.shopping-layout {
+    .theme-has-fixed-header {
+        @media (min-width: $screen-md-min) {
+            padding-top: $sc-theme-header-height;
+        }
+    }
+}
+
+/* Spacing */
+.shopping-layout-breadcrumb,
+.checkout-layout-breadcrumb,
+.myaccount-layout-container,
+.cart,
+.cart-detailed,
+.error-management-forbidden-error, //required?
+.error-management-internal-error,
+.error-management-page-not-found,
+.facets-facet-browse,
+.product-details-full,
+.productcompare-dashboard,
+.product-reviews-form,
+.product-reviews-form-preview,
+.product-reviews-form-confirmation,
+.cms-landing-page,
+.contact-us-container,
+.guest-order-status-layout-container,
+.look-layout-container,
+.lookbook-layout-container,
+.login-register,
+#wizard {
+    padding-left: $sc-theme-mobile-padding;
+    padding-right: $sc-theme-mobile-padding;
+
+    @media (min-width: $screen-md-min) {
+        padding-left: $sc-theme-desktop-padding;
+        padding-right: $sc-theme-desktop-padding;
+    }
+}
+
+.shopping-layout-breadcrumb,
+.checkout-layout-breadcrumb,
+.myaccount-layout-breadcrumb {
+    padding-top: 50px;
+}
+
+.error-management-forbidden-error,
+.error-management-internal-error,
+.error-management-page-not-found {
+    padding-bottom: 50px;
+}
+
+.shopping-layout-header,
+.checkout-layout-header,
+.myaccount-layout-header {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    margin-bottom: 0;
+    background-color: transparent;
+
+    @media (min-width: $screen-sm-min) {
+        margin-bottom: $sc-base-margin * 5;
+    }
+}
+
+.shopping-layout-header {
+    @media (min-width: $screen-sm-min) {
+        margin-bottom: $sc-base-margin * 5;
+    }
+}
+
+.checkout-layout-breadcrumb {
+    @extend .container;
+}
+
+.checkout-layout-content{
+    // padding-top: $sc-theme-desktop-padding;
+    & .error-management-internal-error, .error-management-forbidden-error {
+        padding-right: 0px;
+        padding-left: 0px;
+        width:auto;
+    }
+    & .contact-us-container {
+        padding-right: 45px;
+        padding-left: 45px;
+        width: 100%;
+    }
+}
+
+/* MISC */
+/* Not worth adding an extra file for */
+.cms-content {
+    //default to some basic padding for all
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+}
+.cms-content-text {
+    @media (min-width: $screen-md-min) {
+        padding-left: 85px;
+        padding-right: 85px;
+    }
+}
+
+/*
+MERCHANDISING ZONE ITEM
+Default merchandising template styling merchzone_default.txt
+*/
+.cms-content-merchzone {
+    aside {
+        @extend .container-fluid;
+        padding-top: $sc-base-padding * 2;
+        padding-bottom: $sc-base-padding * 4;
+        @media (min-width: $screen-md-min) {
+            padding-bottom: $sc-base-padding * 8;
+            padding-left: 85px;
+            padding-right: 85px;
+        }
+    }
+    .row-fluid {
+        @extend .row;
+    }
+    %col {
+        position: relative;
+        min-height: 1px;
+        float: left;
+        margin: 0 15px 20px 15px;
+
+        width: calc(50% - 30px); //width minus side margins
+    }
+    .span4 {
+        @extend %col;
+        @media (min-width: $screen-md-min) {
+            width: calc(33% - 30px); //width minus side margins
+        }
+    }
+    .span3 {
+        @extend %col;
+        @media (min-width: $screen-md-min) {
+            width: calc(25% - 30px); //width minus side margins
+        }
+    }
+    .item-cell {
+        padding-top: 10px;
+    }
+    .thumbnail {
+        margin-bottom: 10px;
+    }
+    h5 {
+        font-weight: normal;
+        font-size: 16px;
+        padding: 15px 0 0;
+        text-transform: capitalize;
+    }
+    .item-cell-price { // use this class if adding price to template
+        font-size: 16px;
+        padding-top: $sc-base-padding * 4;
+        padding-bottom: $sc-base-padding * 2;
+        color: $sc-theme-color-copy;
+    }
+    .btn {
+        @extend .button-secondary;
+        @extend .button-small;
+    }
+}
+
+/* Global Views */
+/* Modal */
+.global-views-modal-content {
+    border-radius: 0;
+}
+
+/* Infinite Scroll */
+.infinite-scroll-top {
+    background: $sc-color-theme;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+
+.infinite-scroll-top-icon {
+    color: $sc-color-tertiary;
+    position: relative;
+    top: 10px;
+}
+
+/* My Account */
+.overview-profile-email {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+.info-card{
+    padding: $sc-base-padding * 3;
+    border: 1px solid $sc-theme-color-light;
+}
+.list-header-view-accordion-body-button-sort{
+  height: $sc-target-size;
+  width: $sc-target-size;
+}
+
+/* Checkout */
+/* Also see CustomStyles > _qs-custom-order-wizard-cartitems-module.scss */
+.order-wizard-address-module-form-placeholder .address-edit {
+    border: none;
+}
+.order-wizard-cart-summary-container {
+    margin-bottom: 0;
+}
+.order-wizard-promocodeform-expander-head-toggle {
+    border: none;
+}
+.order-wizard-promocodeform {
+    @extend .summary-container;
+    border-top: none;
+    padding: 0;
+    margin-bottom: 0;
+}
+.item-views-cell-navigable-item-image {
+    padding-left: 0;
+}
+.order-wizard-paymentmethod-creditcard-module .creditcard-edit {
+    border: 0;
+}
+.order-wizard-address-module-address-container {
+    background: transparent;
+}
+.global-views-modal-content {
+    .address-edit {
+        border: 0;
+    }
+}
+
+/* Login */
+.login-register-body-colored {
+    padding: 0;
+    background-color: transparent;
+}
+
+/* Shopcart Quick Order */
+.quick-order {
+    padding: 15px 0;
+}
+.quick-order-expander-head-toggle {
+    border: 1px solid $sc-color-theme-border;
+}
+.quick-add-box {
+    border-top: 0;
+}
+.quick-order-expander-body {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.sticky-button-container-clone.sticked {
+    @media (max-width: $screen-sm) and (orientation: portrait) {
+        padding-right: 35px;
+    }
+}
+
+/* Buttons Border Fix back to Default Tertiary */
+.product-detail-to-quote-loading,
+.product-list-control-single-button-wishlist {
+    border: 2px solid $sc-color-link;
+}
+
+/* PDP */
+/* Add to Quote Button */
+.product-detail-to-quote-add-to-quote {
+    @extend .col-sm-6;
+    padding-left: $sc-base-padding * 2;
+    padding-right: $sc-base-padding * 2;
+    position: static;
+}
+.product-detail-to-quote-add-to-quote-button {
+    @extend .button-tertiary;
+    @extend .button-medium;
+    margin-top: $sc-base-margin * 3;
+    margin-left: 0;
+    font-weight: $sc-font-weight-semibold;
+    border: 2px solid $sc-color-link;
+    width: 100%;
+    text-align:center;
+    cursor:pointer;
+    cursor:hand;
+    padding: 0 $sc-base-padding;
+    line-height: $sc-target-size-mobile - 4px; //to account for border
+}
+
+/* PRODUCT LINE */
+.product-line-stock-msg-out {
+    margin: 0;
+    padding-left: 0;
+}
+
+/* Product Reviews on PDP */
+.product-reviews-center-container,
+.product-reviews-center-container-header {
+    padding: 0;
+    border: none;
+}
+
+.product-reviews-review-comment-footer-button:hover, .product-reviews-review-comment-footer-button:focus:hover {
+    color: $sc-theme-cta-tertiary-color !important;
+    background: $sc-theme-color-link !important;
+    text-decoration: none;
+}
+
+.product-reviews-review-voted,
+.product-reviews-review-voted:focus,
+.product-reviews-review-voted:hover,
+.product-reviews-review-voted:focus:hover {
+    border-color: $sc-theme-cta-secondary-color;
+    background: $sc-theme-cta-secondary-color !important;
+}
+
+.product-details-options-selector {
+    @media (min-width: $screen-md-min) {
+        padding-top: 20px;
+    }
+}
+
+h3.product-reviews-center-container-header-title { // targetting a specific element
+    @extend h2;
+}
+
+.product-reviews-center-container{
+    background: none;
+}
+
+/* Item Views */
+.item-views-cell-navigable-item-amount-value {
+    font-size: 14px;
+}
+
+/* STORE LOCATOR */
+.store-locator-list-all-main,
+.store-locator-main,
+.store-locator-details-main,
+.store-locator-upgrade-container {
+    @extend .row;
+}
+
+/* MISC EFFICIENCIES MODULES STYLES */
+/* Back In Stock Module Styles */
+.back-in-stock-notification-placeholder {
+    .back-in-stock-notification-show-form-button {
+        @extend .button-secondary;
+        width: 100%;
+    }
+}

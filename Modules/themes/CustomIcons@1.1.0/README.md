@@ -1,0 +1,2 @@
+The themes now have access to their own custom font which extends the standard FontAwesome icons available in SCA.
+Default SCA offers an older version of FontAwesome, so this module allows us to add some newer icons available in 4.7.0.

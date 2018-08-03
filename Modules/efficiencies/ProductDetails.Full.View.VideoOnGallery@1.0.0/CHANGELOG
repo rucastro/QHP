@@ -1,0 +1,9 @@
+ItemDetails.View.VideoOnGallery@dev
+1.0.0
+- Initial Release
+
+ProductDetails.View.VideoOnGallery@dev
+1.0.0
+- Elbrus Release
+- eslint fix
+- renamed from ItemDetails to ProductDetails

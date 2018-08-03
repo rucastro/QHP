@@ -1,0 +1,112 @@
+.hashtag-gallery h5 {
+    margin: 5px 0
+}
+.hashtag-gallery #main {
+    font-size: 13px
+}
+.hashtag-gallery .color-code {
+    margin: 10px 0
+}
+.hashtag-gallery .color-code li {
+    display: inline-block;
+    padding-right: 20px;
+    font-size: 12px
+}
+.hashtag-gallery .color-code li img {
+    padding-right: 5px
+}
+/* Search 
+------------------------------------------------*/
+.hashtag-gallery .stylish-input-group .input-group-addon{
+    background: #607799;
+    color: white !important;
+    font-weight: bold;
+}
+.hashtag-gallery .stylish-input-group .form-control{
+    border-right:0;
+    box-shadow:0 0 0;
+    border-color:#ccc;
+}
+.hashtag-gallery .stylish-input-group button{
+    border:0;
+    background:transparent;
+}
+.hashtag-gallery .doubt-style {
+    max-height: 500px;
+    overflow-y: scroll;
+}
+
+
+.hashtag-gallery .thumb-caption {
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    overflow: hidden;
+}
+
+.hashtag-gallery .doubt-style {
+    margin-top: 30px
+}
+
+.hashtag-gallery .thumbnail .caption {
+    padding: 5px 10px;
+    margin-top: 5px
+}
+
+
+
+/* Action Buttons
+------------------------------------------------*/
+.hashtag-action-button {
+    border-radius: 3px;
+    padding: 2px 12px;
+    font-weight: 600;
+    font-size: 14px;
+    border:1px solid #999999;
+    color: #222;
+    margin-right: 10px;
+    margin-top: 5px;
+    display: inline-block;
+}
+
+a.hashtag-action-button.disabled {
+    pointer-events: none;
+    opacity: .40;
+}
+
+
+/* Status icons
+------------------------------------------------*/
+
+.hashtag-status-icon {
+    border-radius: 20px;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    z-index: 99px
+}
+.hashtag-status-icon img {
+    padding: 10px;
+}
+/*Pagination
+------------------------------------------------*/
+.hashtag-gallery .pager {
+    margin: 15px 0;
+}
+
+.hashtag-gallery .pager li>a {
+      border-radius: 3px;
+    padding: 2px 12px;
+    font-weight: 600;
+    font-size: 14px;
+    border:1px solid #999999;
+    color: #222;
+}
+
+/* Hashtag Modal
+------------------------------------------------*/
+.hashtag-comment {
+    padding: 15px 0
+}
+.hashtag-gallery .modal-header p {margin: 0}
+
+

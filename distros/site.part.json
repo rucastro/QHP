@@ -1,0 +1,116 @@
+{
+    "id": "site",
+    "name": "Site QS Temp Placeholder - Summit Theme",
+    "dependencies": ["qs-b2c","hp-summit", "ss-checkoutfieldmanagement"],
+    "endpoint": "true",
+    "modules": {
+        "site/AboutUs.Extend":"dev",
+        "site/HeaderMenuView.Extend":"dev",
+        "site/Configuration.Site":"dev",
+        "site/SiteSearch.Extend": "dev",
+        "site/GoogleAds.Site": "dev",
+        "site/HeaderView.Extend": "dev",
+        "site/AssemblyCategory": "dev",
+        "site/RequestQuoteWizard.Extend":"dev",
+        "site/Facets.Extend":"dev",
+        "site/LoginRegister.Extend":"dev",
+        "site/Cart.Site":"dev",
+        "site/OrderWizard.Module.CartSummary.Site": "dev",
+        "site/OrderWizard.Module.ShipMethod.Site": "dev",
+        "site/Overview.Site": "dev",
+        "site/ProductList.Extend": "dev",
+        "site/ProductDetails.MetaTagsFix": "dev",
+        "site/Profile.Site": "dev",
+        "site/Theme_ProductViews.Site": "dev",
+
+        "site/CustomAddress.Site":"dev",
+        "site/CustomCart.Site":"dev",
+        "site/Warehouse.Site":"dev",
+        "site/PriorityShipping.Site":"dev"
+    },
+    "tasksConfig": {
+        "javascript": [
+            {
+                "entryPoint": "SC.Shopping.Starter",
+                "dependencies": [
+                    "HeaderMenu.View.Extend",
+                    "Header.View.Extend",
+                    "Facets.Browse.Extend",
+                    "GoogleAds.Site",
+                    "Cart.QuickAddToCart.Extend",
+                    "Facets.ItemCell.Extend",
+                    "Item.KeyMapping.URLExtend",
+                    "ProductDetails.Full.ImageGallery.Extend",
+                    "SC.Shopping.Configuration.Site",
+                    "ProductDetails.MetaTagsFix"
+                ]
+            },
+            {
+                "entryPoint": "SC.MyAccount.Starter",
+                "dependencies": [
+                    "HeaderMenu.View.Extend",
+                    "Header.View.Extend",
+                    "Item.KeyMapping.URLExtend",
+                    "ProductList.Lists.Extend"
+                ]
+            },
+            {
+                "entryPoint": "SC.Checkout.Starter",
+                "dependencies": [
+                    "Item.KeyMapping.URLExtend",
+                    "CustomAddress",
+                    {
+                        "add": "Warehouse",
+                        "before": "OrderWizard"
+                    },
+                    "CustomCart",
+                    "PriorityShipping"
+                ]
+            }
+        ],
+        "ssp-libraries": {
+            "dependencies": [
+                "CustomAddress",
+                "Warehouse",
+                "PriorityShipping"
+            ]
+        },
+        "sass": {
+            "applications": [
+                {
+                    "name": "Shopping",
+                    "dependencies": [
+                        "AboutUs.Extend",
+                        "SiteSearch.Extend",
+                        "AssemblyCategory",
+                        "RequestQuoteWizard.Extend",
+                        "HeaderMenuView.Extend",
+                        "Facets.Extend",
+                        "LoginRegister.Extend"
+                    ]
+                },
+                {
+                    "name": "MyAccount",
+                    "dependencies": [
+                        "AboutUs.Extend",
+                        "SiteSearch.Extend",
+                        "RequestQuoteWizard.Extend",
+                        "HeaderMenuView.Extend",
+                        "LoginRegister.Extend"
+                    ]
+                },
+                {
+                    "name": "Checkout",
+                    "dependencies": [
+                        "AboutUs.Extend",
+                        "SiteSearch.Extend",
+                        "RequestQuoteWizard.Extend",
+                        "HeaderMenuView.Extend",
+                        "LoginRegister.Extend",
+                        "Warehouse.Site"
+                    ]
+                }
+            ]
+        }
+    }
+}

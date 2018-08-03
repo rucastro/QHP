@@ -1,0 +1,234 @@
+.facets-assembly-image-container, .facets-assembly-pl-container-float {
+  @extend .col-xs-12, .col-md-4, .col-lg-4;
+  position: relative;
+}
+.assembly-list-header, .assembly-table-separator {
+  background-color: #7c7c7d;
+  color: #FFF;
+  min-height:80px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.facets-assembly-results {
+  @extend .col-xs-12, .col-md-8, .col-lg-8;
+  overflow-x: auto;
+  display: block;
+  padding: 0;
+}
+
+.assembly-items-collection-view-cell-container {
+  @extend .clearfix;
+}
+
+.facets-assembly-results .facets-facet-browse-items,
+.assembly-list-header {
+  @media (max-width: $screen-xs-max) {
+    width:800px;
+  }
+}
+.assembly-item-cell-list {
+  height: 80px;
+  color: #000;
+}
+.assembly-item-cell-list.selected {
+
+  height:80px;
+  //@media (min-width: $screen-md-min) {
+  //  &:hover {
+  //    .assembly-col-item,
+  //    .assembly-col-partnum,
+  //    .assembly-col-description,
+  //    .cart-quickaddtocart-price {
+  //      background-color: #fff6b6;
+  //    }
+  //  }
+  //}
+
+}
+.assembly-item-cell-list.selected .assembly-item-cell-list-details {
+  background-color: #fff6b6;
+  height:80px;
+}
+.assembly-col-item {
+  @extend .col-xs-1;
+  border:1px solid #333;
+  height: 80px;
+  padding-top: 20px;
+  text-align: center;
+}
+.assembly-col-partnum {
+  @extend .col-xs-2;
+  border:1px solid #333;
+  height: 80px;
+  padding-top: 20px;
+}
+.assembly-col-description {
+  @extend .col-xs-4;
+  border:1px solid #333;
+  height: 80px;
+  padding-top: 20px;
+
+  a {
+    color: #000;
+  }
+}
+
+.assembly-col-price,
+.assembly-col-quantity {
+  padding-top: 20px;
+}
+
+.assembly-col-quickadd {
+  .product-views-price-message {
+    color: #000;
+  }
+}
+
+.assembly-col-price, .assembly-col-quickadd .cart-quickaddtocart-price {
+  @extend .col-xs-2;
+  border:1px solid #333;
+  height: 80px;
+  background-color: transparent;
+  padding-top: 10px;
+}
+
+.product-views-price-lead {
+  padding-top: 20px;
+  display: block;
+}
+.assembly-col-quantity, .assembly-col-quickadd .cart-quickaddtocart-quantity {
+  @extend .col-xs-1;
+  border:1px solid #333;
+  height: 80px;
+  background-color: transparent;
+}
+.assembly-col-addtocart, .assembly-col-quickadd .cart-add-to-cart-button-container{
+  @extend .col-xs-2;
+  border:1px solid #333;
+  height: 80px;
+  padding-top: 20px;
+}
+
+.assembly-col-quickadd .cart-add-to-cart-button-container .cart-add-to-cart-button-button {
+  height: 36px;
+  margin-top: 0;
+  font-size: 10px;
+  padding: 0;
+  -webkit-border-radius:0;
+  -moz-border-radius:0;
+  border-radius:0;
+
+  @media (min-width: $screen-lg-min) {
+    width: 100px;
+  }
+}
+.assembly-col-quickadd .cart-quickaddtocart-quantity {
+  margin:0;
+  height:80px;
+  -webkit-border-radius:0;
+  -moz-border-radius:0;
+  border-radius:0;
+  padding: 5px;
+}
+
+.assembly-col-quickadd .product-views-price-login-to-see-prices {
+  padding: 0;
+}
+
+.assembly-parent-separator {
+  margin-top: 20px;
+  min-height: 80px;
+  
+  h6.assembly-parent-separator-text {
+    background-color: $sc-theme-color-primary;
+    border: 1px solid #333;
+    color: #fff;
+    font-size: 16px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+  }
+}
+.assembly-clear {
+  clear: both;
+}
+.facets-assembly-pl-container {
+  padding-top: 80px;
+}
+.facets-assembly-image-placeholder {
+
+
+
+}
+
+.float .facets-assembly-image-placeholder {
+
+  @media (min-width: $screen-md-min) {
+    top: 0;
+    left: 0;
+    z-index: 0;
+    position: fixed;
+    width: 100%;
+  }
+}
+
+
+.float .facets-assembly-pl-container {
+ @extend .col-md-4;
+
+}
+
+.float .facets-assembly-float-left {
+    @extend .facets-facet-browse;
+    border: 0;
+    box-shadow: 0;
+  border-radius: 0;
+    -webkit-box-shadow: none;
+}
+
+
+footer {
+    position: relative;
+    background: #FFF;
+
+}
+
+.assembly-table-separator {
+
+}
+
+.assembly-table-separator  div {
+  border: 1px solid #333;
+  padding-top: 20px;
+  min-height: inherit;
+                            }
+.assembly-separator-item {
+  @extend .col-xs-1;
+
+  @media (min-width: $screen-md-min) {
+    padding-left: 8px;
+  }
+}
+.assembly-separator-part {
+  @extend .col-xs-2;
+}
+.assembly-separator-description {
+  @extend .col-xs-4;
+}
+.assembly-separator-price {
+  @extend .col-xs-2;
+}
+.assembly-separator-quantity {
+  @extend .col-xs-1;
+}
+.assembly-separator-addtocart {
+  @extend .col-xs-2;
+}
+.lighCell {
+  background-color: #d3d3d3 !important;
+}
+
+.darkCell {
+  background-color: #EEEEEE !important;
+}
+

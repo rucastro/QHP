@@ -1,0 +1,117 @@
+/*
+	© 2017 NetSuite Inc.
+	User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
+	provided, however, if you are an authorized user with a NetSuite account or log-in, you
+	may use this code subject to the terms that govern your access and use.
+*/
+
+// Tabs
+//
+// Markup:
+
+// <div role="tabpanel">
+// 	<ul class="content-tabs" role="tablist">
+// 		<li class="content-tabs-title" role="presentation">
+// 			<a href="#"data-toggle="tab" data-target="#tab-1">Tab 1</a>
+//		</li>
+// 		<li class="content-tabs-title" role="presentation">
+// 			<a href="#"data-toggle="tab" data-target="#tab-2">Tab 2</a>
+//		</li>
+//   </ul>
+// 	<div class="tab-content"  data-action="tab-content">
+// 		<div role="tabpanel" class="tab-content-panel" id="tab-1"">
+//			<h2 class="tab-content-panel-title">Lorem Ipsum</h2>
+// 			<div class="tab-content-container">Lorem Ipsum</div>
+//   </div>
+// 		<div role="tabpanel" class="tab-content-panel" id="tab-2"">
+//			<h2 class="tab-content-panel-title">Lorem Ipsum</h2>
+// 			<div class="tab-content-container">Lorem Ipsum</div>
+//  </div>
+// 		<div class="tab-action">
+// 			<a href="#" class="tab-action-more" data-action="show-more">See More</a>
+// 			<a href="#" class="tab-action-less" data-action="show-more">See Less</a>
+//  </div>
+// </div>
+// </div>
+// 
+// Styleguide 11.6
+.content-tabs {
+	display:none;
+	margin-bottom: $sc-base-margin * 3;
+
+	@media (min-width: $screen-sm-min){
+		display: block;
+	}
+}
+
+.content-tabs-title {
+	&.active a {
+		color: $sc-color-copy;
+		border-bottom: 2px solid $sc-color-copy;
+	}
+	&:hover a{
+		border-bottom: 2px solid $sc-color-light-copy;
+}
+
+	&:only-child {
+		display: none;
+	}
+
+	a {
+		padding: $sc-base-padding * 3 $sc-base-padding * 9;
+	float:left;
+	margin-right:2px;
+		font-size:18px;
+		font-weight: $sc-font-weight-semibold;
+		color: $sc-color-light-copy;
+	}
+}
+
+.tab-content {
+	clear:both;
+
+	@media (min-width: $screen-sm-min){
+		padding: $sc-base-padding * 8 0;
+}
+}
+.tab-content-panel {
+
+	@media (min-width: $screen-sm-min){
+		padding-bottom: 0;
+		-webkit-transition: all 0.5s ease;
+		-moz-transition: all 0.5s ease;
+		-ms-transition: all 0.5s ease;
+		-o-transition: all 0.5s ease;
+		transition: all 0.5s ease;
+
+		overflow: hidden;
+		max-height: 400px;
+
+		opacity: 0; 
+		height: 0;
+		overflow: hidden;
+		&.active {
+			opacity: 1;
+			height: auto;
+		}
+	}
+}
+.tab-content-panel-title {
+	margin-bottom: $sc-base-margin * 4;
+}
+
+.tab-action {
+	display: none;
+
+	@media (min-width: $screen-sm-min){
+		display: block;
+	}
+}
+.tab-action-more {
+	margin-top: $sc-base-margin * 2;
+	display:block;
+}
+.tab-action-less {
+	display: none;
+	margin-top: $sc-base-margin * 2;
+}

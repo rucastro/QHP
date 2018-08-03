@@ -1,0 +1,21 @@
+{
+  "id": "qs-b2c",
+  "name": "Quickstart Basic",
+  "dependencies": [
+    "boilerplate",
+    "ss-backinstock",
+    "ss-duplicatecustomermanagement",
+    "ss-hashtaggallery",
+    "ss-sizechart",
+    "ss-localizationpatch",
+    "ss-about-us",
+    "ss-contactuslandingpage"
+
+  ],
+  "modules": {},
+  "tasksConfig": {
+    "ssp-libraries": {
+      "dependencies": []
+    }
+  }
+}

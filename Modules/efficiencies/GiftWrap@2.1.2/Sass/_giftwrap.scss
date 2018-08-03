@@ -1,0 +1,50 @@
+/**
+ * Gift Wrap SASS
+ */
+#custcol_ef_gw_giftwrap,
+#in-modal-custcol_ef_gw_giftwrap {
+  /* @extend .facets-item-list-show-selector; */
+    @extend .list-header-filter-input;;
+  padding-right: $sc-base-padding * 5;
+  width: 300px;
+}
+.item-views-option-gift-wrap-message,
+.item-views-option-dropdown-gift-wrap {
+  margin-bottom: $sc-small-margin;
+}
+
+.item-views-option-dropdown-gift-wrap-label-wrapper {
+  margin: $sc-small-margin 0;
+}
+
+.item-views-option-gift-wrap-message-label {
+  display: block;
+  margin: $sc-small-margin 0;
+  font-weight: $sc-font-weight-bold;
+}
+
+.item-views-option-dropdown-gift-wrap-label {
+  font-weight: $sc-font-weight-bold;
+}
+
+.item-views-cell-actionable-selected-options-cell,
+.item-views-selected-option {
+  margin: $sc-base-margin 0;
+}
+
+.item-views-selected-option-label {
+  font-weight: $sc-font-weight-bold;
+  color: $sc-color-dark-copy;
+}
+
+.giftwrap-action-item{
+  /* margin-top: 70px; */
+  /* border-right: 1px solid #5B7F8C; */
+  @media (max-width: $screen-md-min) {
+    margin-top: 20px;
+  }
+}
+
+.giftWrap-inactive{
+  display:none;
+}

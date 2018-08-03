@@ -1,0 +1,18 @@
+1.0.0
+- Initial Release
+
+1.2.0
+ - Vinson Release 
+- Used ServiceController in services 
+- Migrate configuration to vinson
+- Requires the Models.Init module in files that uses Commerce API
+
+2.0.0
+- Elbrus Release
+- eslint fix
+
+2.0.1
+- fix ItemDetails.LookItems not a constructor
+
+2.0.2
+- Update distro dependencies

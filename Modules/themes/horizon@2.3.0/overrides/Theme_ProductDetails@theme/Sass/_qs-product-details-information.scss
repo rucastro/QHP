@@ -1,0 +1,202 @@
+/*
+	© 2017 NetSuite Inc.
+	User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
+	provided, however, if you are an authorized user with a NetSuite account or log-in, you
+	may use this code subject to the terms that govern your access and use.
+*/
+
+.product-details-information-content-container {
+	@extend .container;
+	background: $sc-color-theme-background-light;
+
+	@media (min-width: $screen-sm-min){
+		padding-left: $sc-base-padding * 7;
+	}
+
+	@media (min-width: $screen-sm-min) {
+		background: transparent;
+	}
+}
+[data-action="sc-pushing"].product-details-information-content-container {
+	padding-bottom: $sc-base-padding * 2;
+}
+.product-details-information-content {
+	margin-bottom: $sc-base-margin * 3;
+	background-color: $sc-color-theme-background-lightest;
+	& ul {
+		@extend .nav !optional;
+		@extend .nav-tabs !optional;
+		background-color: transparent;
+		clear:both;
+
+		@media (min-width: $screen-sm-min) {
+			background-color: white;
+		}
+	}
+}
+.product-details-information-info-hint {
+	margin-top: $sc-base-margin * 3;
+	color: $sc-color-copy;
+	padding-right: $sc-base-padding * 3;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	display: inline-block;
+}
+.product-details-information-content-tabs {
+	@extend .content-tabs;
+
+}
+.product-details-information-tab-title {
+	@extend .content-tabs-title;
+	& a {
+		background-color:$sc-color-theme-background;
+		padding: $sc-base-padding * 4 $sc-base-padding * 6;
+		float:left;
+		margin-right: 2px;
+		font-weight: $sc-font-weight-semibold;
+		font-size:18px;
+		text-transform: uppercase;
+		color:$sc-color-theme;
+	}
+	&:only-child a{
+		display:none;
+	}
+	&.active a {
+		background-color:$sc-color-theme-background-light;
+		color: $sc-color-theme-light;
+	}
+}
+
+.product-details-information-tab-content {
+	clear:both;
+    color: $sc-color-theme-light;
+
+	h2{
+		margin-bottom: $sc-base-margin * 4;
+	}
+
+	ul {
+		background: none;
+	}
+
+	li{
+		list-style: disc inside none;
+		margin:5px 0 0 5px;
+	}
+
+    h2, h4, h5 {
+        color: $sc-theme-color;
+        font-weight: $sc-font-weight-normal;
+        text-transform: uppercase;
+    }
+
+    p {
+        color: $sc-color-theme-light;
+    }
+
+	@media (min-width: $screen-sm-min){
+		padding: $sc-base-padding * 6 $sc-base-padding * 6 $sc-base-padding * 6 0;
+	}
+}
+
+[data-action="sc-pushing"] .product-details-information-tab-content{
+	padding: $sc-base-padding * 3 $sc-base-padding * 6 $sc-base-padding * 6 0;
+}
+
+.product-details-information-tab-content-panel {
+	@extend .tab-content-panel;
+}
+
+.product-details-information-tab-content-panel-title {
+	@extend .tab-content-panel-title;
+}
+
+.product-details-information-tab-content-container {
+	h2, h3, h4 {
+		padding-top: $sc-base-padding * 4;
+	}
+	h5 {
+		padding-top: $sc-base-padding * 3;
+	}
+}
+
+.product-details-information-tab-content-panel {
+	@extend .tab-content-panel;
+}
+
+.product-details-information-tab-action {
+	@extend .tab-action;
+}
+
+.product-details-information-tab-action-more{
+	@extend .tab-action-more;
+	display:none;
+	@media (min-width: $screen-sm-min){
+      display:block;
+  	}
+}
+
+.product-details-information-tab-action-less{
+	@extend .tab-action-less;
+}
+
+.product-details-information-tab-content.show {
+	.product-details-information-tab-content-panel {
+		max-height: 100%;
+	}
+	.product-details-information-tab-action-less {
+		display: block;
+	}
+	.product-details-information-tab-action-more {
+		display: none;
+	}
+}
+.product-details-information-main-bottom-banner {
+	margin-bottom: $sc-medium-margin;
+}
+
+//Pusher button
+.product-details-information-pusher {
+	@extend .push-button-secondary;
+	margin-bottom: $sc-base-margin * 3;
+	position: relative;
+	font-size: $sc-h4-font-size;
+
+	i {
+		position: absolute;
+		right: 15px;
+		top: 50%;
+		height: 26px;
+		margin-top: -12px;
+	}
+}
+.product-details-information-hint {
+	margin-top: $sc-base-margin * 3;
+	color: $sc-color-copy;
+	padding-right: $sc-base-padding * 3;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+.product-details-information-pusher {
+	@extend .push-button-secondary;
+	margin-bottom: $sc-base-margin * 3;
+	position: relative;
+	font-size: $sc-h4-font-size;
+
+	i {
+		position: absolute;
+		right: 15px;
+		top: 50%;
+		height: 26px;
+		margin-top: -12px;
+	}
+}
+
+[data-action="sc-pushing"].product-details-information-content {
+	padding-bottom: $sc-base-padding * 2;
+}
+
+[data-action="sc-pushing"] .product-details-information-tab-content{
+	padding: $sc-base-padding * 3 $sc-base-padding * 6 $sc-base-padding * 6 0;
+}
+.product-details-information-content-container {}

@@ -1,0 +1,16 @@
+<div class="input-group-lg">
+    <h4>Search Social Hashtag</h4>
+    <div class="input-group stylish-input-group">
+        <form id="search-hashtag">
+            <input type="text" class="form-control" data-filter="hashtag" placeholder="Search" value="{{hashtagSearch}}" >
+            <span class="input-group-addon pgBntB">
+                <button type="submit" id="input-hashtag-btn">Search</button>
+            </span>
+        </form>
+    </div>
+</div>
+<div class="list-group doubt-style">
+    {{#each hashtags}}
+    <a class="list-group-item {{#if active}}active{{/if}}" href="#/hashtag/{{name}}/">{{name}}</a>
+    {{/each}}
+</div>

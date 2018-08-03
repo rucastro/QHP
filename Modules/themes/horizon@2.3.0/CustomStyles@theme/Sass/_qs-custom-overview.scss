@@ -1,0 +1,64 @@
+/*
+    © 2017 NetSuite Inc.
+    User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
+    provided, however, if you are an authorized user with a NetSuite account or log-in, you
+    may use this code subject to the terms that govern your access and use.
+*/
+
+/* OVERVIEW - MY ACCOUNT CREDIT CARDS */
+
+
+/* HOME */
+.overview-home-orders-title {
+    border-top: 0;
+}
+.overview-home-orders-title-link {
+    color: $sc-color-secondary;
+    &:hover {
+        color: saturate(lighten($sc-color-secondary, 4), 4);
+    }
+}
+.overview-home-mysettings {
+    background-color: $sc-color-tertiary;
+    @media (min-width: $screen-md-min) {
+        padding: 0;
+    }
+
+    & h3 {
+        padding-bottom: $sc-base-padding * 3;
+        border-bottom: 1px solid $sc-color-theme-border;
+    }
+}
+/* List */
+.overview-home-content-table {
+    border: none;
+}
+.overview-home-content-table-header-row th {
+    color: $sc-color-senary;
+    text-transform: uppercase;
+}
+.overview-home-purchases-list tr {
+    border: none;
+}
+
+
+/* PAYMENT */
+.overview-payment-card {
+    width: auto;
+    border: 1px solid $sc-color-senary;
+}
+
+/* SHIPPING */
+.overview-shipping-header h4 {
+    color: $sc-color-senary;
+}
+.overview-shipping-card {
+    border: none;
+    padding: $sc-base-padding * 2 0;
+}
+.overview-shipping-card-content {
+    @media (min-width: $screen-sm-min) {
+        min-height: 0;
+        padding-bottom: $sc-base-padding * 4;
+    }
+}

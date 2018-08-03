@@ -1,0 +1,254 @@
+/*
+    Custom Styles for SMT (Site Management Tools) Pages
+*/
+
+/* STARTS - Generic Styles for SMT Pages */
+.cms-landing-page p {
+    margin-bottom: $sc-medium-margin;
+}
+
+.cms-landing-page ul,
+.cms-landing-page li {
+    list-style: disc;
+    list-style-position: outside;
+}
+
+.cms-landing-page ul {
+    margin-top: $sc-small-margin;
+    margin-left: $sc-small-margin * 3;
+}
+
+.cms-landing-page li {
+    margin-bottom: $sc-medium-margin;
+}
+
+.cms-landing-page blockquote {
+    margin-left: $sc-small-margin * 3;
+    margin-bottom: $sc-medium-margin;
+}
+/* ENDS - Generic Styles for SMT Pages */
+
+/* STARTS - About Us SMT Page */
+.cms-landing-page-about-us p {
+    color: $sc-theme-color-light;
+    margin-bottom: $sc-medium-margin;
+}
+
+.cms-landing-page-about-us .about-staff-title {
+    @extend h1;
+    text-align: left;
+    margin-top: $sc-small-margin * 3;
+
+    @media (max-width: $screen-xs-min) {
+        text-align: center;
+    }
+}
+
+.about-us-staff-container {}
+
+.about-us-staff-container .row {
+    margin-top: $sc-medium-margin;
+    margin-bottom: $sc-large-margin;
+}
+.about-us-staff-container .staff-employee-cell {
+    @extend .col-xs-6;
+    @extend .col-sm-6;
+    @extend .col-md-3;
+    padding-left: 0;
+    padding-right: 0;
+
+    @media (max-width: $screen-xs-min) {
+        width: 100%;
+    }
+
+    @media (max-width: $screen-md-min) {
+        margin-bottom: $sc-medium-margin;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.about-us-staff-container .staff-employee-container .staff-employee-details {
+    padding: $sc-base-padding * 3;
+
+    h5 {
+        color: $sc-theme-color;
+    }
+    p {
+        color: $sc-theme-color-secondary;
+        text-transform: uppercase;
+        margin-bottom: 0;
+    }
+}
+
+.about-us-bottom-content {
+    margin-top: $sc-medium-margin * 2;
+    margin-bottom: $sc-medium-margin * 2;
+}
+
+.about-us-bottom-content .about-us-bottom-content-link{
+    @media (min-width: $screen-xs-min) {
+        &:nth-child(odd) .about-us-bottom-content-col {
+            margin-right: 10px;
+        }
+
+        &:nth-child(even) .about-us-bottom-content-col {
+            margin-left: 10px;
+        }
+    }
+}
+
+.about-us-bottom-content .about-us-bottom-content-col {
+    float: left;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 200px;
+    width: calc(50% - 10px);
+    display: table;
+
+    @media (max-width: $screen-xs-min) {
+        width: 100%;
+        margin-bottom: $sc-medium-margin;
+    }
+
+    .about-us-bottom-content-text-cell {
+        display: table-cell;
+        vertical-align: bottom;
+        padding-bottom: $sc-base-padding * 4;
+    }
+
+    .about-us-bottom-content-text-info {
+        text-align: center;
+        background: $sc-theme-home-cta-background-color;
+        margin: 0 $sc-medium-margin;
+        padding: 0.7rem 1rem;
+
+        @media (min-width: $screen-md-min) {
+            float: right;
+            min-width: 300px;
+            text-align: left;
+            margin: 0;
+        }
+    }
+
+    .about-us-bottom-content-text {
+        font-size: 26px;
+        line-height: 1;
+        color: $sc-theme-color-tertiary;
+        font-weight: $sc-font-weight-normal;
+
+        @media (max-width: $screen-md-min) {
+            font-size: 22px;
+        }
+    }
+}
+/* ENDS - About Us SMT Page */
+
+/* STARTS - Shop By Brand SMT Page */
+.cms-landing-page-shop-by-brand {}
+
+.cms-landing-page-shop-by-brand ul,
+.cms-landing-page-shop-by-brand li {
+    list-style: none !important;
+}
+
+.cms-landing-page-shop-by-brand ul {
+    margin-left: 0 !important;
+}
+
+.cms-landing-page-shop-by-brand li {
+    margin-bottom: 0 !important;
+}
+
+.cms-landing-page-shop-by-brand > div {
+    margin-bottom: $sc-medium-margin * 2;
+}
+
+.cms-landing-page-shop-by-brand .featured-brands-container {
+    margin-bottom: $sc-medium-margin;
+}
+.cms-landing-page-shop-by-brand .featured-brands-col {
+    @extend .col-xs-6;
+    @extend .col-sm-3;
+    @extend .col-md-3;
+}
+
+.cms-landing-page-shop-by-brand .brands-by-category {}
+
+.cms-landing-page-shop-by-brand h2 {
+    text-align: left;
+    font-size: $sc-h1-font-size;
+}
+
+.cms-landing-page-shop-by-brand .brands-by-category-col {
+    @extend .col-xs-6;
+    @extend .col-sm-6;
+    @extend .col-md-3;
+
+    @media (max-width: $screen-xs-min) {
+        width: 100%;
+    }
+
+    @media (min-width: $screen-xs-min) and (max-width: $screen-sm-max) {
+        &:nth-child(odd) {
+            clear: both;
+        }
+    }
+}
+
+.cms-landing-page-shop-by-brand .brands-by-category-list-title a {
+    color: $sc-theme-color-dark-copy;
+    font-size: 18px;
+}
+
+.cms-landing-page-shop-by-brand .all-brands-col {
+    @extend .col-xs-6;
+    @extend .col-sm-6;
+    @extend .col-md-3;
+
+    @media (max-width: $screen-xs-min) {
+        width: 100%;
+    }
+
+    @media (min-width: $screen-xs-min) and (max-width: $screen-sm-max) {
+        &:nth-child(odd) {
+            clear: both;
+        }
+    }
+}
+/* ENDS - Shop By Brand SMT Page */
+
+/* STARTS - Shop By Category SMT Page */
+.cms-landing-page-shop-by-category {}
+
+.cms-landing-page-shop-by-category h1 {
+    margin-bottom: $sc-medium-margin;
+}
+
+.cms-landing-page-shop-by-category > .row {
+    @media (min-width: $screen-xs-min) {
+        margin-bottom: $sc-small-margin * 3;
+    }
+}
+
+.cms-landing-page-shop-by-category .shop-by-category-col {
+    @extend .col-xs-6;
+    @extend .col-sm-6;
+    @extend .col-md-6;
+
+    @media (max-width: $screen-xs-min) {
+        width: 100%;
+    }
+}
+
+.cms-landing-page-shop-by-category img {
+    width: 100%;
+
+    @media (max-width: $screen-xs-min) {
+        margin-bottom: $sc-medium-margin;
+    }
+}
+/* ENDS - Shop By Category SMT Page */

@@ -1,0 +1,10 @@
+{
+    "gulp": {
+        "templates": [
+            "Templates/*"
+        ]
+    },
+    "overrides": {
+        "suitecommerce/Profile@3.0.0/Templates/profile_information.tpl": "Templates/profile_information.tpl" 
+    }
+}

@@ -1,0 +1,108 @@
+{
+  "id": "ss-theme-bridge",
+  "name": "SuiteSolution Theme Bridge - Elbrus",
+  "dependencies": ["elbrus-base"],
+  "modules": {
+      "themes/ThemesConfiguration": "1.0.1",
+      "themes/CustomIcons": "1.1.0",
+      "themes/bridge@2.2.0/CustomStyles": "theme",
+      "themes/bridge@2.2.0/overrides/Theme_BaseSassStyles": "theme",
+      "themes/bridge@2.2.0/overrides/Theme_Cart": "theme",
+      "themes/bridge@2.2.0/overrides/Theme_Facets": "theme",
+      "themes/bridge@2.2.0/overrides/Theme_Footer": "theme",
+      "themes/bridge@2.2.0/overrides/Theme_Header": "theme",
+      "themes/bridge@2.2.0/overrides/Theme_Home": "theme",
+      "themes/bridge@2.2.0/overrides/Theme_ItemRelations": "theme",
+      "themes/bridge@2.2.0/overrides/Theme_ProductDetails": "theme",
+      "themes/bridge@2.2.0/overrides/Theme_RequestQuoteAccessPoints": "theme",
+      "themes/bridge@2.2.0/overrides/Theme_QuickOrderAccessPoints": "theme",
+      "themes/bridge@2.2.0/overrides/Theme_SiteSearch": "theme",
+      "themes/bridge@2.2.0/overrides/Theme_Transaction.Line.Views": "theme",
+      "themes/bridge@2.2.0/overrides/Theme_ErrorManagement": "theme",
+      "themes/bridge@2.2.0/overrides/Theme_ShoppingApplication": "theme"
+  },
+  "tasksConfig": {
+    "javascript": [
+      {
+        "entryPoint": "SC.Shopping.Starter",
+        "dependencies": [
+          "QS.Home.View",
+          "QS.Header.View",
+          "QS.Footer.View",
+          "QS.Footer.Simplified.View",
+          "QS.ErrorManagement.PageNotFound.View",
+          "QS.SC.Shopping.Layout"
+        ]
+      },
+      {
+        "entryPoint": "SC.MyAccount.Starter",
+        "dependencies": [
+          "QS.Home.View",
+          "QS.Header.View",
+          "QS.Footer.View",
+          "QS.Footer.Simplified.View"
+        ]
+      },
+      {
+        "entryPoint": "SC.Checkout.Starter",
+        "dependencies": [
+          "QS.Home.View",
+          "QS.Header.View",
+          "QS.Header.Simplified.View",
+          "QS.Footer.View",
+          "QS.Footer.Simplified.View"
+        ]
+      }
+    ],
+    "sass": {
+      "applications": [
+        {
+          "name": "Shopping",
+          "dependencies": [
+            "Theme_BaseSassStyles",
+            "Theme_Cart",
+            "Theme_Facets",
+            "Theme_Footer",
+            "Theme_Header",
+            "Theme_Home",
+            "Theme_ProductDetails",
+            "Theme_SiteSearch",
+            "CustomStyles",
+            "Theme_Transaction.Line.Views",
+            "Theme_ItemRelations",
+            "CustomIcons"
+          ]
+        },
+        {
+          "name": "MyAccount",
+          "dependencies": [
+            "Theme_BaseSassStyles",
+            "Theme_Cart",
+            "Theme_Footer",
+            "Theme_Header",
+            "Theme_SiteSearch",
+            "CustomStyles",
+            "Theme_Transaction.Line.Views",
+            "CustomIcons"
+          ]
+        },
+        {
+          "name": "Checkout",
+          "dependencies": [
+            "Theme_BaseSassStyles",
+            "Theme_Cart",
+            "Theme_Footer",
+            "Theme_Header",
+            "Theme_SiteSearch",
+            "CustomStyles",
+            "Theme_Transaction.Line.Views",
+            "CustomIcons"
+          ]
+        }
+      ]
+    },
+    "ssp-libraries": {
+      "dependencies": []
+    }
+  }
+}

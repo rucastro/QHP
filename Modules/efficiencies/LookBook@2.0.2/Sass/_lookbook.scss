@@ -1,0 +1,218 @@
+/*
+    © 2015 NetSuite Inc.
+    User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
+    provided, however, if you are an authorized user with a NetSuite account or log-in, you
+    may use this code subject to the terms that govern your access and use.
+*/
+
+$sc-lookbook-slider-max-width: 1140px;
+
+.lookbook-layout-container {
+  @extend .container;
+  margin-bottom: $sc-medium-margin;
+}
+
+.lookbook-slider-container {
+  @extend .row;
+}
+
+.lookbook-image-slider,
+.lookbook-header {
+  @extend .col-sm-12;
+}
+
+// start bx-slider specifics
+
+.lookbook-image-slider {
+
+  & .bx-wrapper {
+    margin-bottom: $sc-base-margin * 8;
+    @media (min-width: $screen-md-min) {
+      margin-bottom: 0;
+    }
+  }
+
+  & .bx-pager-item {
+    @extend .bx-pager-item;
+  }
+
+  & .bx-controls,
+  & .bx-controls .bx-pager {
+    @media (min-width: $screen-sm-min) {
+      margin-top: $sc-base-margin * 2;
+    }
+  }
+
+  & .bx-wrapper,
+  & .bx-viewport {
+      @media (min-width: $screen-md-min) {
+        height: 600px !important;
+      }
+  }
+
+  & .bx-viewport ul li {
+    overflow:hidden;
+  }
+
+  & .bx-wrapper img {
+    margin: auto 0;
+    margin-top:$sc-base-margin * 20;
+    float:none;
+    @media (min-width: $screen-sm-min) {
+      margin: 0;
+    }
+    @media (min-width: $screen-md-min) {
+      max-width: $sc-lookbook-slider-max-width !important;
+    }
+  }
+
+  & .bx-pager {
+    a {
+      color: $sc-color-theme-light !important;
+      background-color: $sc-color-theme-light!important;
+      width: 10px !important;
+      height: 10px !important;
+      border-radius: 100% !important;
+      font-size:0;
+      text-indent:-9999px;
+    }
+    a.active{
+      background-color: $sc-color-secondary;
+    }
+    @media (min-width: $screen-md-min) {
+      width: 940px;
+      position: absolute !important;
+      bottom: $sc-medium-margin;
+      text-align: center;
+    }
+    @media (min-width: $screen-lg-min) {
+      width: $sc-lookbook-slider-max-width;
+    }
+  }
+
+}
+
+.lookbook-gallery-prev-icon {
+  @extend .home-gallery-prev-icon;
+}
+
+.lookbook-gallery-next-icon {
+  @extend .home-gallery-next-icon;
+}
+
+// end bx-slider specifics
+
+.lookbook-slide-caption {
+  position:absolute;
+  top:0px;
+  width:100%;
+  text-align:center;
+  @media (min-width: $screen-sm-min) {
+    padding:$sc-base-padding * 10;
+    height: auto;
+    width: 50%;
+  }
+}
+
+.lookbook-slide-caption-title {
+  font-size:$sc-base-font-size * 2;
+  line-height: $sc-base-font-size * 2;
+  margin-bottom:$sc-small-margin;
+  color:$sc-color-secondary;
+  text-align: center;
+  @media (min-width: $screen-sm-min){
+    text-align: left;
+  }
+  @media (min-width: $screen-md-min){
+    font-size:$sc-base-font-size * 2.66;
+    line-height: $sc-base-font-size * 2.66;
+    margin-bottom:$sc-medium-margin;
+  }
+}
+
+.lookbook-header { /* when first slide is a look, use look book fields in header  */
+  & .lookbook-slide-caption-title {
+    font-size: $sc-base-font-size * 2;
+  }
+  & .lookbook-slide-shortdesc {
+    font-size: $sc-h2-font-size-mobile;
+  }
+  & .lookbook-slide-longdesc {
+    font-size: $sc-base-font-size;
+  }
+}
+
+.lookbook-slide-caption-align-F {
+  @media (min-width: $screen-sm-min) {
+    text-align:left;
+  }
+}
+
+.lookbook-slide-caption-align-T {
+  @media (min-width: $screen-sm-min) {
+    text-align:right;
+    margin-left: 50%;
+  }
+}
+
+.lookbook-slide-caption-align-T .lookbook-slide-caption-title {
+  @media (min-width: $screen-sm-min) {
+    text-align:right;
+  }
+}
+
+.lookbook-slide-shortdesc {
+  display: none;
+  text-transform: uppercase;
+  @media (min-width: $screen-sm-min){
+    display: block;
+    margin-bottom: $sc-medium-margin;
+    color: $sc-color-theme;
+    font-size: $sc-h2-font-size-mobile;
+    font-weight: $sc-font-weight-light;
+  }
+  @media (min-width: $screen-md-min) {
+    font-size: $sc-h2-font-size;
+  }
+}
+
+.lookbook-slide-longdesc {
+  display: none;
+  @media (min-width: $screen-md-min) {
+    display: block;
+    margin-bottom: $sc-medium-margin;
+    color: $sc-color-theme;
+    font-size: $sc-h2-font-size-mobile;
+    font-weight: $sc-font-weight-light;
+  }
+}
+
+.lookbook-look-button {
+  @extend .button-secondary;
+  @extend .button-medium;
+}
+
+/* CMS */
+
+/* .lookbook-cms-intro {
+  display: none;
+  @media (min-width: $screen-sm-min){
+    display: block;
+    @extend .col-sm-12;
+    margin-bottom: $sc-small-margin;
+  }
+} */
+
+.lookbook-cms-intro {
+  display: none;
+  @extend .col-sm-12;
+  @media (min-width: $screen-sm-min){
+    display: block;
+    margin-bottom: $sc-small-margin;
+  }
+}
+
+.lookbook-cms-footer {
+  @extend .col-sm-12;
+  margin-top: $sc-small-margin;
+}

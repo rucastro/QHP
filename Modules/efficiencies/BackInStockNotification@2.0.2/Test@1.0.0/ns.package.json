@@ -1,0 +1,7 @@
+{
+    "gulp": {
+        "automation-tests": [
+            "Automation/Tests/*.js"
+        ]
+    }
+}

@@ -1,0 +1,32 @@
+/*
+	© 2017 NetSuite Inc.
+	User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
+	provided, however, if you are an authorized user with a NetSuite account or log-in, you
+	may use this code subject to the terms that govern your access and use.
+*/
+
+/// purchase controls
+
+// color picker
+$picker-large: 40px !default;
+$picker-medium: 25px !default;
+$picker-small: 20px !default;
+$picker-xsmall: 10px !default;
+
+//New color picker
+$picker-color-large: 40px;
+$picker-color-medium: 25px;
+$picker-color-small: 15px;
+$picker-color-xsmall: $picker-color-small;
+
+// images
+$img-large: 150px !default;
+$img-medium: 100px !default;
+$img-small: 60px !default;
+
+//target size
+$sc-target-size:44px !default;
+$sc-target-size-mobile:40px !default;
+
+$sc-flyout-arrow-height: 7px !default;
+$sc-flyout-arrow-shadow-height: $sc-flyout-arrow-height - 1 !default;

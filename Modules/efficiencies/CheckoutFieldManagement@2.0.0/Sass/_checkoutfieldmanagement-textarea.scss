@@ -1,0 +1,18 @@
+
+.checkoutfieldmanagement-textarea-line {
+    @extend .control-group;
+}
+
+.checkoutfieldmanagement-textarea-label {
+    @extend .input-label;
+}
+
+.checkoutfieldmanagement-textarea-input {
+    @extend .input-large;
+}
+
+.checkoutfieldmanagement-textarea-help {
+    @extend .input-help;
+}
+
+.checkoutfieldmanagement-textarea-control-container {}

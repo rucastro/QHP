@@ -1,0 +1,108 @@
+/*
+	© 2017 NetSuite Inc.
+	User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
+	provided, however, if you are an authorized user with a NetSuite account or log-in, you
+	may use this code subject to the terms that govern your access and use.
+*/
+.error-management-page-not-found {
+	@extend .container;
+	padding: 0 !important;
+	margin-top: -34px; // used to overlap breadcrumbs
+	background-color: transparent !important;
+	@include box-shadow(none !important);
+}
+
+.error-management-page-not-found-main-banner {}
+
+.error-management-page-not-found-content {}
+
+.error-management-page-not-found-header {
+	position: relative;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	overflow: hidden;
+	height: 400px;
+	text-align: center;
+	border-bottom-left-radius: $sc-theme-border-radius;
+	border-bottom-right-radius: $sc-theme-border-radius;
+}
+
+.error-management-page-not-found-caption {
+	position: absolute;
+	top: 80px;
+	width: 100%;
+	text-align: center;
+	padding: $sc-small-margin;
+	@media (max-width: $screen-xs-min) {
+		top: 80px;
+	}
+	@media (min-width: $screen-sm-min) and (max-width: $screen-md-max) {
+		top: 40px;
+	}
+
+	.error-management-page-not-found-title {
+		h1 {
+			margin-bottom: $sc-small-margin;
+			margin-left: 20px;
+			margin-right: 20px;
+			font-size: $sc-theme-carousel-title-size-mobile;
+			color: $sc-theme-carousel-text-color;
+			text-shadow: 2px 2px $sc-theme-color-shadow;
+			font-weight: $sc-font-weight-light;
+			@media (min-width: $screen-md-min) {
+				margin-bottom: $sc-medium-margin;
+				margin-left: 0;
+				margin-right: 0;
+				font-size: $sc-theme-carousel-title-size-desktop;
+				line-height: $sc-theme-carousel-title-size-desktop;
+				padding-bottom: $sc-base-padding;
+
+				span {
+					font-size: $sc-h1-font-size;
+					line-height: 1;
+					display: block;
+				}
+			}
+		}
+	}
+
+	.error-management-page-not-found-text {
+		display: none;
+		@media (min-width: $screen-xs-min) {
+			display: block;
+			margin-bottom: $sc-medium-margin;
+			color: $sc-theme-carousel-text-color;
+			font-size: $sc-theme-carousel-text-size;
+			text-transform: lowercase;
+			font-weight: $sc-font-weight-bold;
+			text-shadow: 1px 1px $sc-theme-color-shadow;
+		}
+	}
+
+	.error-management-page-not-found-button-container {
+		padding-left: $sc-base-padding *4;
+		padding-right: $sc-base-padding *4;
+		position: absolute;
+		margin-left: -$sc-base-padding *2;
+		bottom: -60px;
+		width: 100%;
+		@media (min-width: $screen-sm-min) {
+			padding: 0;
+			margin-left: 0;
+			margin-right: 0;
+			position: relative;
+			bottom: 0;
+		}
+	}
+
+	.error-management-page-not-found-button {
+		@extend .button-secondary;
+		@extend .button-small;
+		box-shadow: 1px 1px 1px #333;
+		@media (min-width: $screen-xs-min) {
+			width: auto;
+			position: relative;
+		}
+	}
+}

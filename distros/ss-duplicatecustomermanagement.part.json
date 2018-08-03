@@ -1,0 +1,45 @@
+{
+  "id": "ss-duplicatecustomermanagement",
+  "name": "SuiteSolutions - DuplicateCustomerManagement",
+  "dependencies": ["elbrus-base", "ss-efcore"],
+  "modules": {
+    "efficiencies/DuplicateCustomerManagement": "1.0.4"
+  },
+  "tasksConfig": {
+    "ssp-libraries": {
+      "dependencies": [
+        "DuplicateCustomerManagement.ContextSetup"
+      ]
+    },
+    "backend-suitescript": {
+      "amdConfig": {
+        "paths": {
+          "Backbone.Validation": "backbone-validation.server.custom"
+        },
+        "shim": {
+          "Backbone.Validation": {
+            "exports": "Backbone.Validation"
+          }
+        },
+        "findNestedDependencies": true,
+        "map": {
+          "DuplicateCustomerManagement.Configuration": {
+            "Configuration": "Configuration.Backend"
+          },
+          "SC.EventWrapper": {
+            "Application": "Application.Backend"
+          },
+          "ServiceController.Validations": {
+            "Application": "Application.Backend"
+          },
+          "ServiceController": {
+            "Application": "Application.Backend"
+          },
+          "Utils": {
+            "SC.Models.Init": "SC.Models.Init.Backend"
+          }
+        }
+      }
+    }
+  }
+}

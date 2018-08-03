@@ -1,0 +1,26 @@
+1.0.0
+- Initial Release
+
+1.3.0
+- Migrate configuration to vinson
+- Used ServiceController in services
+- Requires the Models.Init module in files that uses Commerce API
+
+1.3.1
+- Remove mandatory attribute from fields
+- Add module enablement in configuration
+
+1.4.0
+- Elbrus Release
+
+1.5.0
+- Read Me file added
+- Configuration added for switching native Registration form to Contact us lead form
+
+1.5.1
+- responseCode variable name typo fix
+- added consideration 'success' for 404 response
+
+1.6.0
+- Enhance Success Message alert after submit
+- Configurable success title and message

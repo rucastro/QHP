@@ -1,0 +1,80 @@
+/*
+    © 2015 NetSuite Inc.
+    User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
+    provided, however, if you are an authorized user with a NetSuite account or log-in, you
+    may use this code subject to the terms that govern your access and use.
+*/
+
+.hashtag-gallery {
+
+}
+
+.hashtag-gallery-header {
+    @extend .row;
+    margin-bottom: $sc-medium-margin;
+    display: flex;
+    align-items: center;
+}
+
+.hashtag-gallery-posts-row {
+    @extend .row;
+}
+
+.hashtag-gallery-post {
+    @extend .col-sm-3;
+    @extend .col-xs-6;
+    margin-bottom: $sc-medium-margin;
+    &:nth-child(4n+1) {
+        @media (min-width: $screen-sm-min) {
+            clear: left;
+        }
+    }
+    &:nth-child(2n+1) {
+        @media (min-width: $screen-xs-min) and (max-width: $screen-xs-max) {
+            clear: left;
+        }
+    }
+}
+
+.hashtag-gallery-post-caption {
+    color: $sc-color-light-copy;
+}
+
+.hashtag-gallery-intro {
+    @extend .col-xs-7;
+}
+
+.hashtag-gallery-pagination {
+    @extend .col-xs-5;
+    .hashtag-gallery-footer & {
+        @extend .col-xs-offset-7;
+        margin-bottom: $sc-medium-margin;
+    }
+}
+
+.hashtag-gallery-footer {
+    @media (min-width: $screen-md-min) {
+        display: none;
+    }
+}
+
+.hashtag-gallery-user {
+    @extend .row;
+    margin-top: $sc-base-margin;
+    display: flex;
+    align-items: center;
+}
+
+.hashtag-gallery-user-pic {
+    @extend .col-xs-3;
+    @media (min-width: $screen-md-min) {
+        padding-right: $sc-base-margin;
+    }
+}
+
+.hashtag-gallery-user-link {
+    @extend .col-xs-9;
+    @media (min-width: $screen-md-min) {
+        font-size: $sc-small-font-size;
+    }
+}

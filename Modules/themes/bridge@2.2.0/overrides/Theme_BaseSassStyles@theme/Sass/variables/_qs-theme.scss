@@ -1,0 +1,156 @@
+/*
+	© 2017 NetSuite Inc.
+	User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
+	provided, however, if you are an authorized user with a NetSuite account or log-in, you
+	may use this code subject to the terms that govern your access and use.
+
+*/
+
+/* SITE-WIDE */
+
+/* COLORS */
+
+/*
+ - These colors are used generally around the site for borders, backgrounds, text
+ - They are used as a general color theme for the main content area
+ - $sc-theme-color is the main color and the light and lightest versions are the same hue
+ - If you want to generate these values instead of use a hex value, use the function provided
+ */
+$sc-theme-color: #829ca9;
+$sc-theme-color-light: #c8d6e3; // approx lighten($sc-color-theme, 24%)
+$sc-theme-color-lightest: #EEF3F7; // background color, approx lighten($sc-color-theme, 36%)
+
+/* Only used in the top nav, as the background colors for the icons */
+$sc-theme-color-navigation: #2274a5;
+$sc-theme-color-navigation-active: #308AFB;
+
+/* Highlight colors around the site, including buttons */
+$sc-theme-color-primary: #00cc6e;
+$sc-theme-color-secondary: #f06543;
+$sc-theme-color-tertiary: #fff; // icons, main content background
+
+/* Link color, headings and some border colors */
+$sc-theme-color-header: #829CDB;
+$sc-theme-color-link: #0f54f8; // for improved UI, a different color for links recommended
+$sc-theme-color-link-hover: #0C10C4;
+
+/* Copy, footer background */
+$sc-theme-color-copy: #031528;
+
+/* Buttons */
+$sc-theme-cta-primary-color: $sc-theme-color-primary;
+$sc-theme-cta-secondary-color: $sc-theme-color-secondary;
+$sc-theme-cta-tertiary-color: $sc-theme-color-tertiary;
+$sc-theme-cta-hover-color: $sc-theme-color-link;
+
+/* FONTS */
+$sc-theme-primary-font: "Roboto", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$sc-theme-secondary-font: "Rubik", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+%secondary-font {
+    font-family: $sc-theme-secondary-font;
+    font-weight: $sc-font-weight-light;
+}
+
+/* SIZING */
+$sc-theme-cell-img-height: 210px; // image size on merchandising zones, related items etc
+$sc-theme-cell-img-width: 210px;
+$sc-theme-skew-distance: 0px; // MUST INCLUDE PX, EVEN IF 0! distance of slant on buttons and nav
+$sc-theme-border-radius: 0px; // curve radius on all container divs and buttons
+
+/* SPACING */
+/* For left/right padding */
+$sc-theme-mobile-padding: 25px;
+$sc-theme-desktop-padding: 60px;
+
+
+////////////////////////////////////////////////////////////////////////////////
+
+
+/* HEADER */
+$sc-main-nav-height: 72px; // was $sc-target-size;
+$sc-main-nav-width: 130px;
+$sc-main-nav-link-height: 44px;
+$sc-sidebar-size: 246px;
+$sc-main-nav-bgr-color: $sc-theme-color-navigation;
+
+$sc-theme-header-height: 147px;
+$sc-theme-header-simplified-height: 100px;
+
+$sc-theme-navlinks-bgr-color: $sc-theme-color-tertiary;
+$sc-theme-navlinks-separator-color: $sc-theme-color-light;
+
+/* Category Navigation */
+$sc-theme-nav-font-size: 14px;
+$sc-theme-nav-color: $sc-main-nav-bgr-color;
+$sc-theme-nav-bgr-color: $sc-theme-color-tertiary;
+
+/* Header Right Hand Menu Links i.e. login, register */
+$sc-theme-header-link-color: $sc-theme-color-tertiary;
+$sc-theme-header-link-color-hover: $sc-theme-color-copy;
+
+/* Navigation Tools (Icons) */
+$sc-theme-icon-size: 20px;
+$sc-theme-icon-color: $sc-theme-color-tertiary;
+$sc-theme-icon-bgr-color: $sc-theme-color-navigation;
+$sc-theme-icon-bgr-hover-color: $sc-theme-color-link;
+$sc-theme-icon-bgr-active-color: $sc-theme-color-navigation-active;
+$sc-theme-cart-icon-color: $sc-theme-color-tertiary;
+
+
+////////////////////////////////////////////////////////////////////////////////
+
+
+/* HOME */
+
+/* Carousel */
+$sc-theme-carousel-title-size: 48px;
+$sc-theme-carousel-text-size: 18px;
+$sc-theme-carousel-text-color: $sc-theme-color-tertiary;
+$sc-theme-carousel-button-font-size: 18px;
+$sc-theme-carousel-button-text-color: $sc-theme-color-tertiary;
+$sc-theme-carousel-button-bgr-color: $sc-theme-cta-secondary-color;
+$sc-theme-carousel-button-bgr-hover-color: $sc-theme-cta-hover-color;
+$sc-theme-carousel-content-width: 560px;
+$sc-theme-carousel-title-size: $sc-h1-font-size + 10px;
+
+/* Infoblocks */
+$sc-theme-infoblock-height-mobile: 200px;
+$sc-theme-infoblock-height-desktop: 250px;
+$sc-theme-infoblock-content-width: 200px;
+$sc-theme-infoblock-large-content-width: 250px; //used only on the 5th infoblock when 5 infoblocks total
+$sc-theme-infoblock-title-underline-color: $sc-theme-color-link;
+$sc-theme-infoblock-title-underline-hover-color: $sc-theme-color-copy;
+$sc-theme-infoblock-background-image-zoom: 120%; //user hovers over infoblock and background size increases by this amount
+$sc-theme-infoblock-highlight-color: $sc-theme-icon-bgr-active-color; //user hovers over infoblock and coloured overlay applied
+$sc-theme-infoblock-title-size: 16px;
+$sc-theme-infoblock-text-size: 24px;
+$sc-theme-infoblock-large-title-size: $sc-theme-infoblock-text-size;
+$sc-theme-infoblock-large-text-size: 36px;
+$sc-theme-infoblock-link-color: $sc-theme-color-tertiary;
+
+
+////////////////////////////////////////////////////////////////////////////////
+
+
+/* FOOTER */
+// $sc-theme-footer-submit-color: $sc-theme-color-secondary;
+// $sc-theme-footer-font-size: $sc-small-font-size;
+$sc-theme-footer-heading-color: $sc-theme-color-tertiary;
+$sc-theme-footer-link-color: $sc-theme-color;
+$sc-theme-footer-link-color-hover: $sc-theme-color-tertiary;
+$sc-theme-footer-social-icon-color: $sc-theme-color-tertiary;
+$sc-theme-footer-social-icon-color-hover: $sc-theme-color-secondary;
+$sc-theme-footer-social-icon-size: 26px;
+
+/* Upper Level */
+$sc-theme-upper-footer-color: $sc-theme-color-tertiary;
+$sc-theme-upper-footer-bgr-color: $sc-theme-color;
+$sc-footer-submit-color: $sc-theme-color-copy; //secondary button if no color set
+
+/* Lower Level */
+$sc-theme-footer-font-size: 14px;
+$sc-theme-lower-footer-color: $sc-theme-color;
+$sc-theme-lower-footer-bgr-color: $sc-theme-color-copy;
+$sc-theme-lower-footer-link-color: $sc-theme-color;
+$sc-theme-lower-footer-link-color-hover: $sc-theme-color-tertiary;

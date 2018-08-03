@@ -1,0 +1,15 @@
+{
+    "gulp": {
+        "sass": [
+            "Sass/*.scss"
+        ],
+        "templates": [
+            "Templates/*"
+        ]
+    },
+    "overrides": {
+        "suitecommerce/Transaction.Line.Views@1.0.0/Sass/_transaction-line-views-cell-actionable.scss": "Sass/_qs-transaction-line-views-cell-actionable.scss",
+        "suitecommerce/Transaction.Line.Views@1.0.0/Sass/_transaction-line-views-price.scss": "Sass/_qs-transaction-line-views-price.scss",
+        "suitecommerce/Transaction.Line.Views@1.0.0/Templates/transaction_line_views_cell_actionable.tpl": "Templates/qs_transaction_line_views_cell_actionable.tpl"
+    }
+}

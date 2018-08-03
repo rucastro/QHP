@@ -1,0 +1,57 @@
+{
+    "type": "object",
+    "subtab": {
+        "id": "checkoutFieldManagement",
+        "group": "checkoutApp",
+        "title": "Field Management",
+        "description": "Custom fields to display during checkout."
+    },
+    "properties": {
+        "checkoutFieldManagementTitle": {
+            "group": "checkoutApp",
+            "subtab": "checkoutFieldManagement",
+            "type": "string",
+            "title": "Title",
+            "description": "Section title to be displayed.",
+            "default": "Additional Information"
+        },
+	"checkoutFieldManagementList": {
+	    "group": "checkoutApp",
+            "subtab": "checkoutFieldManagement",
+	    "type": "array",
+	    "title": "Field Management",
+	    "description": "Custom fields to display during checkout.",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "fieldId": {
+                        "type": "string",
+                        "title": "Field Id",
+                        "description": "Internal id of the field.",
+                        "mandatory": true
+                    },
+                    "label": {
+                        "type": "string",
+                        "title": "Label",
+                        "description": "Label to display."
+                    },
+                    "required": {
+                        "type": "boolean",
+                        "title": "Required",
+                        "description": "Field is required."
+                    },
+                    "defaultValue": {
+                        "type": "string",
+                        "title": "Default Value",
+                        "description": "Default value to display."
+                    },
+                    "helpText": {
+                        "type": "string",
+                        "title": "Help Text",
+                        "description": "Help text to display."
+                    }
+                }
+            }
+	}
+    }
+}

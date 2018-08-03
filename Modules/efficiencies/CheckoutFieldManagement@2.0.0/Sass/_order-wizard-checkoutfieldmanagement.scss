@@ -1,0 +1,19 @@
+
+.order-wizard-checkoutfieldmanagement {
+    @extend .box-column;
+}
+
+.order-wizard-checkoutfieldmanagement-message {
+    @extend .message-info;
+}
+
+.order-wizard-checkoutfieldmanagement-edit-link {
+    margin-top: $sc-base-margin * 3;
+    margin-bottom: $sc-base-margin * 3;
+    display: inline-block;
+    @media (min-width: $screen-md-min) {
+	margin-bottom: 0;
+    }
+}
+
+.order-wizard-checkoutfieldmanagement-title {}

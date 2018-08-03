@@ -1,0 +1,26 @@
+1.0.0
+- Initial Release (Denali)
+
+2.0.0
+- Montblanc Release
+
+3.0.0
+- Vinson Release
+
+3.1.0
+- Removed postframe.js
+- Fixed WebFont usage
+- Fixed local CMS loading
+- Fix load local from https in my_account-local.ssp
+
+3.1.1
+- Fix cms loading in ssp local files
+
+4.0.0
+- Elbrus Release
+
+4.0.1
+- Create distro for this module
+
+4.0.2
+- Added missing X-SC-Touchpoint code from original code base

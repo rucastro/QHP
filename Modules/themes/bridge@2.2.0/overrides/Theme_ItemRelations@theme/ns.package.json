@@ -1,0 +1,17 @@
+{
+    "gulp": {
+        "templates": [
+            "Templates/*"
+        ],
+        "sass": [
+            "Sass/**/*.scss"
+        ]
+    },
+    "overrides": {
+        "suitecommerce/ItemRelations@3.0.0/Sass/_item-relations-cell.scss": "Sass/_qs-item-relations-cell.scss",
+        "suitecommerce/ItemRelations@3.0.0/Sass/_item-relations-correlated.scss": "Sass/_qs-item-relations-correlated.scss",
+        "suitecommerce/ItemRelations@3.0.0/Sass/_item-relations-related-item.scss": "Sass/_qs-item-relations-related-item.scss",
+        "suitecommerce/ItemRelations@3.0.0/Sass/_item-relations-row.scss": "Sass/_qs-item-relations-row.scss",
+        "suitecommerce/ItemRelations@3.0.0/Templates/item_relations_related_item.tpl": "Templates/qs_item_relations_related_item.tpl"
+    }
+}

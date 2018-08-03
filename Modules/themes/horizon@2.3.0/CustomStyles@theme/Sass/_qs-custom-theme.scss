@@ -1,0 +1,475 @@
+/*
+    © 2017 NetSuite Inc.
+    User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
+    provided, however, if you are an authorized user with a NetSuite account or log-in, you
+    may use this code subject to the terms that govern your access and use.
+*/
+
+body {
+    font-family: $sc-theme-primary-font;
+    background-color: $sc-theme-color-body-background;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+::-webkit-scrollbar-track {
+    background-color: #eaeaea;
+    border-left: 1px solid #ccc;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #aaa;
+}
+
+.main, .layout-container {
+    min-height: 100%;
+    width: 100%;
+    background-color: $sc-theme-color-content-background;
+
+    @media (min-width: $sc-theme-site-max-width) {
+        max-width: $sc-theme-site-max-width;
+        margin: 0 auto;
+    }
+
+    @media (min-width: $screen-md-min) {
+        height: auto; // do not use on mobile scrollbar
+    }
+}
+
+%sc-layout {
+    min-height: 100%;
+}
+
+.layout-overlay{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+}
+
+/* MYACCOUNT FIXED HEADER */
+/* ADD PADDING-TOP WHEN FIXED HEADERS ENABLED */
+// THIS APPROACH WAS USED INSTEAD OF ADDING MARKUP TO MYACCOUNT_LAYOUT.TPL
+.myaccount-layout {
+    .fixed-header + .myaccount-layout-breadcrumb {
+        @media (min-width: $screen-md-min) {
+            padding-top: 120px;
+        }
+    }
+}
+
+// CSS OVERRIDES TO FIX SPACING WHEN FIXED HEADER IS DISABLED VIA CONFIGURATION
+.theme-has-static-header {
+    .breadcrumb-container {
+        margin-top: $sc-small-margin;
+        margin-bottom: $sc-small-margin;
+        min-height: 0;
+
+        .global-views-breadcrumb {
+            position: static;
+        }
+    }
+    .facets-browse-category-heading-main-image {
+        position: static;
+        margin-top: $sc-small-margin;
+    }
+    .product-reviews-form,
+    .product-reviews-form-preview,
+    .product-reviews-form-confirmation {
+        padding-top: 0;
+    }
+    .shopping-layout-content .page-not-found {
+        margin-top: -40px;
+
+        .error-management-page-not-found {
+            margin-top: 0;
+        }
+    }
+}
+
+// Add space between header and content except in home page, item listing
+#content {
+    padding-top: $sc-large-margin;
+
+    .home-page, .facets-facet-browse {
+        margin-top: -$sc-large-margin;
+    }
+}
+
+#hashtag-gallery {
+    @extend .container-fluid;
+}
+
+.look-title,
+.look-divider-desktop {
+    display: none;
+}
+.look-subtitle {
+    margin-top: 30px;
+}
+
+.recordviews-title-anchor {
+    color: $sc-color-secondary;
+
+    &:hover {
+        color: saturate(lighten($sc-color-secondary, 4), 4);
+    }
+}
+
+/* LAYOUT */
+.shopping-layout-breadcrumb {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.shopping-layout-content {
+    & .page-not-found {
+        min-height: 200px;
+        @media (min-width: $screen-md-min) {
+            min-height: 400px;
+            margin-top: 127px;
+        }
+    }
+}
+
+/* FACETS - PLP */
+.facets-item-cell-grid-image,
+.facets-item-cell-list-image,
+.facets-item-cell-table-image{
+  width:auto;
+}
+
+/* SHOPCART & CHECKOUT */
+.cart-item-actions-item-list-actionable-edit-button-edit{
+    padding: 13px;
+}
+
+.cart-item-summary-quantity-value {
+    padding-right: $sc-base-padding * 3;
+    @media (min-width: $screen-md-min) {
+        padding-right: 0;
+    }
+}
+
+.checkout-layout-breadcrumb {
+    & .breadcrumb-container {
+        min-height: 80px;
+    }
+}
+
+.checkout-layout-content {
+    padding-bottom: $sc-base-padding * 2 !important;
+    & .contact-us-container {
+        padding: 0;
+        width: 100%;
+    }
+}
+
+.order-wizard-address-module-show-addresses-container {
+    padding-bottom: 0;
+    padding-top: 0;
+    margin-bottom: 0;
+}
+
+.order-wizard-termsandconditions-module-top,
+.order-wizard-termsandconditions-module-bottom,
+.order-wizard-submitbutton-module-top {
+    display: none;
+}
+
+.order-wizard-termsandconditions-module-default {
+    display: block !important;
+}
+
+/* CHECKOUT */
+.order-wizard-promocodeform-expander-head-toggle {
+    @extend .accordion-head-toggle;
+}
+.order-wizard-cartitems-module-ship-accordion-head-toggle {
+    @extend .accordion-head-toggle;
+}
+.order-wizard-paymentmethod-selector-module-options {
+    background-color: $sc-color-tertiary !important;
+    border: 1px solid $sc-color-theme-border !important;
+}
+/* ORDER SUMMARY CART ITEMS */
+.order-wizard-cartitems-module-ship {
+    .order-wizard-cartitems-module-ship-accordion-body {
+        background-color: $sc-color-tertiary;
+    }
+    .order-wizard-cartitems-module-ship-products-scroll {
+        padding-left: $sc-base-padding * 4;
+        padding-right: $sc-base-padding * 4;
+    }
+}
+/* LOGIN */
+.login-register-body-colored {
+    padding: 0;
+    background-color: transparent;
+}
+
+/* HEADER */
+/* Menu Tree */
+.menu-tree-node-item-anchor{
+    text-transform: capitalize;
+
+    &:hover {
+        color: saturate(lighten($sc-color-secondary, 4), 4);
+    }
+}
+
+.menu-tree-node-item-anchor.active{
+    color: $sc-color-secondary;
+}
+
+.global-views-currency-selector-addon {
+    width: 28px;
+    @media (min-width: $screen-md-min) {
+        width: 40px;
+    }
+}
+
+
+/* ADDRESS */
+.address-details {
+    padding-left: 0;
+    border: none;
+
+    @media (min-width: $screen-sm-min) {
+        padding-left: 0;
+    }
+}
+
+
+/* LIST HEADER */
+.list-header-view-accordion-body-button-sort {
+  i {
+    font-size: $sc-base-font-size;
+    width: auto
+  }
+  .listheader-filter-sortorder-arrow-selected {
+    color: $sc-color-quaternary;
+  }
+}
+.OrderItemReorderListView .list-header-view-sorts,
+.list-header-view-sorts {
+    & .list-header-view-filters {
+        width: calc(100% - 44px);
+        margin-top: 0;
+        float: right;
+    }
+    & .list-header-view-accordion-body-select {
+        width: 100%;
+    }
+}
+
+
+/* ORDER HISTORY */
+.order-history-list-header-button-group {
+    a, span {
+        display: inline-block;
+    }
+}
+
+
+/* RECENTLY VIEWED ITEMS */
+.recently-viewed-items {
+    position:relative;
+    h3{
+        margin-bottom:$sc-large-margin;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: $sc-font-weight-normal;
+    }
+
+    & .bx-wrapper,
+    & .bx-viewport {
+        height: auto !important;
+    }
+}
+
+ul.recently-viewed-row-cell li{
+    display:inline-block;
+    margin-right: 1px;
+}
+
+/* RELATED AND CORRELATED ITEMS */
+.item-relations-related,
+.item-relations-correlated {
+    h3 {
+        margin-bottom:$sc-large-margin;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: $sc-font-weight-normal;
+    }
+}
+
+/* EFFICIENCIES STORE LOCATOR */
+.storelocator-container,
+.stores-store-locator-details-container {
+    width: 100%;
+    margin: 10px 0;
+    padding: 0;
+}
+
+.store-locator-search-buttons-container-geolocalization {
+    .store-locator-search-button-current {
+        @extend .button-tertiary;
+    }
+}
+
+/* WIZARD */
+.wizard-header{
+    text-align: center;
+}
+
+/* Infinite Scroll */
+.infinite-scroll-top {
+    background: $sc-theme-color;
+}
+
+.infinite-scroll-top-icon {
+    color: $sc-theme-color-tertiary;
+    position: relative;
+    top: 8px;
+}
+
+
+/*
+MERCHANDISING ZONE ITEM
+Default merchandising template styling merchzone_default.txt
+*/
+.cms-content-merchzone {
+    .merchandising-zone {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .bx-viewport {
+        height: auto !important;
+    }
+    aside {
+        @extend .container-fluid;
+        padding-top: $sc-base-padding * 10;
+        padding-bottom: $sc-base-padding * 4;
+        @media (min-width: $screen-md-min) {
+            padding-bottom: $sc-base-padding * 8;
+        }
+    }
+    .row-fluid {
+        @extend .row;
+    }
+    .span4 {
+        @extend .col-sm-4;
+        padding-left: 0;
+        padding-right: 1px;
+    }
+    .span3 {
+        @extend .col-sm-3;
+        padding-left: 0;
+        padding-right: 1px;
+    }
+    .item-cell {
+        text-align: center;
+    }
+    .thumbnail {}
+    h5 {
+        font-weight: normal;
+        font-size: 15px;
+        padding: $sc-base-padding * 2;
+        a {
+            color: $sc-theme-color;
+        }
+        a:hover,
+        a:focus {
+            color: $sc-theme-color-link-hover;
+        }
+    }
+    .item-cell-price { // use this class if adding price to template
+        font-size: 18px;
+        padding-bottom: $sc-base-padding * 2;
+    }
+    .btn {}
+}
+
+/* MERCHANDISING ZONE CELL TEMPLATE */
+.merchandising-zone-cell-template {
+    .item-relations-related-item-thumbnail {
+        img {
+            height: auto;
+        }
+    }
+}
+
+/* CMS CONTENT */
+.cms-content-text {
+    // text-align: center;
+    padding: $sc-base-padding * 2 0;
+}
+
+/* PDP */
+/* Add to Quote Button */
+.product-detail-to-quote-add-to-quote {
+    @extend .col-sm-6;
+	padding-left: $sc-base-padding * 2;
+	padding-right: $sc-base-padding * 2;
+	position: static;
+
+    @media (min-width: $screen-lg-min) {
+        width: 35% !important;
+    }
+}
+
+.product-detail-to-quote-add-to-quote-button {
+    @extend .button-tertiary;
+    @extend .button-medium;
+    margin-top: $sc-base-margin * 3;
+    margin-left: 0;
+    font-weight: $sc-font-weight-semibold;
+    border: 1px solid $sc-color-secondary;
+    width: 100%;
+    text-align:center;
+    cursor:pointer;
+    cursor:hand;
+    padding: 0 $sc-base-padding;
+    line-height: $sc-target-size-mobile - 4px; //to account for border
+}
+
+/* PRODUCT LINE */
+.product-line-stock-msg-out {
+    margin: 0;
+}
+.product-line-sku-container,
+.product-line-sku-label,
+.product-line-sku-value {
+    color: $sc-color-senary;
+}
+
+/* MISC EFFICIENCIES MODULES STYLES */
+/* Look Books Items Styles */
+.itemdetails-lookitems-header {
+    text-align: center;
+}
+
+/* Back In Stock Module Styles */
+.back-in-stock-notification-placeholder {
+    .back-in-stock-notification-show-form-button {
+        @extend .button-secondary;
+        font-size: $sc-button-large-font-size;
+        font-weight:$sc-font-weight-bold;
+        width: 100%;
+        @media (min-width: $screen-lg-min) {
+            width: calc(70% - 5px);
+        }
+    }
+    .back-in-stock-notification-form-wrapper {
+        @media (min-width: $screen-lg-min) {
+            width: calc(70% - 5px);
+        }
+    }
+}

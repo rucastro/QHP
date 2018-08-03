@@ -1,0 +1,220 @@
+{
+    "type": "object",
+    "properties": {
+        "footer.copyright.hide": {
+            "group": "layout",
+            "subtab": "footer",
+            "type": "boolean",
+            "title": "Hide",
+            "description": "Hide copyright notice from the footer",
+            "default": false
+        },
+        "footer.copyright.companyName": {
+            "group": "layout",
+            "subtab": "footer",
+            "type": "string",
+            "title": "Company Name",
+            "description": "Company Name to show in the footer copyright notice",
+            "default": "Company Name"
+        },
+        "footer.copyright.initialYear": {
+            "group": "layout",
+            "subtab": "footer",
+            "type": "string",
+            "title": "Initial Year",
+            "description": "Initial Year to show in the footer copyright notice (empty will show current year)",
+            "default": null
+        },
+        "footer.backgroundImg": {
+            "group": "layout",
+            "subtab": "footer"
+        ,   "type": "string"
+        ,   "title": "Upper section background url"
+        ,   "description": "Enter the URL location of the background image file to display in the background of the upper level footer. Use img/<file-name> and upload via the File Cabinet."
+        ,   "default": "img/footer.png"
+        },
+        "footer.multiColLinks": {
+          "group": "layout"
+        , "subtab": "footer"
+        , "type": "array"
+        , "title": "Multi-column Links"
+        , "description": "Multiple column footer displaying up to four columns of links"
+        , "items": {
+            "type": "object"
+          , "properties": {
+              "text": {
+                "type": "string"
+              , "title": "Text"
+              , "description": ""
+              },
+              "href": {
+                "type": "string"
+              , "title": "URL"
+              , "description": ""
+              },
+              "datatouchpoint": {
+                "type": "string"
+              , "title": "data-touchpoint"
+              , "description": ""
+              },
+              "datahashtag": {
+                "type": "string"
+              , "title": "data-hashtag"
+              , "description": ""
+              },
+              "datatarget": {
+                "type": "string"
+              , "title": "data-target"
+              , "description": ""
+              },
+              "column": {
+                "type": "string"
+              , "title": "Column"
+              , "description": ""
+              , "enum": ["Column 1", "Column 2", "Column 3", "Column 4"]
+              }
+            }
+          },
+          "default": [
+            {
+              "text": "Here to Help"
+            , "href": ""
+            , "datatouchpoint": ""
+            , "datahashtag": ""
+            , "datatarget": ""
+            , "column": "Column 1"
+            },
+            {
+              "text": "FAQs"
+            , "href": "#"
+            , "datatouchpoint": ""
+            , "datahashtag": ""
+            , "datatarget": ""
+            , "column": "Column 1"
+            },
+            {
+              "text": "Delivery & Collection"
+            , "href": "#"
+            , "datatouchpoint": ""
+            , "datahashtag": ""
+            , "datatarget": ""
+            , "column": "Column 1"
+            },
+            {
+              "text": "Returns & Refunds"
+            , "href": "#"
+            , "datatouchpoint": ""
+            , "datahashtag": ""
+            , "datatarget": ""
+            , "column": "Column 1"
+            },
+            {
+              "text": "Shopping With Us"
+            , "href": ""
+            , "datatouchpoint": ""
+            , "datahashtag": ""
+            , "datatarget": ""
+            , "column": "Column 2"
+            },
+            {
+              "text": "International Delivery"
+            , "href": "#"
+            , "datatouchpoint": ""
+            , "datahashtag": ""
+            , "datatarget": ""
+            , "column": "Column 2"
+            },
+            {
+              "text": "Our Stores"
+            , "href": "#"
+            , "datatouchpoint": ""
+            , "datahashtag": ""
+            , "datatarget": ""
+            , "column": "Column 2"
+            },
+            {
+              "text": "Size Guides"
+            , "href": "#"
+            , "datatouchpoint": ""
+            , "datahashtag": ""
+            , "datatarget": ""
+            , "column": "Column 2"
+            },
+            {
+              "text": "About Us"
+            , "href": ""
+            , "datatouchpoint": ""
+            , "datahashtag": ""
+            , "datatarget": ""
+            , "column": "Column 3"
+            },
+            {
+              "text": "Corporate Site"
+            , "href": "#"
+            , "datatouchpoint": ""
+            , "datahashtag": ""
+            , "datatarget": ""
+            , "column": "Column 3"
+            },
+            {
+              "text": "Jobs"
+            , "href": "#"
+            , "datatouchpoint": ""
+            , "datahashtag": ""
+            , "datatarget": ""
+            , "column": "Column 3"
+            },
+            {
+              "text": "Contact Us"
+            , "href": "/contact-us"
+            , "datatouchpoint": ""
+            , "datahashtag": ""
+            , "datatarget": ""
+            , "column": "Column 3"
+            },
+            {
+              "text": "Follow Us"
+            , "href": ""
+            , "datatouchpoint": ""
+            , "datahashtag": ""
+            , "datatarget": ""
+            , "column": "Column 4"
+            },
+            {
+              "text": "Facebook"
+            , "href": "#"
+            , "datatouchpoint": ""
+            , "datahashtag": ""
+            , "datatarget": ""
+            , "column": "Column 4"
+            },
+            {
+              "text": "Twitter"
+            , "href": "#"
+            , "datatouchpoint": ""
+            , "datahashtag": ""
+            , "datatarget": ""
+            , "column": "Column 4"
+            },
+            {
+              "text": "Instagram"
+            , "href": "#"
+            , "datatouchpoint": ""
+            , "datahashtag": ""
+            , "datatarget": ""
+            , "column": "Column 4"
+            }
+          ]
+        },
+        "footer.text": {
+            "group": "layout",
+            "subtab": "footer"
+        ,   "type": "string"
+        ,   "title": "Lower section text area"
+        ,   "nsType": "textarea"
+        ,   "translate": true
+        ,   "description": "Text area in the lower section"
+        ,   "default": "<span>1.800.555.9000</span><span>hello@genn.com</span>"
+        }
+    }
+}

@@ -1,0 +1,16 @@
+1.0.0
+- Initial release (Denali)
+
+1.0.1
+- Vinson Release
+- Formulas on SearchHelper filters
+
+1.1.0
+- Elbrus Release
+- eslint fix
+- Configuration.Backend and SC.Models.Init.Backend files are added for backend-suitescript generation
+
+1.1.1
+- Create distro for this module
+
+

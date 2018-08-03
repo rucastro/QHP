@@ -1,0 +1,158 @@
+<div class="size-chart-content">
+    <div class="size-chart-text">
+        <h4>Measuring Guide</h4>
+        <p>To choose the correct size for you, measure your body as follows:</p>
+        <h5>Bust</h5>
+        <p>Measure under your arms, around the fullest part of your chest.</p>
+        <h5>Waist</h5>
+        <p>Measure around your natural waistline, keeping the tape a bit loose.</p>
+    </div>
+    <div class="size-chart-image">
+        <img src="/images/sizecharts/womenstops.png" alt="Women's Tops" />
+    </div>
+</div>
+
+<div class="size-chart-measurements">
+    <h4>Measurements</h4>
+    <!--
+    Toggle Units (Optional)
+    The value of data-action must equal show-unit
+    Each button with data-action="show-unit" must have an id which corresponds with the data-unit value in the col tags
+    The first button will always be the default unit first shown in the table
+    You may use as many units as you need, no restriction applies
+    -->
+    <div class="size-chart-show-unit-buttons">
+        <button data-action="show-unit" id="inches" class="size-chart-unit-button">Inches</button>
+        <button data-action="show-unit" id="cms" class="size-chart-unit-button">Centimeters</button>
+    </div>
+
+    <!--
+    Keep table markup simple, don't use colspan if you want to toggle between different units
+    It does not matter in which order you put your inches and cms columns
+    You can create multiple tables but they must have the same structure, i.e. the way in which you order the column units
+    -->
+    <h5>Regular Sizes</h5>
+    <div class="size-chart-table-wrapper">
+        <table class="size-chart-table">
+            <colgroup>
+                <col></col>
+                <col></col>
+                <col data-unit="inches"></col>
+                <col data-unit="cms"></col>
+                <col data-unit="inches"></col>
+                <col data-unit="cms"></col>
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>size (us)</th>
+                    <th>numeric size (us)</th>
+                    <th>bust (inches)</th>
+                    <th>bust (cms)</th>
+                    <th>waist (inches)</th>
+                    <th>waist (cms)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>XS</td>
+                    <td>0</td>
+                    <td>32.5</td>
+                    <td>82.5</td>
+                    <td>25</td>
+                    <td>63.5</td>
+                </tr>
+                <tr>
+                    <td>S</td>
+                    <td>4</td>
+                    <td>34.5</td>
+                    <td>87.5</td>
+                    <td>27</td>
+                    <td>68.5</td>
+                </tr>
+                <tr>
+                    <td>M</td>
+                    <td>8</td>
+                    <td>36.5</td>
+                    <td>93</td>
+                    <td>29</td>
+                    <td>73.5</td>
+                </tr>
+                <tr>
+                    <td>L</td>
+                    <td>12</td>
+                    <td>39</td>
+                    <td>99</td>
+                    <td>31.5</td>
+                    <td>80</td>
+                </tr>
+                <tr>
+                    <td>XL</td>
+                    <td>16</td>
+                    <td>42</td>
+                    <td>106.5</td>
+                    <td>34.5</td>
+                    <td>87.5</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h5>Petite Sizes</h5>
+    <p>Petite sizes, recommended for women 1.52m-1.63m, have a reduced sleeve and torso length to better fit smaller frames.</p>
+    <div class="size-chart-table-responsive">
+        <table class="size-chart-table">
+            <colgroup>
+                <col></col>
+                <col></col>
+                <col data-unit="inches"></col>
+                <col data-unit="cms"></col>
+                <col data-unit="inches"></col>
+                <col data-unit="cms"></col>
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>size (us)</th>
+                    <th>numeric size (us)</th>
+                    <th>bust (inches)</th>
+                    <th>bust (cms)</th>
+                    <th>waist (inches)</th>
+                    <th>waist (cms)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>XS</td>
+                    <td>0</td>
+                    <td>31.5</td>
+                    <td>80</td>
+                    <td>24</td>
+                    <td>61</td>
+                </tr>
+                <tr>
+                    <td>S</td>
+                    <td>4</td>
+                    <td>33.5</td>
+                    <td>85</td>
+                    <td>26</td>
+                    <td>66</td>
+                </tr>
+                <tr>
+                    <td>M</td>
+                    <td>8</td>
+                    <td>35.5</td>
+                    <td>90</td>
+                    <td>28</td>
+                    <td>71</td>
+                </tr>
+                <tr>
+                    <td>L</td>
+                    <td>12</td>
+                    <td>38</td>
+                    <td>97</td>
+                    <td>30.5</td>
+                    <td>77.5</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

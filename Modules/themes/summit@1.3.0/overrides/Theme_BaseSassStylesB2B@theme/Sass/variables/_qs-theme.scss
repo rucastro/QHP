@@ -1,0 +1,142 @@
+/*
+	© 2017 NetSuite Inc.
+	User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
+	provided, however, if you are an authorized user with a NetSuite account or log-in, you
+	may use this code subject to the terms that govern your access and use.
+
+*/
+
+/* SITE-WIDE */
+
+/* COLORS */
+
+/*
+ - These colors are used generally around the site for borders, backgrounds, text
+ - They are used as a general color theme for the main content area
+ - $sc-theme-color is the main color and the light and lightest versions are the same hue
+ - If you want to generate these values instead of use a hex value, use the function provided
+ */
+$sc-theme-color: #cccccc;
+$sc-theme-color-light: #6d7d81; // approx lighten($sc-theme-color, 24%)
+$sc-theme-color-lightest: #edf0f2; // background color, approx lighten($sc-theme-color, 36%)
+
+/* Highlight colors around the site, including buttons */
+$sc-theme-color-primary: #66cc99;
+$sc-theme-color-secondary: #4f88b0;
+$sc-theme-color-tertiary: #fff; // icons, main content background
+
+/* Link color, headings and some border colors */
+$sc-theme-color-header: #1a78ba;
+$sc-theme-color-link: $sc-theme-color-primary; // for improved UI, a different color for links recommended
+$sc-theme-color-link-hover: $sc-theme-color-header;
+$sc-theme-border-color: $sc-theme-color-light; //border color against background color
+$sc-theme-border-color-light: $sc-theme-color-lightest; // border color against content background color, facet display icons, .box-column background color
+$sc-theme-border: 1px solid $sc-theme-border-color; // borders in footer
+$sc-theme-border-light: 1px solid $sc-theme-border-color-light; // borders in main content area, under nav, in cart and checkout
+
+/* Forms */
+$sc-theme-input-color: #4f88b0; //input border color
+
+/* Copy, footer background */
+$sc-theme-color-copy: #5a5a5a;
+
+/* Content boxes */
+$sc-theme-color-content: $sc-theme-color-tertiary; //background color for the products, pdp container, content containers
+
+/* Drop Shadow */
+$sc-theme-color-shadow: transparentize(black, 1-0.25); //button, carousel and infoblocks text shadow
+
+/* Buttons */
+$sc-theme-cta-primary-color: $sc-theme-color-primary;
+$sc-theme-cta-secondary-color: $sc-theme-color-secondary;
+$sc-theme-cta-tertiary-color: $sc-theme-color-tertiary;
+$sc-theme-cta-tertiary-border-text: $sc-theme-color-header;
+$sc-theme-cta-hover-color: #336633;
+
+/* FONTS */
+$sc-theme-primary-font: "Open Sans", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$sc-theme-secondary-font: "Droid Sans", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+/* SIZING */
+$sc-theme-cell-img-height: 160px; // image size on merchandising zones, related items etc
+$sc-theme-cell-img-width: 160px;
+$sc-theme-border-radius: 0px; // curve radius on all container divs and buttons
+
+/* SPACING */
+/* For left/right padding */
+$sc-theme-mobile-padding: 25px;
+$sc-theme-desktop-padding: 35px;
+
+
+////////////////////////////////////////////////////////////////////////////////
+
+
+/* HEADER */
+/* Moved from header scss */
+$sc-main-nav-height: 72px;
+$sc-main-nav-width: 130px;
+$sc-main-nav-link-height: 44px;
+$sc-main-nav-bgr-color: #0B274E;
+$sc-sidebar-size: 246px;
+$sc-theme-header-height: 150px; // neight of header which includes blue bar and navigation - used for padding when FIXED HEADER is ENABLED
+
+/* Category Navigation */
+$sc-theme-nav-font-size: 14px;
+$sc-theme-nav-color: $sc-main-nav-bgr-color;
+$sc-theme-nav-bgr-color: $sc-theme-color-tertiary;
+
+/* Header Right Hand Menu Links i.e. login, register */
+$sc-theme-header-link-color: $sc-theme-color;
+$sc-theme-header-link-color-hover: $sc-theme-color-link-hover;
+
+/* Navigation Tools (Icons) */
+$sc-theme-icon-size: 20px;
+$sc-theme-icon-color: #A0B4C0;
+$sc-theme-cart-icon-color: $sc-theme-cta-hover-color;
+
+
+////////////////////////////////////////////////////////////////////////////////
+
+
+/* HOME */
+
+/* Carousel */
+$sc-theme-carousel-title-size-desktop: 50px;
+$sc-theme-carousel-title-size-mobile: 35px;
+$sc-theme-carousel-text-size: 19px;
+$sc-theme-carousel-text-color: $sc-theme-color-tertiary;
+$sc-theme-carousel-button-font-size: 18px;
+$sc-theme-carousel-button-text-color: $sc-theme-color-tertiary;
+$sc-theme-carousel-button-bgr-color: $sc-theme-cta-secondary-color;
+$sc-theme-carousel-button-bgr-hover-color: $sc-theme-cta-hover-color;
+
+/* Infoblocks */
+$sc-theme-infoblock-height-mobile: 160px;
+$sc-theme-infoblock-height-desktop: 200px;
+$sc-theme-infoblock-content-padding: 40px;
+$sc-theme-infoblock-highlight-color: #000; //user hovers over infoblock and coloured overlay applied
+$sc-theme-infoblock-title-size-desktop: 50px;
+$sc-theme-infoblock-title-size-mobile: 28px;
+$sc-theme-infoblock-text-size: 20px;
+$sc-theme-infoblock-link-color: $sc-theme-color-tertiary;
+
+
+////////////////////////////////////////////////////////////////////////////////
+
+
+/* FOOTER */
+
+$sc-theme-footer-submit-color: $sc-theme-color-secondary;
+$sc-theme-footer-font-size: 14px;
+$sc-theme-footer-heading-color: $sc-theme-color;
+$sc-theme-upper-footer-link-color: $sc-theme-color-link;
+$sc-theme-upper-footer-link-color-hover: $sc-theme-color-link-hover;
+$sc-theme-lower-footer-link-color: $sc-theme-color;
+$sc-theme-lower-footer-link-color-hover: $sc-theme-color-link-hover;
+$sc-theme-lower-bgr-color: $sc-main-nav-bgr-color;
+$sc-theme-footer-social-icon-color: $sc-theme-color-secondary;
+$sc-theme-footer-social-icon-size: 26px;
+
+/* Error Pages */
+$sc-theme-error-height-mobile: 100px;
+$sc-theme-error-height-desktop: 400px;

@@ -1,0 +1,620 @@
+/*
+  © 2017 NetSuite Inc.
+  User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
+  provided, however, if you are an authorized user with a NetSuite account or log-in, you
+  may use this code subject to the terms that govern your access and use.
+*/
+
+.home-page {
+    margin-top: -50px;
+    @media (min-width: $screen-sm-min) {
+        margin-top: -75px; // this is to HIDE breadcrumbs from home page - size of breadcrumbs + header margin-bottom
+    }
+}
+
+.home {
+  @extend .container;
+  // margin-top: 150px; //this is to compensate for the slider pushing up under the nav
+}
+
+.home-fluid {
+  @extend .container-fluid;
+}
+
+.home-banner-top-message {
+  @extend .message-info;
+  @extend .message-large;
+}
+
+.home-slider-container {
+  @extend .row;
+  background-color: $sc-theme-color-tertiary;
+}
+
+.home-image-slider {
+  @extend .col-sm-12;
+  padding: 0;
+  /*
+  The positioning below pushes the slider underneath the nav, which is part of the desktop design
+  To stop this, just remove the declarations below
+   */
+  // position: absolute;
+  // top: 0;
+  // z-index: 2;
+}
+
+// start bx-slider specifics
+$sc-image-slider-height: 400px;
+$sc-image-slider-max-width: 1140px;
+$sc-image-slider-max-width-mobile: 767px;
+
+.home-image-slider .bx-wrapper {
+    @media (min-width: $screen-md-min) {
+        margin-bottom: $sc-base-margin * 8;
+    }
+}
+.home-image-slider .bx-pager-item {
+  vertical-align: middle;
+}
+.home-image-slider .bx-controls,
+.home-image-slider .bx-controls .bx-pager {
+  @media (min-width: $screen-sm-min) {
+    margin-top: $sc-base-margin * 2;
+  }
+}
+
+.home-image-slider .bx-wrapper,
+.home-image-slider .bx-viewport {
+  height: $sc-image-slider-height !important;
+}
+.home-image-slider .bx-viewport ul li {
+  overflow:hidden;
+}
+
+.home-image-slider .bx-wrapper img {
+  // margin: auto 0;
+  float: none;
+  width: auto !important;
+  margin: 0 auto !important;
+  min-width: auto !important;
+
+  @media (max-width: $screen-sm-min) {
+      width: auto !important;
+      margin: 0 auto !important;
+  }
+}
+
+.home-gallery-prev-icon, .home-gallery-next-icon {
+  position: absolute;
+  top: 40%;
+  width: $sc-target-size-mobile;
+  height: $sc-target-size-mobile;
+  font-size: 50px;
+  color: $sc-theme-color-light;
+  @media (min-width: $screen-md-min) {
+    top: 50%;
+  }
+}
+
+.home-gallery-prev-icon {
+  left: $sc-base-margin * 6;
+  @extend .icon-angle-left;
+}
+
+.home-gallery-next-icon {
+  right:10px;
+  @extend .icon-angle-right;
+}
+
+.home-image-slider .bx-controls {
+    @media (max-width: $screen-md-min) {
+        margin-top: -65px;
+    }
+}
+
+.home-image-slider .bx-pager {
+  a {
+    color: $sc-theme-color-link !important;
+    background-color: $sc-theme-color-link !important;
+    width: 10px !important;
+    height: 10px !important;
+    border-radius: 100% !important;
+    font-size:0;
+    text-indent:-9999px;
+  }
+  a.active{
+    background-color: $sc-theme-color-link;
+  }
+
+  @media (max-width: $screen-md-min) {
+      a, a.active {
+          color: $sc-theme-color-tertiary !important;
+          background-color: $sc-theme-color-tertiary !important;
+      }
+      a.active {
+          position: relative;
+      }
+  }
+}
+
+@media (min-width: $screen-md-min) {
+
+  .home-image-slider .bx-wrapper {
+    margin-bottom: 0;
+  }
+}
+
+.home-image-slider .bx-pager {
+  @media (min-width: $screen-md-min) {
+    width: 940px;
+    position: absolute !important;
+    bottom: $sc-medium-margin;
+    text-align: center;
+  }
+  @media (min-width: $screen-lg-min) {
+    //width: 1140px;
+    width: 100%;
+  }
+}
+// end bx-slider specifics
+
+// Top Promo
+.home-top-promo {
+    @extend .row;
+    background-color: $sc-theme-color-navigation;
+    text-align: center;
+    font-family: $sc-theme-secondary-font;
+    color: $sc-theme-color-tertiary;
+    font-weight: 300;
+    font-size: 16px;
+    padding-top: $sc-base-padding * 4;
+    padding-bottom: $sc-base-padding * 4;
+
+}
+
+.home-top-promo-text,
+.home-top-promo-image {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.home-top-promo-bgr-image {
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 180px;
+    height: 125px;
+    @media (min-width: $screen-sm-min) {
+      width: 480px;
+    }
+}
+
+.home-top-promo-text {
+    font-size: 18px;
+    line-height: 1.3;
+    text-align: left;
+    margin-right: $sc-base-margin * 3;
+
+    @media (max-width: $screen-sm-min) {
+        padding-left: $sc-base-padding * 2;
+        padding-right: $sc-base-padding * 2;
+        margin-right: 0;
+        margin-bottom: $sc-base-margin * 4;
+        text-align: center;
+    }
+}
+// ENDS Top Promo
+
+.home-banner-main {
+  margin-bottom:$sc-base-margin * 4;
+  @extend .row;
+}
+
+.home-banner-main-cell-nth0{
+  @extend .col-xs-12;
+  @extend .col-sm-4;
+  text-align:center;
+  margin-bottom:$sc-medium-margin;
+
+  img {
+    margin:auto;
+    float:left;
+    @media (min-width: $screen-sm-min) {
+      max-width:100%;
+      width: 100%;
+      float: none;
+    }
+  }
+}
+
+.home-banner-main-cell-nth1,
+.home-banner-main-cell-nth2 {
+  @extend .col-xs-6;
+  @extend .col-sm-4;
+  .home-banner-main-cell-text {
+    display: none;
+  }
+  img {
+    margin: 0 auto;
+    float: none;
+  }
+}
+.home-banner-main-cell-bg{
+  background: $sc-color-slide-background;
+  width: 100%;
+  overflow: hidden;
+}
+
+.home-banner-main-cell-text{
+  display:inline-block;
+  color:$sc-color-theme;
+  font-size:$sc-h2-font-size-mobile;
+  text-transform:uppercase;
+  font-weight:$sc-font-weight-light;
+  line-height: 82px;
+  float: left;
+  @media (min-width: $screen-sm-min) {
+    display:none;
+  }
+}
+
+/* CAROUSEL */
+.home-slide-main-container{
+  background:$sc-color-slide-background;
+  overflow:hidden;
+  height:400px;
+  text-align:center;
+  background-size: cover;
+  background-position: center center;
+  @media (min-width: $screen-sm-min) {
+    //height:100%;
+  }
+}
+
+.home-slide-image {
+  height: 400px;
+  max-width: none;
+  min-width: 100%;
+}
+
+.home-slide-caption{
+  position:absolute;
+  top:0;
+  width:100%;
+  text-align:center;
+  height: 400px;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  @media (min-width: $screen-sm-min) {
+    width: 450px;
+    right: 10%;
+    background-position-x: inherit;
+  }
+}
+
+.home-slide-caption-content {
+  font-family: $sc-theme-carousel-text-color;
+  color: $sc-theme-color-tertiary;
+  width: 200px;
+  text-transform: uppercase;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  margin-left: -100px;
+  @media (min-width: $screen-sm-min) {
+    left: 25%;
+    margin-left: 0;
+  }
+  & .home-slide-caption-title {
+    color: $sc-theme-carousel-text-color;
+    font-size: $sc-theme-carousel-title-size;
+    font-weight: 300;
+    text-align: right;
+    margin-bottom: $sc-small-margin;
+  }
+  & p {
+    color: $sc-theme-carousel-text-color;
+    margin-bottom: $sc-small-margin;
+    font-size: $sc-theme-carousel-text-size;
+  }
+}
+
+.home-slide-caption-button-container{
+  padding-left:$sc-base-padding *4;
+  padding-right:$sc-base-padding *4;
+  position:absolute;
+  margin-left: -$sc-base-padding *2;
+  bottom: -60px;
+  //width: 100%;
+  @media (min-width: $screen-sm-min){
+    padding:0;
+    margin-left:0;
+    margin-right:0;
+    position:relative;
+    bottom:0;
+  }
+}
+
+.home-slide-caption-button{
+  color: $sc-theme-carousel-button-text-color;
+  background-color: $sc-theme-carousel-button-bgr-color;
+  display: inline-block;
+  @extend .button-large;
+  font-size: 18px;
+  padding: 15px;
+
+  @include skew-before($sc-theme-carousel-button-bgr-color,-$sc-theme-skew-distance,$sc-target-size,$sc-theme-skew-distance);
+  @include skew-after($sc-theme-carousel-button-bgr-color,-$sc-theme-skew-distance,$sc-target-size,$sc-theme-skew-distance,1);
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: $sc-theme-carousel-button-bgr-hover-color;
+    color: $sc-theme-carousel-button-text-color;
+    @include skew-before($sc-theme-carousel-button-bgr-hover-color,-$sc-theme-skew-distance,$sc-target-size,$sc-theme-skew-distance);
+    @include skew-after($sc-theme-carousel-button-bgr-hover-color,-$sc-theme-skew-distance,$sc-target-size,$sc-theme-skew-distance,1);
+    outline: none;
+  }
+  &:disabled {
+    opacity: 0.6;
+    cursor: default;
+    pointer-events: none;
+  }
+  @media (min-width: $screen-xs-min){
+    width: auto;
+    position:relative;
+  }
+}
+
+.home-slide-button-icon {
+  @extend .icon-angle-right;
+  color: $sc-color-icon;
+  font-size: 20px;
+  font-weight: bold;
+}
+/* END CAROUSEL */
+
+
+/* MERCHANDISING AREA / STAFF PICKS */
+.home-merchandizing-zone-content {
+    & .cms-content:first-child {
+      padding-top: $sc-base-padding * 10 !important;
+    }
+    & .cms-content-text {
+      padding-left: $sc-base-padding*3;
+      @media (min-width: $screen-lg-min) {
+          padding-left: 98px;
+      }
+    }
+    & h2 {
+      @extend .large-title;
+    }
+}
+
+/* Home Infoblocks */
+
+%home-infoblock {
+    padding: 0;
+    background-size: 100%;
+    background-position: center;
+    background-color: darkgray;
+    -webkit-transition: all 0.325s ease;
+    -moz-transition: all 0.325s ease;
+    -o-transition: all 0.325s ease;
+    transition: all 0.325s ease;
+    height: $sc-theme-infoblock-height-mobile;
+    &:hover {
+        background-size: $sc-theme-infoblock-background-image-zoom;
+        cursor: pointer;
+        @media (min-width: $screen-sm-min) {
+            background-size: auto $sc-theme-infoblock-background-image-zoom;
+        }
+    }
+    &:hover .home-infoblock-title {
+        border-bottom: 1px solid $sc-theme-infoblock-title-underline-hover-color;
+    }
+    &:hover .home-infoblock-highlight {
+        width: 100%;
+    }
+    @media (min-width: $screen-sm-min) {
+        background-size: auto 100%;
+    }
+    @media (min-width: $screen-md-min) {
+        height: $sc-theme-infoblock-height-desktop;
+    }
+}
+
+.home-infoblock-layout1,
+.home-infoblock-layout {
+    @extend .row;
+    & .home-infoblock {
+      @extend .col-sm-12;
+      @extend %home-infoblock;
+    }
+}
+
+.home-infoblock-layout2 {
+    @extend .row;
+    & .home-infoblock {
+      @extend .col-sm-6;
+      @extend %home-infoblock;
+    }
+}
+
+.home-infoblock-layout3 { // suggest this is used for more than 5
+    @extend .row;
+    & .home-infoblock {
+      @extend .col-sm-4;
+      @extend %home-infoblock;
+    }
+}
+
+.home-infoblock-layout4 {
+    @extend .row;
+    & .home-infoblock {
+      @extend .col-sm-6;
+      @extend %home-infoblock;
+        &:nth-child(2n+1) { // do this to force a clear break after every second div
+          clear: left;
+      }
+    }
+}
+
+.home-infoblock-layout5 {
+    @extend .row;
+    & .home-infoblock {
+      @extend .col-sm-6;
+      @extend %home-infoblock;
+    }
+    & .home-infoblock4 {
+      display: none; // the last infoblock which we can't prevent handlebars from printing
+    }
+    & .home-infoblock-last {
+      @extend .col-sm-4;
+      @extend %home-infoblock;
+      @media (min-width: $screen-sm-min) {
+          height: $sc-theme-infoblock-height-mobile * 2;
+      }
+      @media (min-width: $screen-md-min) {
+          height: $sc-theme-infoblock-height-desktop * 2;
+      }
+  }
+}
+
+/* only used when 5 blocks featured */
+.home-infoblock-quadblock-wrapper {
+    @extend .col-sm-8;
+}
+/* only used when 5 blocks featured */
+.home-infoblock-quadblock {
+    @extend .row;
+}
+
+.home-infoblock-content {
+    width: $sc-theme-infoblock-content-width;
+    position: absolute;
+    left: 30px;
+    bottom: 30px;
+    z-index: 1;
+}
+
+.home-infoblock-title {
+    text-transform: capitalize;
+    font-size: $sc-theme-infoblock-title-size;
+    border-bottom: 1px solid $sc-theme-infoblock-title-underline-color;
+    margin-bottom: $sc-small-margin;
+    padding-bottom: $sc-base-padding * 2;
+}
+
+.home-infoblock-text {
+    font-size: $sc-theme-infoblock-text-size;
+}
+
+.home-infoblock-title-link,
+.home-infoblock-text-link {
+    color: $sc-theme-infoblock-link-color;
+    &:hover {
+      color: $sc-theme-infoblock-link-color;
+    }
+}
+
+.home-infoblock-last .home-infoblock-content {
+    @media (min-width: $screen-md-min) {
+        width: $sc-theme-infoblock-large-content-width;
+        & .home-infoblock-title-link {
+            font-size: $sc-theme-infoblock-large-title-size;
+        }
+        & .home-infoblock-text-link {
+            font-size: $sc-theme-infoblock-large-text-size;
+        }
+    }
+}
+
+// this box fills the banner with a coloured layer when user rolls over
+.home-infoblock-highlight {
+    background-color: $sc-theme-infoblock-highlight-color;
+    opacity: 0.75;
+    -webkit-transition: all 0.125s linear;
+    -moz-transition: all 0.125s linear;
+    -o-transition: all 0.125s linear;
+    transition: all 0.125s linear;
+    height: $sc-theme-infoblock-height-mobile;
+    width: 0;
+    @media (min-width: $screen-md-min) {
+        height: $sc-theme-infoblock-height-desktop;
+    }
+}
+.home-infoblock-last .home-infoblock-highlight {
+    @extend .home-infoblock-highlight;
+    @media (min-width: $screen-sm-min) {
+        height: $sc-theme-infoblock-height-mobile * 2;
+    }
+    @media (min-width: $screen-md-min) {
+        height: $sc-theme-infoblock-height-desktop * 2;
+    }
+}
+
+
+/* Free text area: Right hand text and left hand graphics directly above footer, below banner graphics */
+
+.home-page-freetext-content-header {
+    @extend .row;
+    padding-top: $sc-base-padding * 4;
+    padding-bottom: $sc-base-padding * 2;
+    @media (min-width: $screen-sm-min) {
+        padding-top: $sc-base-padding * 12;
+    }
+}
+
+.home-page-freetext-content {
+    @extend .row;
+    padding-bottom: $sc-base-padding * 4;
+    @media (min-width: $screen-sm-min) {
+        padding-bottom: $sc-base-padding * 12;
+    }
+}
+
+.home-cms-page-bottom-content-title {
+    @extend .col-sm-10;
+    @extend .col-sm-push-1;
+}
+
+.home-page-freetext-content-text,
+.home-page-freetext-content-images-wrapper {
+    @extend .col-sm-5;
+    @extend .col-sm-push-1;
+}
+
+.home-page-freetext-content-images {
+    @extend .row;
+}
+
+.home-page-freetext-content-images {
+    margin-top: $sc-small-margin;
+    @media (min-width: $screen-sm-min) {
+        margin-top: 0;
+    }
+}
+
+.home-page-freetext-content-image {
+    @extend .col-sm-12;
+    @extend .col-md-6;
+    text-align: center;
+    & img {
+        padding: $sc-base-padding * 4 0;
+    }
+    &:nth-child(2n+1) { // do this to force a clear break after every second div
+        clear: left;
+    }
+    .hpfcti { // only used in an extend
+        width: 200px;
+        height: 65px;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    & a div {
+        @media (max-width: $screen-sm-max) {
+          text-align: center;
+          display: table-cell;
+        }
+    }
+}

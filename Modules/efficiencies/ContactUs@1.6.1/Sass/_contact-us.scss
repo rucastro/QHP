@@ -1,0 +1,72 @@
+/*
+	© 2015 NetSuite Inc.
+	User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
+	provided, however, if you are an authorized user with a NetSuite account or log-in, you
+	may use this code subject to the terms that govern your access and use.
+*/
+
+.contact-us-container {
+	@extend .container;
+}
+
+.contact-us-content {
+	@extend .box-column-bordered;
+}
+
+.contact-us-header {
+	margin-bottom: $sc-medium-margin;
+}
+
+.contact-us-header-cms {
+	margin-top: $sc-small-margin;
+}
+
+.contact-us-button-back {
+    @extend .button-back;
+}
+
+.contact-us-button-back-icon {
+	@extend .button-back-icon;
+}
+
+.contact-us-required {
+	display:block;
+	margin-top: $sc-medium-margin;
+}
+
+.contact-us-form-controls-group {
+	@extend .control-group;
+}
+
+.contact-us-form-label {
+	@extend .input-label;
+}
+
+.contact-us-form-required {
+	@extend .input-required;
+}
+
+.contact-us-form-input,
+.contact-us-form-case-category {
+	@extend .input-large;
+}
+
+.contact-us-form-textarea {
+	@extend .input-textarea;
+	display: block;
+	margin-bottom: $sc-base-margin * 2;
+	width: 100%;
+}
+
+.contact-us-button-submit {
+	@extend .button-medium;
+	@extend .button-primary;
+}
+
+.contact-us-button-back {
+	@extend .button-back;
+}
+
+.contact-us-button-back-icon {
+	@extend .button-back;
+}

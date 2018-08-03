@@ -1,0 +1,8 @@
+{
+  "gulp": {},
+  "overrides": {
+    "suitecommerce/ShoppingApplication@4.0.0/SuiteScript/shopping.user.environment.ssp": "SuiteScript/shopping.user.environment.ssp",
+    "suitecommerce/CheckoutApplication@2.3.0/SuiteScript/checkout.environment.ssp": "SuiteScript/checkout.environment.ssp",
+    "suitecommerce/MyAccountApplication@3.1.0/SuiteScript/myaccount.environment.ssp": "SuiteScript/myaccount.environment.ssp"
+  }
+}

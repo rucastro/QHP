@@ -1,0 +1,90 @@
+/*
+	© 2017 NetSuite Inc.
+	User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
+	provided, however, if you are an authorized user with a NetSuite account or log-in, you
+	may use this code subject to the terms that govern your access and use.
+*/
+
+.store-locator-list-box {
+	border-bottom:1px solid $sc-color-theme-border;
+	list-style-type: none;
+	padding:$sc-base-padding*4;
+	position:relative;
+
+	:hover {
+		cursor:pointer;
+   		cursor:hand;
+	}
+}
+
+.store-locator-list-box-count {
+	position:absolute;
+	left:0px;
+	width:15%;
+	vertical-align:middle;
+	height:40px;
+	padding:$sc-base-padding*2 $sc-base-padding*2;
+	text-decoration:none;
+	background-image: url('../img/map-marker.png');
+	background-repeat:no-repeat;
+	background-position: center; 
+	text-align:center;
+}
+
+.store-locator-list-box-count {
+	margin-right:$sc-base-margin;
+	display: inline;
+}
+
+.store-locator-list-box-info {
+	list-style-type: none;
+	position: relative;
+	left:10%;
+
+	li {
+		padding-right:$sc-base-padding*2;
+	}
+}
+
+.store-locator-list-box-distance {
+	display:inline-block;
+	margin-right:$sc-base-margin*2;
+}
+
+.store-locator-list-box-address {
+	width: 100px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display:inline-block;
+}
+
+.store-locator-list-box-details {
+	display: inline-flex;
+	color:$sc-color-light-copy;
+	padding-top:$sc-base-padding;
+}
+
+.store-locator-list-box-arrow-container {
+	position:absolute;
+	right:0px;
+	top:5px;
+	height:100%;
+	width:10%;
+	vertical-align:middle;
+	padding:$sc-base-padding*4 0px;
+	text-align:center;
+}
+
+.store-locator-list-box-arrow-icon {
+	@extend .icon-angle-right;
+}
+
+.store-locator-list-box-icon {
+	@extend .icon-map-marker;
+	color: $sc-color-primary;
+}
+
+.store-locator-list-box-info-name {
+	color: $sc-color-dark-copy;
+}

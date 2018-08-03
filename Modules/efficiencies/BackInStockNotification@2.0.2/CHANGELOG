@@ -1,0 +1,24 @@
+1.0.0
+- Initial Release (MontBlanc)
+
+1.0.1
+- Minor styling and template changes
+- Changed a bug with itemOptions that prevented schedule to be sent, when you had multiple options with the same name.
+- Fixed dependency to ItemsResultsHelper
+- fixed LocaleCurrencyMetadata issue
+
+1.2.0
+- Vinson Release
+- Remove session paramter in Application.getEnvironment method
+- Used ServiceController in services 
+- Fixes undefined Configuration.publish
+
+2.0.0
+- Elbrus Release
+- ESLINT fix
+
+2.0.1
+- Update distro dependencies
+
+2.0.2
+- Fix: issue in wishlist update in my account page that returns error record not found

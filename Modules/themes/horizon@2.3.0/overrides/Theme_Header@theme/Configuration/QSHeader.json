@@ -1,0 +1,28 @@
+{
+	"type": "object",
+    "properties": {
+        "header.fixedHeader": {
+            "group": "layout",
+            "subtab": "header"
+        ,	"type": "boolean"
+		,	"title": "Fixed Header"
+        ,	"description": "Fix header to the top of the page."
+        ,   "default": true
+		},
+		"header.bannerText": {
+			"group": "layout",
+			"subtab": "header"
+		,	"type": "string"
+		,	"title": "Banner Text"
+		,	"description": "Promotional text at the top of the header."
+		,   "default": "Two Days only - Free Shipping on orders over $50"
+		}
+    },
+    "modifications": [
+      {
+        "target": "$.properties['header.logoUrl'].default",
+        "action": "replace",
+        "value": "img/Horizon_Logo.png"
+      }
+    ]
+}

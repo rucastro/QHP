@@ -1,0 +1,40 @@
+{
+  "id": "ss-about-us",
+  "name": "AboutUs",
+  "dependencies": [
+      "elbrus-base",
+      "ss-generalconfig"
+  ],
+  "folders": {
+    "modules": "Modules",
+    "distribution": "bin/LocalDistribution",
+    "deploy": "bin/DeployDistribution",
+    "release": "bin/ReleaseDistribution"
+  },
+  "modules": {
+    "efficiencies/AboutUs": "1.0.2"
+  },
+  "tasksConfig": {
+    "javascript": [
+      {
+        "entryPoint": "SC.Shopping.Starter",
+        "dependencies": [
+          "AboutUs"
+        ]
+      }
+    ],
+    "ssp-libraries": {
+      "dependencies": []
+    },
+    "sass": {
+      "applications": [
+        {
+          "name": "Shopping",
+          "dependencies": [
+            "AboutUs"
+          ]
+        }
+      ]
+    }
+  }
+}

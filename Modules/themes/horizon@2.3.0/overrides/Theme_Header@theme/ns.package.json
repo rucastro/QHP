@@ -1,0 +1,34 @@
+{
+    "gulp": {
+        "javascript": [
+            "JavaScript/*"
+        ],
+        "images": [
+            "Images/*"
+        ],
+        "templates": [
+            "Templates/*"
+        ],
+        "sass": [
+            "Sass/**/*.scss"
+        ],
+        "configuration": [
+            "Configuration/*.json"
+        ]
+    },
+    "overrides": {
+        "suitecommerce/Header@1.3.0/Templates/header.tpl": "Templates/qs_header.tpl",
+        "suitecommerce/Header@1.3.0/Templates/header_menu.tpl": "Templates/qs_header_menu.tpl",
+        "suitecommerce/Header@1.3.0/Templates/header_profile.tpl": "Templates/qs_header_profile.tpl",
+        "suitecommerce/Header@1.3.0/Templates/header_mini_cart.tpl": "Templates/qs_header_mini_cart.tpl",
+
+        "suitecommerce/Header@1.3.0/Sass/_header.scss": "Sass/_qs-header.scss",
+        "suitecommerce/Header@1.3.0/Sass/_header-menu.scss": "Sass/_qs-header-menu.scss",
+        "suitecommerce/Header@1.3.0/Sass/_header-profile.scss": "Sass/_qs-header-profile.scss",
+        "suitecommerce/Header@1.3.0/Sass/_header-sidebar.scss": "Sass/_qs-header-sidebar.scss",
+        "suitecommerce/Header@1.3.0/Sass/_header-logo.scss": "Sass/_qs-header-logo.scss",
+        "suitecommerce/Header@1.3.0/Sass/_header-mini-cart.scss": "Sass/_qs-header-mini-cart.scss",
+        "suitecommerce/Header@1.3.0/Sass/_header-mini-cart-item-cell.scss": "Sass/_qs-header-mini-cart-item-cell.scss",
+        "suitecommerce/Header@1.3.0/Sass/_header-simplified.scss": "Sass/_qs-header-simplified.scss"
+    }
+}

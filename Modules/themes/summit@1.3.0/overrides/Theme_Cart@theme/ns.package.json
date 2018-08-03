@@ -1,0 +1,31 @@
+{
+    "gulp": {
+        "javascript": [
+            "JavaScript/*.js"
+        ],
+        "templates": [
+            "Templates/*.*"
+        ],
+        "unit-test-files": [
+            "Tests/*.js"
+        ],
+        "unit-test-entry-point": [
+            "Tests/UnitTest.Cart.js"
+        ],
+        "sass": [
+            "Sass/**/*.scss"
+        ],
+        "configuration": [
+            "Configuration/*.json"
+        ]
+    },
+    "overrides": {
+        "suitecommerce/Cart@4.0.0/Sass/_cart-detailed.scss": "Sass/_qs-cart-detailed.scss",
+        "suitecommerce/Cart@4.0.0/Sass/_cart-confirmation-modal.scss": "Sass/_qs-cart-confirmation-modal.scss",
+        "suitecommerce/Cart@4.0.0/Sass/_cart.scss": "Sass/_qs-cart.scss",
+        "suitecommerce/Cart@4.0.0/Sass/_cart-summary.scss": "Sass/_qs-cart-summary.scss",
+        "suitecommerce/Cart@4.0.0/Sass/_cart-item-summary.scss": "Sass/_qs-cart-item-summary.scss",
+        "suitecommerce/Cart@4.0.0/Sass/_cart-item-actions.scss": "Sass/_qs-cart-item-actions.scss",
+        "suitecommerce/Cart@4.0.0/Templates/cart_detailed.tpl": "Templates/qs_cart_detailed.tpl"
+    }
+}

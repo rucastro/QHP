@@ -1,0 +1,17 @@
+{
+    "gulp": {
+        "templates": [
+            "Templates/*"
+        ],
+        "sass": [
+            "Sass/**/*.scss"
+        ]
+    },
+    "overrides": {
+        "suitecommerce/ProductReviews@3.0.0/Sass/_product-reviews-center.scss": "Sass/_qs-product-reviews-center.scss",
+        "suitecommerce/ProductReviews@3.0.0/Sass/_product-reviews-form.scss": "Sass/_qs-product-reviews-form.scss",
+        "suitecommerce/ProductReviews@3.0.0/Sass/_product-reviews-review.scss": "Sass/_qs-product-reviews-review.scss",
+        "suitecommerce/ProductReviews@3.0.0/Templates/product_reviews_review.tpl": "Templates/qs_product_reviews_review.tpl",
+        "suitecommerce/ProductReviews@3.0.0/Templates/product_reviews_center.tpl": "Templates/qs_product_reviews_center.tpl"
+    }
+}

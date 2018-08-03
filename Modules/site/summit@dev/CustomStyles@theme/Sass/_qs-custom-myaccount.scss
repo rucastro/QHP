@@ -1,0 +1,285 @@
+/* My Account */
+.overview-profile-email {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+.overview-home-orders-title{
+    border-bottom: $sc-theme-border-light;
+    border-top: $sc-theme-border-light;
+}
+.order-history-details-order-title{
+    padding: $sc-base-padding * 3 0;
+}
+.order-history-shipping-group-accordion-head{
+    padding-right: 0px;
+    a{
+        padding: $sc-base-padding;
+    }
+}
+
+.order-history-shipping-group-accordion-container {
+    margin: 0;
+    .item-views-cell-actionable-table-first {
+        background-color: $sc-theme-color-tertiary;
+        padding-top: $sc-base-padding * 4;
+        padding-bottom: $sc-base-padding * 4;
+        .item-views-cell-actionable-thumbnail{
+            padding-left: $sc-base-padding * 4;
+        }
+    }
+    .item-views-cell-actionable-table-middle, .item-views-cell-actionable-table-last {
+        background-color: $sc-theme-color-tertiary;
+        padding-top: $sc-base-padding * 4;
+        padding-bottom: $sc-base-padding * 4;
+        padding-right: $sc-base-padding * 4;
+    }
+}
+
+.quote-details-products-table tbody tr{
+    td {
+        background-color: $sc-theme-color-tertiary;
+        padding-top: $sc-base-padding * 4;
+        padding-bottom: $sc-base-padding * 4;
+        padding-right: $sc-base-padding * 4;
+    }
+
+    td:first-child {
+        padding-left: $sc-base-padding * 4;
+        padding-right:0;
+    }
+}
+
+.reorder-items-list .reorder-items-list-reorder-items-table {
+    border-bottom: none;
+    tr{
+        border-bottom: none;
+    }
+    & .transaction-line-views-cell-actionable-table-first {
+        display: block;
+        width: 100%;
+        padding-left: 0;
+        @media (min-width: $screen-sm-min) {
+            //restore defaults
+            display: table-cell;
+            width: 25%;
+            padding-left: 15px;
+        }
+    }
+    & .transaction-line-views-cell-actionable-table-middle,
+    & .transaction-line-views-cell-actionable-table-last {
+        padding-left: 0;
+        @media (min-width: $screen-sm-min) {
+            //restore defaults
+            padding-left: 15px;
+        }
+    }
+}
+
+.reorder-items-actions-quantity-value {
+    @media (max-width: $screen-md-min) {
+        padding-right: $sc-base-padding * 2 !important;
+    }
+}
+
+.reorder-items-actions-add-to-cart-button-container {
+    @media (max-width: $screen-sm-min) {
+        margin-top: $sc-base-margin * 3;
+    }
+}
+
+.myaccount-layout-main header {
+    // h2 {
+        @media (max-width: $screen-sm-min) {
+            margin-top: $sc-small-margin;
+        }
+    // }
+}
+
+.myaccount-layout-main header,
+.information-box-summary {
+    border-top: $sc-theme-border-light;
+}
+.list-header-view,
+.product-list-lists-header,
+.product-list-list-details-wrapper {
+    border-bottom: $sc-theme-border-light;
+}
+.info-card{
+    padding: $sc-base-padding * 3;
+    border: none;
+    @include border-radius($sc-theme-border-radius);
+}
+.information-box {
+    border: none;
+    @include border-radius($sc-theme-border-radius);
+}
+.balance-indicator-bar {
+    background-color: $sc-theme-border-color-light;
+}
+
+.OrderItemReorderListView .list-header-view-sorts,
+.list-header-view-sorts {
+    & .list-header-view-filters {
+        width: calc(100% - 50px);
+        margin-top: 0;
+        float: right;
+    }
+    & .list-header-view-accordion-body-select {
+        width: 100%;
+    }
+}
+
+.return-authorization-list {
+    & .list-header-view-sorts .list-header-view-filters {
+        padding-right: 0;
+    }
+}
+
+.list-header-view-accordion-body-button-sort{
+  height: $sc-target-size;
+  width: $sc-target-size;
+  border-right: none;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  i {
+    font-size: $sc-base-font-size;
+    width: auto
+  }
+}
+.header-menu-profile .header-menu-myaccount-overview {
+    border-bottom: $sc-theme-border-light;
+}
+.QuoteList .list-header-view-accordion-body-label-group .list-header-view-accordion-body-select,
+.OrderItemReorderListView .list-header-view-accordion-body-label-group .list-header-view-accordion-body-select,
+.list-header-view-sorts .list-header-view-filters .list-header-view-accordion-body-select,
+.product-list-list-details-button-expander {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+}
+.product-list-list-details-button-edit {
+    border-right: none;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+/* My Account Menu Tree */
+.menu-tree {
+    font-family: $sc-theme-secondary-font;
+}
+.menu-tree-node-item-anchor {
+    background-color: $sc-theme-border-color-light;
+    border-bottom: 1px solid $sc-theme-input-color;
+}
+.menu-tree-node {
+    &:first-child .menu-tree-node-item-anchor {
+        border-top-left-radius: $sc-theme-border-radius;
+        border-top-right-radius: $sc-theme-border-radius;
+    }
+    &:last-child .menu-tree-node-item-anchor {
+        border-bottom-left-radius: $sc-theme-border-radius;
+        border-bottom-right-radius: $sc-theme-border-radius;
+        border-bottom: none;
+    }
+}
+.menu-tree-node-submenu-wrapper {
+    border-bottom: none;
+}
+
+.product-list-bulk-actions-button-group{
+    float: none;
+    @media (min-width: $screen-sm-min) {
+        //restore defaults
+        float: right;
+    }
+    .product-list-bulk-actions-button-addtocart{
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    .product-list-bulk-actions-button-expander{
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+}
+
+.product-list-display-full-actions {
+    padding-bottom: 20px;
+}
+
+/* Wish List > My List */
+.list-header-view-accordion-link {
+    @media (min-width: $screen-sm-min) {
+        margin-bottom:0;
+    }
+}
+
+/* Support Cases */
+.case-list {
+    & .list-header-view-sorts .list-header-view-accordion-body-select {
+        width: 100% !important;
+        @media (min-width: $screen-md-min) {
+            width: 100% !important; // to override default style
+        }
+        @media (min-width: $screen-md-min) {
+            margin: 0;
+        }
+    }
+
+}
+
+.case-list-title {
+    @media (max-width: $screen-sm-min) {
+        padding-top: $sc-base-padding * 2;
+    }
+}
+
+.case-list-results-container {
+    margin-bottom: $sc-small-margin * 2;
+}
+
+.case-list-header-button-new {
+    top:38px;
+    line-height: 21px;
+
+    @media (min-width: $screen-sm-min) {
+        margin-top: 0;
+        z-index:0;
+        top: 64px;
+        margin-bottom: $sc-base-margin * 3;
+    }
+
+    @media (min-width: $screen-md-min) {
+        top: 0;
+        margin: 0;
+        position: relative;
+    }
+}
+
+/* Invoices */
+.invoice-open-list-title,
+.invoice-paid-list-title {
+    @media (max-width: $screen-sm-min) {
+        padding-top: $sc-base-padding * 2;
+    }
+}
+.invoice-open-list-body {
+    margin-top: $sc-small-margin * 2;
+}
+
+.invoice-open-list-body,
+.invoice-paid-list-body {
+    margin-bottom: $sc-small-margin * 2;
+}
+
+.invoice-open-list-no-records {
+    padding-top: 0;
+}
+
+/* Balance */
+.balance-actions {
+    margin-bottom: $sc-small-margin * 2;
+}
+
+/* Transaction History */
+.transaction-history-list-results-container {
+    margin-bottom: $sc-small-margin * 2;
+}

@@ -1,0 +1,24 @@
+{
+  "type": "object",
+  "subtab": {
+    "id": "hashScroll",
+    "title": "Hash Scroll",
+    "group": "commerceSuiteSolution"
+  },
+  "properties": {
+    "hashScroll.animate": {
+      "group": "commerceSuiteSolution",
+      "type": "boolean",
+      "subtab": "hashScroll",
+      "title": "Animated",
+      "default": true
+    },
+    "hashScroll.urlparam": {
+      "group": "commerceSuiteSolution",
+      "type": "string",
+      "subtab": "hashScroll",
+      "title": "URL parameter",
+      "default": "target"
+    }
+  }
+}

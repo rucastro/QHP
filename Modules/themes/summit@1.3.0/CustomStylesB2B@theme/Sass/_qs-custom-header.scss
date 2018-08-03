@@ -1,0 +1,39 @@
+/* HEADER */
+.storelocator-accesspoints-headerlink-link-icon {
+    top: 3px;
+    color: $sc-theme-color;
+    @media(min-width: $screen-sm-min){
+        display: none;
+    }
+}
+
+.header-mini-cart {
+    border: none;
+    @include border-radius($sc-theme-border-radius);
+}
+
+.header-mini-cart-subtotal {
+    font-family: $sc-theme-secondary-font;
+    & .header-mini-cart-subtotal-amount span {
+        color: $sc-theme-color-primary;
+    }
+}
+
+.header-mini-cart-menu-cart-icon {
+    background-color: $sc-theme-color-primary;
+    @include border-radius($sc-theme-border-radius);
+    line-height: 35px;
+    min-width: 35px;
+    @media(min-width: $screen-md-min){
+        background-color: transparent;
+        @include border-radius(0);
+        line-height: 28px;
+        min-width: 30px;
+    }
+}
+
+.breadcrumb{
+    @media(min-width: $screen-md-min){
+        margin-bottom: $sc-base-margin*6;
+    }
+}

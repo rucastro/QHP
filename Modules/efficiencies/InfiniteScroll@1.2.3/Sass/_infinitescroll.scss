@@ -1,0 +1,67 @@
+/*
+ © 2016 NetSuite Inc.
+ User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
+ provided, however, if you are an authorized user with a NetSuite account or log-in, you
+ may use this code subject to the terms that govern your access and use.
+*/
+
+.infinite-scroll-results {
+    @extend .row;
+    text-align: center;
+    padding-bottom: $sc-small-margin * 3;
+}
+
+.infinite-scroll-button-wrapper {
+    text-align: center;
+    float: right;
+    @extend .col-md-9;
+    padding-bottom: $sc-small-margin * 3;
+
+}
+
+.infinite-scroll-button-wrapper-prev {
+    text-align: center;
+    padding: 0;
+}
+
+.infinite-scroll-previous-button {
+    @extend .button-medium;
+    @extend .button-secondary;
+    margin-bottom: $sc-small-margin;
+}
+
+.infinite-scroll-next-button {
+    @extend .button-medium;
+    @extend .button-secondary;
+    margin-top: $sc-small-margin;
+}
+
+.infinite-scroll-top {
+    display: none;
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    z-index: 999;
+    right: $sc-medium-margin;
+    bottom: $sc-medium-margin;
+    background: no-repeat center 43%;
+    background: lighten($sc-color-light-copy, 45);
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+}
+
+.infinite-scroll-top-icon {
+    @extend .icon-chevron-up;
+    color: $sc-color-primary;
+    padding-left: $sc-small-margin + 2;
+    font-size: $sc-h4-font-size * 2;
+}
+
+.facets-facet-browse-pagination {
+    float: none;
+}
+
+.infinite-scroll-loading {
+    height: 16px;
+}

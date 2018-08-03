@@ -1,0 +1,5 @@
+1.0.0
+- Initial Release (Vinson)
+
+1.1.0
+- Upgraded to FA 4.7.0, though should be added individually to 'additions' file in Sass folder

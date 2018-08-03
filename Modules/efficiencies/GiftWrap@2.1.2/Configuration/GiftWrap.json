@@ -1,0 +1,65 @@
+{
+    "type": "object",
+	"properties": {
+		"quickStart.giftWrap.enabled": {
+			"group": "commerceSuiteSolution",
+			"type": "boolean",
+			"subtab": "quickStart",
+			"title": "Enable Gift Wrap",
+			"default": true
+		}
+	},
+
+    "modifications" : [
+	{
+	    "target": "$.resource.template.transactionlineviews-option-selected",
+	    "action": "add",
+	    "value": "item_views_option_void.tpl"
+	},
+	{
+	    "target": "$.resource.template.productivew-option-selector",
+	    "action": "add",
+	    "value": "item_views_option_void.tpl"
+	},
+	{
+	    "target": "$.resource.template.productivew-option-selector",
+	    "action": "add",
+	    "value": "item_views_option_gift_wrap.tpl"
+	},
+	{
+	    "target": "$.resource.template.productivew-option-selector",
+	    "action": "add",
+	    "value": "item_views_option_gift_wrap_message.tpl"
+	},
+	{
+	    "target": "$.properties[ItemOptions.optionsConfiguration].default",
+	    "action": "add",
+	    "value": {
+                "cartOptionId": "custcol_ef_gw_id",
+		"urlParameterName": "gwid",
+                "templateSelector": "item_views_option_void.tpl",
+                "templateSelected": "item_views_option_void.tpl"
+            }
+	},
+	{
+	    "target": "$.properties[ItemOptions.optionsConfiguration].default",
+	    "action": "add",
+	    "value": {
+                "cartOptionId": "custcol_ef_gw_giftwrap",
+		"urlParameterName": "gw",
+		"index": 8,
+                "templateSelector": "item_views_option_gift_wrap.tpl"
+            }
+	},
+	{
+	    "target": "$.properties[ItemOptions.optionsConfiguration].default",
+	    "action": "add",
+	    "value": {
+                "cartOptionId": "custcol_ef_gw_message",
+		"urlParameterName": "gwmsg",
+		"index": 9,
+                "templateSelector": "item_views_option_gift_wrap_message.tpl"
+            }
+	}
+    ]
+}

@@ -1,0 +1,113 @@
+/*
+	© 2017 NetSuite Inc.
+	User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
+	provided, however, if you are an authorized user with a NetSuite account or log-in, you
+	may use this code subject to the terms that govern your access and use.
+*/
+
+///////////////////////////////////////////////////////////////
+//header maxi menu
+
+.header-menu-secondary-nav {
+	@extend .container;
+	padding: 0;
+}
+
+.header-menu-level1 {
+	margin-left: -$sc-small-margin;
+	height: $sc-target-size;
+	background-color: $sc-theme-color-tertiary;
+}
+
+.header-menu-level1 > li {
+	float: left;
+}
+
+.header-menu-level1-anchor {
+	display: block;
+	height: $sc-target-size;
+	line-height: $sc-target-size;
+	padding: 0 $sc-base-padding*2;
+	margin-right: $sc-base-margin;
+	color: $sc-color-copy;
+	background-color: $sc-theme-navlinks-bgr-color;
+	font-family: $sc-theme-secondary-font;
+	font-size: 16px;
+    font-weight: $sc-font-weight-semibold;
+    text-transform: uppercase;
+}
+
+.header-menu-level1-anchor-last {
+	margin-right: 0;
+}
+
+.header-menu-level1-anchor:hover,
+.header-menu-level1-anchor:focus,
+.header-menu-level1-anchor:active,
+.open .header-menu-level1-anchor {
+	color: $sc-color-link;
+}
+
+//maxi menu level 2
+.header-menu-back {
+	display: none;
+}
+
+.header-menu-level2 > li {
+	float: left;
+	width: 20%;
+	padding-right: $sc-base-padding * 6;
+}
+
+.header-menu-level2-anchor {
+	font-family: $sc-theme-secondary-font;
+	font-weight: $sc-font-weight-normal;
+	text-transform: uppercase;
+	padding-bottom: $sc-base-padding;
+	margin-bottom: $sc-base-margin * 2;
+	display: block;
+	border-bottom: 1px solid $sc-color-theme-border;
+
+	//@media (min-width: $screen-md-min) {
+	//	pointer-events: none;
+	//}
+}
+
+//maxi menu level 3
+.header-menu-level3-anchor {
+	display: block;
+	padding: $sc-base-padding 0;
+	color: $sc-color-copy;
+}
+
+.header-menu-myaccount-anchor-level3.active {
+	color: $sc-color-link;
+}
+
+//container fix for maxi menu on desktop
+.header-menu-push-icon, .header-menu-pop-icon {
+	display: none;
+}
+
+.header-menu-level-container {
+	display: none;
+	position: absolute;
+	top: $sc-target-size;
+	width: 100%;
+	min-height: 150px;
+	z-index: 5;
+}
+
+.header-menu-level-categories {
+	@extend .container;
+	min-height: 150px;
+	overflow: auto;
+	padding: $sc-base-padding * 5;
+	background-color: $sc-color-tertiary;
+	border: 1px solid $sc-color-theme-border;
+}
+
+//maxi menu opened
+.open .header-menu-level-container {
+	display: block;
+}

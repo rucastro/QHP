@@ -1,0 +1,157 @@
+/*
+	© 2017 NetSuite Inc.
+	User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
+	provided, however, if you are an authorized user with a NetSuite account or log-in, you
+	may use this code subject to the terms that govern your access and use.
+*/
+
+.facets-item-cell-table {
+	@extend .item-cell;
+
+	.global-views-star-rating {
+		float:none;
+		display: inline-block;
+	}
+
+	.item-views-price {
+		text-align:center;
+	}
+
+	.item-views-option-color {
+		text-align:center;
+	}
+}
+
+.facets-item-cell-table-quick-view-wrapper {
+	@extend .item-cell-quick-view-wrapper;
+}
+
+.facets-item-cell-table-quick-view-link {
+	@extend .item-cell-quick-view-link;
+}
+
+.facets-item-cell-table-image-wrapper {
+	position:relative;
+	text-align:center;
+}
+
+.facets-item-cell-table-link-image {}
+
+.facets-item-cell-table-quick-view-icon {}
+
+.facets-item-cell-table-add-to-cart {
+	text-align: center;
+}
+
+.facets-item-cell-table-add-to-cart-itemid {}
+
+.facets-item-cell-table-stock {
+    display: inline-block;
+    float: right;
+}
+
+.facets-item-cell-table-details {
+    display: flex;
+    flex-direction: column;
+	text-align: left;
+	padding: $sc-base-padding * 4;
+
+    @media (min-width: $screen-md-min) {
+        display: block;
+        padding: $sc-base-padding * 6;
+        margin-bottom: $sc-base-padding * 6;
+    }
+
+    // add to cart on facets
+    [data-view="AddToCart"] {
+        @media (min-width: $screen-sm-min) {
+            display: inline-block;
+        }
+    }
+    .cart-add-to-cart-button-container {
+        padding-left: 0;
+        padding-right: 0;
+
+        @media (min-width: $screen-sm-min) {
+            float: none;
+            width: 100%;
+            margin-left: 5px;
+        }
+        @media (min-width: $screen-md-min) {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+}
+
+.facets-item-cell-table-image {
+	max-width: 100%;
+	height:auto;
+}
+
+.facets-item-cell-table-title {
+	@extend .item-cell-title;
+}
+
+.facets-item-cell-table-price {
+	@extend .small-price;
+}
+
+.facets-item-cell-table-rating {
+	text-align:center;
+	display: inline-block;
+    padding: $sc-base-padding 0;
+    order: 2;
+    margin-bottom: $sc-padding-medium;
+
+    @media (min-width: $screen-desktop) {
+        float: right;
+        margin-bottom: 0;
+    }
+}
+
+.facets-item-cell-table .item-details-option-color-tiles-container {
+	@extend .color-picker-sm;
+}
+
+.facets-item-cell-table .item-details-option-color-label {
+	display:none;
+}
+
+.facets-item-cell-table {
+	.global-views-star-rating-area {
+		float:none;
+		margin-bottom:$sc-small-margin;
+	}
+
+	[data-view="ItemDetails.Options"] {
+		display: block;
+		clear: both;
+
+		.item-views-option-color-tiles-container{
+			@extend .color-picker-sm;
+		}
+	}
+}
+
+.facets-item-cell-table-add-to-cart-quantity {
+	@extend .input-medium;
+
+	width: 100%;
+	min-width: 0;
+	outline: none;
+	color: $sc-theme-color;
+	background-color: $sc-color-theme-background-light;
+	border: 1px solid $sc-color-theme-background-light;
+
+	@media (min-width: $screen-sm) {
+		width: 200px;
+		display: inline-block;
+		margin-right: $sc-base-margin;
+	}
+}
+
+.facets-item-cell-table-add-to-cart-button {
+	@extend .button-primary;
+	@extend .button-medium;
+}

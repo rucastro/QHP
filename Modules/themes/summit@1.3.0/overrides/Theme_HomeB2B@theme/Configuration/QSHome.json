@@ -1,0 +1,166 @@
+{
+    "type": "object",
+    "subtab": {
+        "id": "home",
+        "title": "Home",
+        "description": "Home",
+        "group": "layout"
+    },
+    "properties": {
+        "home.carouselBgrImg": {
+            "group": "layout",
+            "subtab": "home",
+            "type": "string",
+            "title": "Carousel Text Background",
+            "description": "Enter the URL location of the background image that sits underneath the text and button but overlaid on top of the main carousel image (optional).",
+            "default": ""
+        },
+        "home.carouselImages": {
+            "group": "layout",
+            "subtab": "home",
+            "type": "array",
+            "docRef": "bridgehead_4666978268",
+            "title": "Carousel images",
+            "description": "Carousel image Urls, plus overlaid text and link to click through to.",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "title": {
+                        "type": "string",
+                        "title": "Title"
+                    },
+                    "text": {
+                        "type": "string",
+                        "title": "Text"
+                    },
+                    "image": {
+                        "type": "string",
+                        "title": "Image Url"
+                    },
+                    "linktext": {
+                        "type": "string",
+                        "title": "Link Text"
+                    },
+                    "href": {
+                        "type": "string",
+                        "title": "Link Location"
+                    }
+                }
+            },
+            "default": [{
+                    "title": "Free Shipping",
+                    "text": "on all cleaning products. The weekend only. Use code: YEAHBUDDY",
+                    "image": "img/summitb2b-carousel-home-1.jpg",
+                    "linktext": "Shop Now",
+                    "href": "#"
+                },
+                {
+                    "title": "Quick Turnaround Times",
+                    "text": "From Deep Groove To Angular Contact",
+                    "image": "img/summitb2b-carousel-home-2.jpg",
+                    "linktext": "Get the Best Price",
+                    "href": "#"
+                },
+                {
+                    "title": "Wiring Solutions",
+                    "text": "Including Cord Grips and Ferrules",
+                    "image": "img/summitb2b-carousel-home-3.jpg",
+                    "linktext": "View Products",
+                    "href": "#"
+                }
+            ]
+        },
+        "home.infoblock": {
+            "group": "layout",
+            "subtab": "home",
+            "type": "array",
+            "title": "Infoblocks",
+            "description": "Infoblock banners that link through to specified areas. Will accept any number of lines.",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "title": {
+                        "type": "string",
+                        "title": "Title"
+                    },
+                    "text": {
+                        "type": "string",
+                        "title": "Text"
+                    },
+                    "image": {
+                        "type": "string",
+                        "title": "Background Image URL"
+                    },
+                    "color": {
+                        "type": "string",
+                        "title": "Background Color"
+                    },
+                    "href": {
+                        "type": "string",
+                        "title": "Link Location"
+                    }
+                }
+            },
+            "default": [{
+                    "title": "Shop Performance",
+                    "text": "",
+                    "image": "img/infoblock1.jpg",
+                    "color": "#a3b9ce",
+                    "href": "#"
+                },
+                {
+                    "title": "Shop Reliability",
+                    "text": "",
+                    "image": "img/infoblock2.jpg",
+                    "color": "#789bb0",
+                    "href": "#"
+                }
+            ]
+        },
+        "home.freeTextTitle": {
+            "group": "layout",
+            "subtab": "home",
+            "type": "string",
+            "translate": true,
+            "title": "Free Text Title",
+            "description": "Title for free text section.",
+            "default": "Reliability, Quality & Power"
+        },
+        "home.freeText": {
+            "group": "layout",
+            "subtab": "home",
+            "type": "string",
+            "translate": true,
+            "nsType": "textarea",
+            "title": "Free Text",
+            "description": "Can accept HTML tags.",
+            "default": "<p>We Mean Business when it comes to getting you the Products and Customer Service you need...  when you need them.</p><p>In today's extremely agressive marketplace, all companies face the issues of global competition and the ever increasing costs of operating a business environment. We created a low-overhead business model and an extremely efficient global supply chain that are the envy of our customers. At Summit we provide our customer with high-quality industrial control products at extremely low prices.</p>"
+        },
+        "home.freeTextImages": {
+            "group": "layout",
+            "subtab": "home",
+            "type": "array",
+            "title": "Free Text Images",
+            "description": "Images to display with the free text.",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "image": {
+                        "type": "string",
+                        "title": "Image",
+                        "description": ""
+                    },
+                    "href": {
+                        "type": "string",
+                        "title": "URL",
+                        "description": ""
+                    }
+                }
+            },
+            "default": [{
+                "image": "img/freetextimage.jpg",
+                "href": "#"
+            }]
+        }
+    }
+}

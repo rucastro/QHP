@@ -1,0 +1,31 @@
+1.0.0
+- Initial Release
+
+1.0.1
+- Styling and template changes
+
+1.0.3
+- BOPIS enhancement
+- Giftwrap functionality in cart
+- New PDP layout for Giftwrap
+
+1.0.4
+- Fixed issue with giftwrap price
+- Fixed issue with giftwrap label
+
+1.1.0
+- Vinson Release
+- Requires the Models.Init module in files that uses Commerce API
+
+2.0.0
+- Elbrus Release
+- ESLint Fix
+
+2.1.0
+- add enablement config
+
+2.1.1
+- Update distro dependencies
+
+2.1.2
+- Fix: computing decimal number

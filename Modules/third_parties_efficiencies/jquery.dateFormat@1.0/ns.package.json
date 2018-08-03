@@ -1,0 +1,11 @@
+{
+  "gulp": {
+    "javascript": [
+      "jquery.dateFormat.js"
+    ],
+    "ssp-libraries": [
+        "jquery.dateFormat.js"
+    ]
+  }
+,	"jshint": "false"
+}

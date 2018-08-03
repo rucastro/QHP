@@ -1,0 +1,14 @@
+{
+    "id": "ss-efcore",
+    "name": "SuiteSolution - EFCore",
+    "folders": {
+        "modules": "Modules",
+        "distribution": "bin/LocalDistribution",
+        "deploy": "bin/DeployDistribution",
+        "release": "bin/ReleaseDistribution"
+    },
+    "dependencies": [],
+    "modules": {
+        "efficiencies/EFCore": "1.1.1"
+    }
+}

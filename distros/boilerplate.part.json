@@ -1,0 +1,162 @@
+{
+    "id": "boilerplate",
+    "name": "SuiteSolutions Boilerplate - For Elbrus",
+    "dependencies": [
+        "elbrus-base",
+        "ss-generalconfig",
+        "ss-moduleenablement",
+        "ss-environmentfiles",
+        "ss-sspfiles",
+        "ss-postcontexthook",
+        "ss-contactus"
+    ],
+    "folders": {
+        "modules": "Modules",
+        "suitecommerceModules": "Modules/suitecommerce",
+        "thirdPartyModules": "Modules/third_parties",
+        "distribution": "bin/LocalDistribution",
+        "deploy": "bin/DeployDistribution",
+        "release": "bin/ReleaseDistribution",
+        "binaries": "bin"
+    },
+    "endpoint": true,
+    "modules": {
+        "efficiencies/Backbone.CompositeView.CollectionViewFix": "2.0.0",
+        "efficiencies/Backbone.CompositeView.DataContext": "1.0.0",
+        "efficiencies/Case.UrlParams" : "1.1.0",
+        "efficiencies/HashScroll": "1.0.1",
+        "efficiencies/StagingNoIndex": "1.0.2",
+        "efficiencies/ProductDetails.Full.View.LinkToReviews": "1.0.0",
+        "efficiencies/ProductDetails.Full.View.SelectSingleOption": "1.0.0",
+
+        "efficiencies/ResolveAssetUrl": "1.0.1",
+        "efficiencies/CMSRefreshLinks": "1.0.1",
+        "efficiencies/ShoppingStarterFixes": "2.0.0"
+    },
+    "tasksConfig": {
+        "livereload": {
+            "enable": true,
+            "secure": {
+                "js_port": 35730,
+                "port": 35731
+            },
+            "config": {
+                "start": true,
+                "silent": true,
+                "port": 35729,
+                "https": true
+            },
+            "tasks": {
+                "sass": true,
+                "templates": true
+            }
+        },
+        "local": {
+            "https": {
+                "port": 7778,
+                "key": "SupportScripts/local-https/key.pem",
+                "cert": "SupportScripts/local-https/cert.pem"
+            }
+        },
+        "javascript": [
+            {
+                "entryPoint": "SC.Shopping.Starter",
+                "dependencies": [
+                    "HashScroll",
+                    "StagingNoIndex",
+                    "ProductDetails.Full.View.LinkToReviews",
+                    "ProductDetails.Full.View.SelectSingleOption",
+
+                    "ContactUs",
+                    "ResolveAssetUrlHandlebarsAddOn",
+                    "CMSRefreshLinks",
+                    "Backbone.CompositeView.DataContext",
+                    "Backbone.CompositeView.CollectionViewFix"
+                ]
+            },
+            {
+                "entryPoint": "SC.MyAccount.Starter",
+                "dependencies": [
+                    "HashScroll",
+                    "StagingNoIndex",
+                    "Case.UrlParams",
+                    "ResolveAssetUrlHandlebarsAddOn",
+                    "Backbone.CompositeView.DataContext",
+                    "Backbone.CompositeView.CollectionViewFix"
+                ]
+            },
+            {
+                "entryPoint": "SC.Checkout.Starter",
+                "dependencies": [
+                    "ContactUs",
+                    "HashScroll",
+                    "StagingNoIndex",
+                    "ResolveAssetUrlHandlebarsAddOn",
+                    "Backbone.CompositeView.DataContext",
+                    "Backbone.CompositeView.CollectionViewFix"
+                ]
+            }
+        ],
+        "ssp-libraries": {
+            "dependencies": [
+                "ContactUs.Model",
+                "ContactUs.ServiceController"
+            ]
+        },
+        "sass": {
+            "applications": [
+                {
+                    "name": "Shopping",
+                    "dependencies": [
+                        "ContactUs"
+                    ]
+                },
+                {
+                    "name": "MyAccount",
+                    "dependencies": []
+                },
+                {
+                    "name": "Checkout",
+                    "dependencies": [
+                        "ContactUs"
+                    ]
+                }
+            ]
+        },
+        "efficiencies-release": {
+            "extras": [
+                "bin/",
+                "gulp/livereload/**/*",
+                "gulp/distros/**/*",
+                "gulp/module-creator/**/*",
+                "gulp/ns-deploy/fs.js",
+                "gulp/ns-deploy/net.js",
+                "gulp/package-manager/index.js",
+                "gulp/tasks/backend-suitescript.js",
+                "gulp/tasks/clean.js",
+                "gulp/tasks/deploy.js",
+                "gulp/tasks/eslint.js",
+                "gulp/tasks/distros.js",
+                "gulp/tasks/efficiencies-release.js",
+                "gulp/tasks/hosting-root-files.js",
+                "gulp/tasks/local.js",
+                "gulp/tasks/module.js",
+                "gulp/tasks/sass.js",
+                "gulp/tasks/templates.js",
+                "gulp/tasks/watch.js",
+                "Modules/efficiencies/.eslintrc",
+                "Modules/site/.eslintrc",
+                "Modules/ps/.eslintrc",
+                "HostingRootFiles/*",
+                "package.json",
+                ".svnignore",
+                ".eslintrc",
+                ".eslintignore",
+                ".gitignore",
+                "svnignore.sh",
+                ".nvmrc",
+                "SupportScripts/**/*"
+            ]
+        }
+    }
+}

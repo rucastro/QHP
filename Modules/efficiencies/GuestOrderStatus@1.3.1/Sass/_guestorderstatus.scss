@@ -1,0 +1,68 @@
+/*
+    © 2015 NetSuite Inc.
+    User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
+    provided, however, if you are an authorized user with a NetSuite account or log-in, you
+    may use this code subject to the terms that govern your access and use.
+*/
+
+.guest-order-status-layout-container {
+  @extend .container;
+}
+
+.guest-order-status-container {
+  @extend .row;
+}
+
+.guest-order-status-header {
+  @extend .col-xs-12;
+}
+
+.guest-order-status-form {
+  @extend .col-md-8;
+}
+
+.guest-order-status-details {
+  @extend .col-md-4;
+}
+
+.guest-order-status-title {
+  margin-bottom: $sc-base-margin * 2;
+}
+
+.guest-order-status-form-fields {
+  @extend .box-column;
+  margin-top: $sc-small-margin * 3;
+}
+
+.guest-order-status-required-text {
+  margin-bottom: $sc-base-margin * 4;
+  margin-top: $sc-base-margin * 2;
+  display: inline-block;
+}
+
+.guest-order-status-required {
+  @extend .input-required;
+}
+
+.guest-order-status-label {
+  @extend .input-label;
+}
+
+.guest-order-status-input {
+  @extend .input-large;
+}
+
+.guest-order-status-submit {
+  @extend .button-medium;
+  @extend .button-primary;
+}
+
+.guest-order-status-reset {
+  @extend .button-medium;
+  @extend .button-secondary;
+  @extend .button-positioning-stack2next;
+}
+
+.guest-order-status-form-controls p { /* dynamic tag, cannot add class */
+  margin-bottom: $sc-base-margin * 3;
+}

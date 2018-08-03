@@ -1,0 +1,10 @@
+{
+    "gulp": {
+        "templates": [
+            "Templates/*.tpl"
+        ]
+    },
+    "overrides": {
+        "suitecommerce/OrderWizard.Module.CartSummary@4.0.0/Templates/order_wizard_cart_summary.tpl": "Templates/order_wizard_cart_summary.tpl"
+    }
+}

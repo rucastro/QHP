@@ -1,0 +1,236 @@
+{
+    "type": "object",
+    "subtab": {
+        "id": "home",
+        "title": "Home",
+        "description": "Home",
+        "group": "layout"
+    },
+    "properties": {
+        "home.carouselBgrImg": {
+            "group": "layout",
+            "subtab": "home",
+            "type": "string",
+            "title": "Carousel Text Background",
+            "description": "Enter the URL location of the background image that sits underneath the text and button but overlaid on top of the main carousel image (optional).",
+            "default": "img/carousel_background.png"
+        },
+        "home.carouselImages": {
+            "group": "layout",
+            "subtab": "home",
+            "type": "array",
+            "docRef": "bridgehead_4666978268",
+            "title": "Carousel images",
+            "description": "Carousel image Urls, plus overlaid text and link to click through to.",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "title": {
+                        "type": "string",
+                        "title": "Title"
+                    },
+                    "text": {
+                        "type": "string",
+                        "title": "Text"
+                    },
+                    "image": {
+                        "type": "string",
+                        "title": "Image Url"
+                    },
+                    "linktext": {
+                        "type": "string",
+                        "title": "Link Text"
+                    },
+                    "href": {
+                        "type": "string",
+                        "title": "Link Location"
+                    }
+                }
+            },
+            "default": [{
+                    "title": "New Tablets",
+                    "text": "",
+                    "image": "img/bridge-carousel-home-1.jpg",
+                    "linktext": "Shop Now",
+                    "href": "#"
+                },
+                {
+                    "title": "Learn",
+                    "text": "Basics of audio setup",
+                    "image": "img/bridge-carousel-home-2.jpg",
+                    "linktext": "Find Out How",
+                    "href": "#"
+                },
+                {
+                    "title": "Support",
+                    "text": "Setup without the upset",
+                    "image": "img/bridge-carousel-home-3.jpg",
+                    "linktext": "More",
+                    "href": "#"
+                }
+            ]
+        },
+		"home.topPromo": {
+            "group": "layout",
+            "subtab": "home",
+            "type": "array",
+            "title": "Top Promo",
+            "description": "Top promotional banner used to display any information you enter in this area.",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "text": {
+                        "type": "string",
+                        "title": "Text"
+                    },
+                    "image": {
+                        "type": "string",
+                        "title": "Background Image URL"
+                    },
+                    "color": {
+                        "type": "string",
+                        "title": "Background Color"
+                    },
+                    "href": {
+                        "type": "string",
+                        "title": "Link Location"
+                    }
+                }
+            },
+            "default": [
+				{
+                    "text": "Use promo code SCADEMO for 40% off your purchase",
+                    "image": "img/top_promo_bridge_1.png",
+                    "color": "#2274a5",
+                    "href": "#"
+                }
+            ]
+        },
+        "home.infoblock": {
+            "group": "layout",
+            "subtab": "home",
+            "type": "array",
+            "title": "Infoblocks",
+            "description": "Infoblock banners that link through to specified areas. Will accept any number of lines but the section was designed for 5 blocks with the fifth being a larger size.",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "title": {
+                        "type": "string",
+                        "title": "Title"
+                    },
+                    "text": {
+                        "type": "string",
+                        "title": "Text"
+                    },
+                    "image": {
+                        "type": "string",
+                        "title": "Background Image URL"
+                    },
+                    "color": {
+                        "type": "string",
+                        "title": "Background Color"
+                    },
+                    "href": {
+                        "type": "string",
+                        "title": "Link Location"
+                    }
+                }
+            },
+            "default": [{
+                    "title": "Support",
+                    "text": "Set up without the upset",
+                    "image": "img/infoblock1.png",
+                    "color": "#a3b9ce",
+                    "href": "#"
+                },
+                {
+                    "title": "Learn",
+                    "text": "Basics of audio setup",
+                    "image": "img/infoblock2.png",
+                    "color": "#789bb0",
+                    "href": "#"
+                },
+                {
+                    "title": "Tablets",
+                    "text": "Tablets that fit you",
+                    "image": "img/infoblock3.png",
+                    "color": "#789bb0",
+                    "href": "#"
+                },
+                {
+                    "title": "Opinions",
+                    "text": "Our staff picks favorites",
+                    "image": "img/infoblock4.png",
+                    "color": "#b4bcc2",
+                    "href": "#"
+                },
+                {
+                    "title": "Ending Tomorrow",
+                    "text": "50% off close outs",
+                    "image": "img/infoblock5.png",
+                    "color": "#b6d6ef",
+                    "href": "#"
+                }
+            ]
+        },
+        "home.freeTextTitle": {
+            "group": "layout",
+            "subtab": "home",
+            "type": "string",
+            "translate": true,
+            "title": "Free Text Title",
+            "description": "Title for free text section.",
+            "default": "Why buy from ACME"
+        },
+        "home.freeText": {
+            "group": "layout",
+            "subtab": "home",
+            "type": "string",
+            "translate": true,
+            "nsType": "textarea",
+            "title": "Free Text",
+            "description": "Can accept HTML tags.",
+            "default": "<p>Our goal is for you to become a life long customer for life by providing you with the most hassle-free shopping, purchasing, and support experience possible. We are very fortunate to represent a brand we believe in; Acme is the industry standard for quality, durability, and low cost of ownership. A product this good deserves to be backed up by a world-class customer service experience and that's what we will provide you when you choose to do business with Acme Tronics</p>"
+        },
+        "home.freeTextImages": {
+            "group": "layout",
+            "subtab": "home",
+            "type": "array",
+            "title": "Free Text Images",
+            "description": "Images to display with the free text.",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "image": {
+                        "type": "string",
+                        "title": "Image",
+                        "description": ""
+                    },
+                    "href": {
+                        "type": "string",
+                        "title": "URL",
+                        "description": ""
+                    }
+                }
+            },
+            "default": [{
+                    "image": "img/logo_samsung.png",
+                    "href": "#"
+                },
+                {
+                    "image": "img/logo_sennheiser.png",
+                    "href": "#"
+                },
+                {
+                    "image": "img/logo_jumbo.png",
+                    "href": "#"
+                },
+                {
+                    "image": "img/logo_kindle.png",
+                    "href": "#"
+                }
+            ]
+        }
+    }
+}

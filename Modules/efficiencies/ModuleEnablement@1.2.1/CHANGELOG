@@ -1,0 +1,11 @@
+1.0.0
+- Initial Release (Elbrus)
+
+1.1.0
+- Added Giftwrap enablement
+
+1.2.0
+- Default value of Store Locator enable feature is set to false
+
+1.2.1
+- Update distro dependencies

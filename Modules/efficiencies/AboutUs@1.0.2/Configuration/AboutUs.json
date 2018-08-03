@@ -1,0 +1,163 @@
+{
+    "type": "object",
+    "subtab": {
+        "id": "aboutUs",
+        "title": "About Us Page",
+        "group": "commerceSuiteSolution"
+    },
+    "properties": {
+        "aboutUs.enabled": {
+            "group": "commerceSuiteSolution",
+            "subtab": "aboutUs",
+            "type": "boolean",
+            "title": "Enabled",
+            "default": false
+        },
+        "aboutUs.pageUrl": {
+            "group": "commerceSuiteSolution",
+            "subtab": "aboutUs",
+            "type": "string",
+            "title": "Page URL",
+            "mandatory": true,
+            "requiredmsg": "Page URL is required.",
+            "default": "about-us"
+        },
+        "aboutUs.browsersTitle": {
+            "group": "commerceSuiteSolution",
+            "subtab": "aboutUs",
+            "type": "string",
+            "title": "Browsers Title",
+            "mandatory": true,
+            "requiredmsg": "Browsers Title is required.",
+            "default": "About Our Company"
+        },
+        "aboutUs.pageHeading": {
+            "group": "commerceSuiteSolution",
+            "subtab": "aboutUs",
+            "type": "string",
+            "title": "Page Heading",
+            "mandatory": true,
+            "requiredmsg": "Page Heading is required.",
+            "default": "About Our Company"
+        },
+        "aboutUs.text": {
+            "group": "commerceSuiteSolution",
+            "subtab": "aboutUs",
+            "type": "string",
+            "translate": true,
+            "nsType": "textarea",
+            "title": "HTML Text",
+            "description": "Can accept HTML tags.",
+            "default": "<p>Fusce finibus pharetra malesuada. Duis ullamcorper ultricies velit, eu interdum urna cursus vitae.</p><p>Suspendisse pretium dolor eu cursus consequat. Quisque posuere finibus ligula, vel volutpat urna vestibulum sed. Aenean hendrerit risus at dui tempor, quis iaculis sem interdum. Curabitur sit amet imperdiet dolor. Integer efficitur nisi lacus, non ornare nulla molestie ac. Aliquam fermentum viverra justo, ut condimentum lectus blandit a.</p>"
+        },
+        "aboutUs.meta": {
+          "group": "commerceSuiteSolution",
+          "subtab": "aboutUs",
+          "type": "string",
+          "nsType": "textarea",
+          "title": "Meta Description"
+        },
+        "aboutUs.staff": {
+            "group": "commerceSuiteSolution",
+            "subtab": "aboutUs",
+            "type": "array",
+            "title": "Staff",
+            "description": "About Us page staff section",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "image": {
+                        "type": "string",
+                        "title": "Image"
+                    },
+                    "name": {
+                        "type": "string",
+                        "title": "Name"
+                    },
+                    "jobtitle": {
+                        "type": "string",
+                        "title": "Job Title"
+                    }
+                }
+            },
+            "default": [
+                {
+                    "image": "img/about-us-staff-placeholder.png",
+                    "name": "Arlyn Johnson",
+                    "jobtitle": "General Manager"
+                },
+                {
+                    "image": "img/about-us-staff-placeholder.png",
+                    "name": "Brian Johnson",
+                    "jobtitle": "Merchandise Manager"
+                },
+                {
+                    "image": "img/about-us-staff-placeholder.png",
+                    "name": "Jenny Savoy",
+                    "jobtitle": "Merchandise Specialist"
+                },
+                {
+                    "image": "img/about-us-staff-placeholder.png",
+                    "name": "Johnathan Bravo",
+                    "jobtitle": "HR Coodinator"
+                },
+                {
+                    "image": "img/about-us-staff-placeholder.png",
+                    "name": "Arlyn Johnson",
+                    "jobtitle": "General Manager"
+                },
+                {
+                    "image": "img/about-us-staff-placeholder.png",
+                    "name": "Brian Johnson",
+                    "jobtitle": "Merchandise Manager"
+                },
+                {
+                    "image": "img/about-us-staff-placeholder.png",
+                    "name": "Jenny Savoy",
+                    "jobtitle": "Merchandise Specialist"
+                },
+                {
+                    "image": "img/about-us-staff-placeholder.png",
+                    "name": "Johnathan Bravo",
+                    "jobtitle": "HR Coodinator"
+                }
+            ]
+        },
+        "aboutUs.bottomContent": {
+            "group": "commerceSuiteSolution",
+            "subtab": "aboutUs",
+            "type": "array",
+            "title": "Bottom Content",
+            "description": "About Us page bottom content images",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "href": {
+                        "type": "string",
+                        "title": "Link"
+                    },
+                    "image": {
+                        "type": "string",
+                        "title": "Image"
+                    },
+                    "text": {
+                        "type": "string",
+                        "title": "Text"
+                    }
+                }
+            },
+            "default": [
+                {
+                    "href": "#",
+                    "image": "img/about-us-our-history.jpg",
+                    "text": "Our History"
+                },
+                {
+                    "href": "#",
+                    "image": "img/about-us-our-values.jpg",
+                    "text": "Our Values"
+                }
+            ]
+        }
+    }
+}

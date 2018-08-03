@@ -1,0 +1,51 @@
+{
+    "type": "object",
+    "subtab": {
+        "id": "inventoryDisplay",
+        "title": "Inventory Display",
+        "description": "",
+        "group": "commerceSuiteSolution"
+    },
+    "properties": {
+        "inventoryDisplay.messageInStock": {
+            "group": "commerceSuiteSolution",
+            "subtab": "inventoryDisplay",
+            "type": "string",
+            "title": "In Stock Message",
+            "description": "",
+            "default": "In Stock"
+        },
+        "inventoryDisplay.messageDropShip": {
+            "group": "commerceSuiteSolution",
+            "subtab": "inventoryDisplay",
+            "type": "string",
+            "title": "Drop Ship Message",
+            "description": "",
+            "default": "In Stock"
+        },
+        "inventoryDisplay.messageSpecialOrder": {
+            "group": "commerceSuiteSolution",
+            "subtab": "inventoryDisplay",
+            "type": "string",
+            "title": "Special Order Message",
+            "description": "",
+            "default": "In Stock"
+        },
+        "inventoryDisplay.messageBackOrder": {
+            "group": "commerceSuiteSolution",
+            "subtab": "inventoryDisplay",
+            "type": "string",
+            "title": "Back Order Message",
+            "description": "",
+            "default": "On Back Order"
+        },
+        "inventoryDisplay.enabled": {
+            "group": "commerceSuiteSolution",
+            "type": "boolean",
+            "subtab": "inventoryDisplay",
+            "title": "Enable Inventory Display",
+            "description": "",
+            "default": true
+        }
+    }
+}

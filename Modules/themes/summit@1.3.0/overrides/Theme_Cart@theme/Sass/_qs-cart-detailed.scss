@@ -1,0 +1,107 @@
+/*
+	© 2017 NetSuite Inc.
+	User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
+	provided, however, if you are an authorized user with a NetSuite account or log-in, you
+	may use this code subject to the terms that govern your access and use.
+*/
+
+.cart-detailed{
+	@extend .cart;
+	margin-bottom: $sc-base-margin * 10;
+}
+
+.cart-detailed-title{
+	@extend .cart-title;
+}
+
+.cart-detailed-title-details-count{
+	@extend .cart-title-details-count;
+	@extend .middle-price;
+}
+
+.cart-detailed-right{
+	@extend .cart-right;
+	margin-top: $sc-base-margin * 4;
+	@media (min-width: $screen-md-min) {
+		margin-top:  $sc-base-margin * 3;
+	}
+}
+
+.cart-detailed-body{
+	@extend .cart-body;
+}
+
+.cart-detailed-left{
+	@extend .cart-left;
+}
+
+.cart-detailed-empty{
+	@extend .cart-empty;
+}
+
+.cart-detailed-savedforlater{
+	@extend .cart-savedforlater;
+}
+
+.cart-detailed-proceed-to-checkout-container{
+	@extend .cart-proceed-to-checkout-container;
+}
+
+.cart-detailed-proceed-to-checkout{
+	@extend .cart-proceed-to-checkout;
+}
+
+.sticky-button-container-clone.sticked {
+	left: 0;
+	margin-left: 0;
+}
+
+.cart-detailed-body-empty-info{
+	@extend .cart-body-empty-info;
+}
+
+.cart-detailed-row-fluid{
+	@extend .row;
+}
+
+.cart-detailed-item-view-cell-actionable-table{
+	@extend .transaction-line-views-cell-actionable-table;
+  	border-collapse: collapse;
+
+	.transaction-line-views-cell-actionable-table-middle,
+	.transaction-line-views-cell-actionable-table-first,
+	.transaction-line-views-cell-actionable-table-last {
+    	padding-bottom: 30px;
+
+		@media (min-width: $screen-md-min) {
+			padding-bottom: 30px;
+		}
+	}
+
+	td {
+		padding-bottom: 30px;
+	}
+	.quantity-pricing td {
+		padding-bottom: $sc-base-padding;
+	}
+
+	.transaction-line-views-price-lead {
+		color: $sc-color-primary;
+	}
+
+	.product-line-sku-container {
+		margin-top: $sc-base-margin;
+	}
+}
+
+
+.cart-detailed-view-header{}
+.cart-detailed-confirm-message{}
+.cart-detailed-table-row-with-border{}
+.cart-detailed-footer{}
+.cart-detailed-header{}
+.cart-detailed-body-empty{}
+.cart-detailed-body-empty-title{}
+.cart-detailed-recently-viewed{}
+.cart-detailed-related{}
+.cart-detailed-correlated{}

@@ -1,0 +1,99 @@
+//Facet Browse
+.facets-facet-browse {
+    padding-bottom: $sc-base-padding * 7;
+}
+//Facet Browse - Header
+.facets-facet-browse-header {
+    border-bottom: 1px solid $sc-theme-border-light;
+}
+.facets-facet-browse-title {
+    margin-top: 16px;
+}
+.facets-facet-browse-narrowedby {
+    font-family: $sc-theme-secondary-font;
+}
+//Navigation Item Category
+.facets-faceted-navigation-item-category-facet-group {
+    font-family: $sc-theme-secondary-font;
+    @media (min-width: $screen-md-min) {
+        padding-left: 0;
+    }
+}
+.facets-faceted-navigation-item-category-facet-group-expander-icon {
+    padding: 8px 0;
+}
+.facets-faceted-navigation-item-category-facet-optionlist {
+    padding-bottom: $sc-base-padding * 4;
+}
+.facets-faceted-navigation-item-category-title {
+    padding: $sc-base-padding 0 0 0 !important;
+}
+//Faceted Navigation
+.facets-faceted-navigation-facet-group {
+    padding: $sc-base-padding * 2;
+    font-family: $sc-theme-secondary-font;
+    @media (min-width: $screen-md-min) {
+        padding: $sc-base-padding * 2 0;
+    }
+}
+.facets-faceted-navigation-title {
+    @media (min-width: $screen-md-min) {
+        padding: 9px 0 0 0;
+    }
+}
+.facets-faceted-navigation-facets-clear {
+    &:hover .facets-faceted-navigation-facets-clear-icon,
+    &:focus .facets-faceted-navigation-facets-clear-icon {
+        color: $sc-theme-cta-tertiary-color !important;
+    }
+
+    @media (min-width: $screen-md-min) {
+        margin-left: 0;
+    }
+}
+.facets-faceted-navigation-facets-clear-icon {
+    @extend .icon-base;
+    @extend %fa-times-circle;
+    margin-left: $sc-base-margin;
+    cursor: pointer;
+    color: $sc-theme-cta-tertiary-border-text !important;
+    &:hover,
+    &:focus {
+        color: $sc-theme-cta-tertiary-color;
+    }
+}
+.facets-faceted-navigation-facet-group-title {
+    width: 90%;
+    overflow: hidden;
+}
+.facets-faceted-navigation-facet-option.option-active {
+    color: $sc-theme-color-secondary;
+}
+
+.facets-faceted-navigation-facet-option-circle {
+    color: $sc-theme-color-secondary;
+}
+// Facets Display
+.facets-facets-display-filter-delete-icon {
+    color: inherit;
+}
+
+// Sort/Show dropdowns for tablet landscape only
+.facets-facet-browse-list-header-filters-row {
+    & .facets-facet-browse-list-header-filter-column {
+        @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+            padding-right: 0;
+            padding-top: 5px;
+        }
+    }
+    & .facets-facet-browse-list-header-filter-column:last-child {
+        @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+            display: none;
+        }
+    }
+    & .facets-facet-browse-list-header-filter-column:first-child {
+        @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+            padding-right: 5px;
+        }
+    }
+}

@@ -1,0 +1,70 @@
+{
+    "id": "ss-localizationpatch",
+    "name": "SS - Localization Patch",
+    "dependencies": [
+        "elbrus-base"
+    ],
+    "folders": {
+        "modules": "Modules",
+        "distribution": "bin/LocalDistribution",
+        "deploy": "bin/DeployDistribution",
+        "release": "bin/ReleaseDistribution"
+    },
+    "modules": {
+        "efficiencies/LocalizationPatch": "1.1.1"
+    },
+    "tasksConfig": {
+        "javascript": [
+            {
+                "entryPoint": "SC.Checkout.Starter",
+                "dependencies": [
+                    {
+                        "add":"LocalizationPatch", "after":"Location"
+                    }
+                ],
+                "amdConfig": {
+                    "map": {
+                        "SC.Checkout.Configuration": {
+                            "SC.Configuration": "LocalizationPatch.LoadTranslations"
+                        }
+                    }
+                }
+            },
+            {
+                "entryPoint": "SC.MyAccount.Starter",
+                "dependencies": [
+                    {
+                        "add":"LocalizationPatch", "after":"Location"
+                    }
+                ],
+                "amdConfig": {
+                    "map": {
+                        "SC.MyAccount.Configuration": {
+                            "SC.Configuration": "LocalizationPatch.LoadTranslations"
+                        }
+                    }
+                }
+            },
+            {
+                "entryPoint": "SC.Shopping.Starter",
+                "dependencies": [
+                    {
+                        "add":"LocalizationPatch", "after":"Location"
+                    }
+                ],
+                "amdConfig": {
+                    "map": {
+                        "SC.Shopping.Configuration": {
+                            "SC.Configuration": "LocalizationPatch.LoadTranslations"
+                        }
+                    }
+                }
+            }
+        ],
+        "ssp-libraries": {
+            "dependencies": [
+                "LocalizationPatch.DeliveryTax"
+            ]
+        }
+    }
+}

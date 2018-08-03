@@ -1,0 +1,82 @@
+/*
+	© 2017 NetSuite Inc.
+	User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
+	provided, however, if you are an authorized user with a NetSuite account or log-in, you
+	may use this code subject to the terms that govern your access and use.
+*/
+
+// Summary box
+//
+// Markup:
+// refix new grid floating amoounts
+// Styleguide 11.5
+
+.summary-title{
+	text-align: center;
+	margin-bottom: $sc-medium-margin;
+	font-size: $sc-h4-font-size;
+	text-transform: uppercase;
+	font-weight: $sc-font-weight-normal;
+	color: $sc-theme-color-copy;
+}
+
+.summary-container{
+	font-family: $sc-theme-secondary-font;
+	margin-bottom: $sc-medium-margin;
+	@media(min-width: $screen-sm-min){
+		margin-bottom: 0;
+	}
+}
+
+.summary-subtotal{
+	border-top: $sc-theme-border-light;
+	padding-top: $sc-base-padding * 2;
+	padding-bottom: $sc-base-padding;
+	font-weight:$sc-font-weight-bold;
+	text-transform:uppercase;
+	font-size:$sc-h5-font-size;
+}
+
+.summary-total{
+	text-transform:uppercase;
+}
+
+.summary-grid-right{
+	float:right;
+	padding-left: $sc-base-padding;
+	color: $sc-theme-color-primary;
+}
+
+.summary-grid-float{
+	@extend .row;
+	clear:both;
+	margin:0px;
+	font-size: 16px;
+}
+
+.summary-button-container{
+	text-align:center;
+	background:$sc-color-theme-background;
+	padding:$sc-base-padding * 4 0px;
+}
+
+.summary-shipping-cost-applied{
+	margin-bottom: $sc-small-margin;
+	text-transform: uppercase;
+	& .cart-summary-grid {
+		border: none;
+	}
+	& .cart-summary-grid-float {
+		font-size: 14px;
+	}
+}
+
+.button-proceed-to-checkout{
+	@extend .button-primary;
+	@extend .button-large;
+}
+
+.button-apply{
+	@extend .button-secondary;
+	@extend .button-small;
+}

@@ -1,0 +1,243 @@
+{
+    "type": "object",
+    "subtab": {
+        "id": "localizationPatchENAU",
+        "group": "localizationPatch",
+        "title": "en_AU",
+        "description": "Configuration for localization en_AU"
+    },
+    "properties": {
+        "localizationPatch.translations.enAU": {
+            "group": "localizationPatch",
+            "subtab": "localizationPatchENAU",
+            "type": "array",
+            "title": "Translations for en_AU",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "base": {
+                        "type": "string",
+                        "title": "Base",
+                        "mandatory": true
+                    },
+                    "translation": {
+                        "type": "string",
+                        "title": "Translation",
+                        "mandatory": true
+                    }
+                }
+            },
+
+            "default": [
+                {
+                    "base":"$(0) (Incl. tax)",
+                    "translation":"$(0) (Incl. GST)"
+                },
+                {
+                    "base":"( Total includes $(0) tax )",
+                    "translation":"( Total includes $(0) GST )"
+                },
+                {
+                    "base":"<b>Shipping Estimator</b><br>Shipping fees are based on your shipping location. Please enter your information to view estimated shipping costs.",
+                    "translation":"<b>Delivery Cost</b><br>Delivery fees are based on your delivery location. Please enter your information to view estimated delivery costs."
+                },
+                {
+                    "base":"<span data-type=\"item-selected-count\" class=\"hidden\">$(0)</span>The product you selected will be shipped to:",
+                    "translation":"<span data-type=\"item-selected-count\" class=\"hidden\">$(0)</span>The product you selected will be delivered to:"
+                },
+                {
+                    "base":"Add to Cart",
+                    "translation":"Add to Bag"
+                },
+                {
+                    "base":"Add to Shipment",
+                    "translation":"Add to Delivery"
+                },
+                {
+                    "base":"Added to Cart",
+                    "translation":"Added to Bag"
+                },
+                {
+                    "base":"Back to edit shipping information",
+                    "translation":"Back to edit delivery information"
+                },
+                {
+                    "base":"Cart",
+                    "translation":"Bag"
+                },
+                {
+                    "base":"Choose a Shipping Address",
+                    "translation":"Choose a Delivery Address"
+                },
+                {
+                    "base":"Choose Shipping Address",
+                    "translation":"Choose Delivery Address"
+                },
+                {
+                    "base":"Click here if you want to divide your order and ship it to multiple addresses. All your data will be saved.",
+                    "translation":"Click here if you want to divide your order and deliver it to multiple addresses. All your data will be saved."
+                },
+                {
+                    "base":"Color",
+                    "translation":"Colour"
+                },
+                {
+                    "base":"Create Shipment",
+                    "translation":"Create Delivery"
+                },
+                {
+                    "base":"Default Shipping Address",
+                    "translation":"Default Delivery Address"
+                },
+                {
+                    "base":"Edit Cart",
+                    "translation":"Edit Bag"
+                },
+                {
+                    "base":"Enter Address, Zip Code or City",
+                    "translation":"Enter Address, Postal Code or City"
+                },
+                {
+                    "base":"Enter Shipping Address",
+                    "translation":"Enter Delivery Address"
+                },
+                {
+                    "base":"Enter Your Zip Code",
+                    "translation":"Enter Your Postal Code"
+                },
+                {
+                    "base":"Estimate Tax & Shipping",
+                    "translation":"Delivery Cost"
+                },
+                {
+                    "base":"Estimated Tax & Shipping",
+                    "translation":"Delivery Cost"
+                },
+                {
+                    "base":"Example: 555-123-1234",
+                    "translation":"Example: 01 2345 6789"
+                },
+                {
+                    "base":"Example: 94117",
+                    "translation":"Example: 0260"
+                },
+                {
+                    "base":"I want to ship to a single address",
+                    "translation":"I want to deliver to a single address"
+                },
+                {
+                    "base":"I want to ship to multiple addresses",
+                    "translation":"I want to deliver to multiple addresses"
+                },
+                {
+                    "base":"Make this my default shipping address",
+                    "translation":"Make this my default delivery address"
+                },
+                {
+                    "base":"Products pending shipment",
+                    "translation":"Products pending delivery"
+                },
+                {
+                    "base":"Select shipping address",
+                    "translation":"Select delivery address"
+                },
+                {
+                    "base":"Set shipments",
+                    "translation":"Set deliveries"
+                },
+                {
+                    "base":"SKU: #",
+                    "translation":"STYLE: #"
+                },
+                {
+                    "base":"SKU: #$(0)",
+                    "translation":"STYLE: #$(0)"
+                },
+                {
+                    "base":"Same as shipping address",
+                    "translation":"Same as delivery address"
+                },
+                {
+                    "base":"Search",
+                    "translation":"Search Products..."
+                },
+                {
+                    "base":"Ship To:",
+                    "translation":"Deliver To:"
+                },
+                {
+                    "base":"Ship to the following postal code",
+                    "translation":"Deliver to the following postal code"
+                },
+                {
+                    "base":"Ship to the following zip code",
+                    "translation":"Deliver to the following postal code"
+                },
+                {
+                    "base":"Ship to this Address",
+                    "translation":"Deliver to this Address"
+                },
+                {
+                    "base":"Ship to:",
+                    "translation":"Deliver to:"
+                },
+                {
+                    "base":"Shipping",
+                    "translation":"Delivery"
+                },
+                {
+                    "base":"Shipping Address",
+                    "translation":"Delivery Address"
+                },
+                {
+                    "base":"Shipping Total",
+                    "translation":"Delivery Total"
+                },
+                {
+                    "base":"Shopping Cart",
+                    "translation":"Shopping Bag"
+                },
+                {
+                    "base":"Total does not include shipping or tax",
+                    "translation":"Total does not include delivery"
+                },
+                {
+                    "base":"View Cart",
+                    "translation":"View Bag"
+                },
+                {
+                    "base":"View Cart & Checkout",
+                    "translation":"View Bag & Checkout"
+                },
+                {
+                    "base":"YYYY-MM-DD",
+                    "translation":"DD-MM-YYYY"
+                },
+                {
+                    "base":"Your Shopping Cart is empty",
+                    "translation":"Your Shopping Bag is Empty"
+                },
+                {
+                    "base":"Your Zip Code",
+                    "translation":"Your Postal Code"
+                },
+                {
+                    "base":"Your cart is empty",
+                    "translation":"Your bag is empty"
+                },
+                {
+                    "base":"Your cart is loading",
+                    "translation":"Your bag is loading"
+                },
+                {
+                    "base":"Zip Code",
+                    "translation":"Postal Code"
+                },
+                {
+                    "base":"Zip Code is required",
+                    "translation":"Postal Code is required"
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,40 @@
+{
+  "id": "ss-hashtaggallery",
+  "name": "HashtagGallery",
+  "folders": {
+    "modules": "Modules",
+    "distribution": "bin/LocalDistribution",
+    "deploy": "bin/DeployDistribution",
+    "release": "bin/ReleaseDistribution"
+  },
+  "dependencies": ["elbrus-base", "ss-generalconfig", "ss-efcore"],
+  "modules": {
+    "efficiencies/HashtagGallery": "3.0.1"
+  },
+  "tasksConfig": {
+    "javascript": [
+      {
+        "entryPoint": "SC.Shopping.Starter",
+        "dependencies": [
+          "HashtagGallery"
+        ]
+      }
+    ],
+    "ssp-libraries": {
+      "dependencies": [
+        "HashtagGallery.Model",
+        "HashtagGallery.ServiceController"
+      ]
+    },
+    "sass": {
+      "applications": [
+        {
+          "name": "Shopping",
+          "dependencies": [
+            "HashtagGallery"
+          ]
+        }
+      ]
+    }
+  }
+}

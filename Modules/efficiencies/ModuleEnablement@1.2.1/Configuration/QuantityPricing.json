@@ -1,0 +1,12 @@
+{
+    "type": "object",
+    "properties": {
+        "quickStart.quantityPricing.enabled": {
+            "group": "commerceSuiteSolution",
+            "type": "boolean",
+            "subtab": "quickStart",
+            "title": "Enable Quantity Pricing",
+            "default": true
+        }
+    }
+}

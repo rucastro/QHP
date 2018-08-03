@@ -1,0 +1,259 @@
+/*
+    © 2017 NetSuite Inc.
+    User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
+    provided, however, if you are an authorized user with a NetSuite account or log-in, you
+    may use this code subject to the terms that govern your access and use.
+*/
+
+.transaction-line-views-cell-actionable{
+    display:block;
+    clear:both;
+    &:hover{
+        background:none;
+    }
+}
+
+.transaction-line-views-cell-actionable-image{
+    @extend .col-xs-3;
+    @extend .col-sm-3;
+}
+
+.transaction-line-views-cell-actionable-details{
+    @extend .col-xs-9;
+    @extend .col-sm-6;
+}
+
+.transaction-line-views-cell-actionable-actions{
+    @extend .col-xs-offset-3;
+    @extend .col-xs-9;
+    @extend .col-sm-offset-0;
+    @extend .col-sm-3;
+}
+
+.transaction-line-views-cell-actionable-name{
+    margin-bottom:$sc-small-margin;
+}
+
+.transaction-line-views-cell-actionable-name-viewonly{
+    @extend .medium-title-viewonly;
+}
+
+.transaction-line-views-cell-actionable-thumbnail{
+    img{
+        width:$img-large;
+        border: 1px solid $sc-color-theme-light;
+    }
+}
+
+.transaction-line-views-cell-actionable-price{
+    margin-bottom:$sc-small-margin * 2;
+}
+
+.transaction-line-views-cell-actionable-price .transaction-line-views-price-lead{
+    @extend .middle-price;
+    font-size: 16px;
+    font-weight: $sc-font-weight-light;
+}
+
+.transaction-line-views-cell-actionable-sku{
+    font-size:$sc-small-font-size;
+}
+
+.transaction-line-views-cell-actionable-name-link {
+    @extend .large-title-navigable;
+    font-size: 16px;
+    font-weight: $sc-font-weight-light;
+}
+
+.transaction-line-views-cell-navigable-actionable-sku-label {
+    font-weight: $sc-font-weight-bold;
+}
+
+.item-views-selected-option,
+.transaction-line-views-selected-option,
+.transaction-line-views-cell-actionable-selected-options-cell {
+    margin: 0 !important; //gift wrap module is overriding this
+}
+
+.transaction-line-views-cell-actionable-qty{
+    clear:both;
+    display:block;
+    width:100%;
+    font-size:$sc-base-font-size;
+}
+
+.transaction-line-views-cell-actionable-qty input[type=number]{
+    float: left;
+    width: 60px;
+    height: 43px;
+    padding: 0;
+    padding-right: $sc-base-padding;
+    text-align: right;
+    color: $sc-theme-color;
+    background: $sc-theme-color-tertiary;
+    outline: none;
+    border: 0;
+    @media (min-width: $screen-md-min) {
+        border: 2px solid $sc-theme-color;
+    }
+}
+
+.transaction-line-views-cell-actionable-label-qty{
+    @extend .sc-label;
+    display: block;
+    margin-right: 15px;
+    line-height: 1.2;
+    overflow:hidden;
+    margin-top:$sc-base-margin;
+    margin-bottom:$sc-base-margin;
+}
+
+.transaction-line-views-cell-actionable-input-qty{
+    display:block;
+    margin-bottom:$sc-small-margin;
+    overflow:hidden;
+}
+
+.transaction-line-views-cell-actionable-details{
+    .cart-option{
+    margin-bottom:$sc-base-margin;
+    }
+}
+
+.transaction-line-views-cell-actionable-options{
+    .cart-option{
+        font-size:$sc-base-font-size;
+    }
+}
+
+.transaction-line-views-cell-actionable-amount{
+    clear:both;
+    display:block;
+    font-size:$sc-base-font-size;
+    margin-bottom:$sc-medium-margin;
+    @media (min-width: $screen-sm-min){
+        margin-bottom:0px;
+    }
+
+}
+
+.transaction-line-views-cell-actionable-amount-label{
+    @extend .sc-label;
+}
+
+.transaction-line-views-cell-actionable-edit-button{
+   @extend .split-button;
+    @media (min-width: $screen-sm-min){
+         position:absolute;
+         margin-top: 21px; //vertical alignment with quantity box
+    }
+}
+
+.transaction-line-views-cell-actionable-edit-button-edit{
+    @extend .button-tertiary;
+    @extend .button-small;
+    border-right:none;
+}
+
+.transaction-line-views-cell-actionable-edit-button-drop{
+    @extend .button-tertiary;
+    @extend .button-small;
+    i{
+        @extend .fa;
+        @extend %fa-angle-down;
+    }
+}
+
+.transaction-line-views-cell-actionable-edit-content{
+    @extend .split-button-dropdown;
+    @extend .dropdown-menu;
+    //position:relative;
+    display:none;
+    padding:$sc-base-padding * 3;
+     @media (min-width: $screen-sm-min){
+         left:-65px;
+    }
+    li{
+        margin-bottom:$sc-base-margin;
+    }
+    li:last-child{
+        margin-bottom:0;
+    }
+    li a{
+        margin:0px;
+        padding:0px;
+        line-height:1.2;
+        cursor:pointer;
+        cursor:hand;
+        color:$sc-color-link;
+        &:hover{
+            color:$sc-color-link-hover;
+            text-decoration:none;
+            background:none;
+        }
+    }
+}
+
+.transaction-line-views-cell-actionable-table{
+    @extend .table-flex-item-actionable;
+    table-layout: fixed;
+}
+
+.transaction-line-views-cell-actionable-table td{
+    padding-left:$sc-base-padding * 3;
+    padding-right:$sc-base-padding * 3;
+    vertical-align:top;
+}
+
+.transaction-line-views-cell-actionable-table-first{
+    @extend .table-flex-tdfirst;
+    width:25%;
+    @media (min-width: $screen-sm-min){
+        padding-left: 0 !important; // force align left
+    }
+}
+
+.transaction-line-views-cell-actionable-table-middle {
+    @extend .table-flex-middle;
+}
+
+.transaction-line-views-cell-actionable-table-summary {
+    @extend .table-flex-middle;
+    @media (min-width: $screen-md-min){
+       width: 110px;
+       padding-right: 0 !important;
+    }
+}
+
+.transaction-line-views-cell-actionable-table-last{
+     @extend .table-flex-tdlast;
+     vertical-align:top;
+     @media (min-width: $screen-sm-min){
+        width: 120px; //25%;
+    }
+}
+.transaction-line-views-cell-actionable-alert-placeholder{
+    margin: $sc-base-margin * 2 0;
+}
+
+/* Divider */
+.cart-divider-row {
+    & td {
+        padding: 0;
+        @media (min-width: $screen-sm-min){
+           padding: $sc-base-padding*10 0;
+        }
+    }
+    & .cart-divider {
+        @extend .product-details-full-divider-desktop;
+        margin: $sc-small-margin*2 0;
+    }
+}
+/* Remove the final divider */
+.transaction-line-views-cell-actionable-table tbody>div:last-child .cart-divider-row {
+    display: none;
+}
+
+.transaction-line-views-cell-actionable-stock{}
+.transaction-line-views-cell-actionable-summary{}
+.transaction-line-views-cell-actionable-line-tr{}

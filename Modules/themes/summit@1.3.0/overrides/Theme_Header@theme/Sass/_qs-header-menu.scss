@@ -1,0 +1,181 @@
+/*
+	© 2017 NetSuite Inc.
+	User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
+	provided, however, if you are an authorized user with a NetSuite account or log-in, you
+	may use this code subject to the terms that govern your access and use.
+*/
+
+///////////////////////////////////////////////////////////////
+//header secondary nav
+.header-menu-secondary-nav {
+	@extend .container;
+	padding-left: $sc-base-padding * 7;
+	font-family: $sc-theme-secondary-font;
+	background-color: $sc-theme-nav-bgr-color;
+	border-top-left-radius: $sc-theme-border-radius;
+	border-top-right-radius: $sc-theme-border-radius;
+	border-bottom: $sc-theme-border-light;
+	@include box-shadow(0 0 12px transparentize($sc-color-overlay, 1-0.05));
+}
+
+///////////////////////////////////////////////////////////////
+//header search
+
+.header-menu-search {
+	float: right;
+}
+
+.header-menu-search-link {
+	font-size: $sc-h2-font-size;
+	background: none;
+	padding: $sc-base-padding * 2;
+	color: $sc-theme-icon-color;
+	cursor: pointer;
+	position: relative;
+	line-height: 50px;
+}
+
+.header-menu-search-link.active {
+	color: $sc-theme-color-header;
+}
+
+.header-menu-search-icon {
+	@extend .fa;
+	@extend %fa-search;
+}
+
+.header-menu-searchmobile-link {
+	margin-right: 0px;
+	cursor: pointer;
+	@media (min-width: $screen-sm-min) {
+		margin-right: $sc-base-margin * 2;
+	}
+}
+
+///////////////////////////////////////////////////////////////
+//header maxi menu
+
+.header-menu-level1 {
+	margin-left: - $sc-base-padding * 2;
+}
+
+.header-menu-level1 > li {
+	float: left;
+}
+
+.header-menu-level1-anchor,
+.header-menu-home-anchor,
+.header-menu-shop-anchor {
+	display: block;
+	position: relative;
+	height: $sc-main-nav-height;
+	line-height: $sc-main-nav-height;
+	padding: 0 $sc-base-padding*2;
+	margin-right: $sc-base-margin;
+	color: $sc-theme-nav-color;
+	font-size: $sc-theme-nav-font-size;
+    font-weight: $sc-font-weight-semibold;
+    text-transform: uppercase;
+}
+
+.open .header-menu-level1-anchor{
+	color: $sc-theme-color-link-hover;
+}
+
+//maxi menu level 2
+.header-menu-back {
+	display: none;
+}
+
+.header-menu-level2 > li {
+	float: left;
+	width: 20%;
+	padding-right: $sc-base-padding * 6;
+}
+
+.header-menu-level2-anchor {
+	text-transform: uppercase;
+	font-weight: $sc-font-weight-semibold;
+	font-size: $sc-theme-nav-font-size;
+	color: $sc-color-copy;
+	padding-bottom: $sc-base-padding;
+	margin-bottom: $sc-base-margin * 2;
+	border-bottom: $sc-theme-border-light;
+	display: block;
+
+	//@media (min-width: $screen-md-min) {
+	//	pointer-events: none;
+	//}
+}
+.header-menu-level2-anchor:hover {
+	color: $sc-theme-color-link-hover;
+}
+
+//maxi menu level 3
+.header-menu-level3-anchor {
+	display: block;
+	text-transform: uppercase;
+	padding: $sc-base-padding 0;
+	color: $sc-theme-color-primary;
+	font-size: $sc-theme-nav-font-size;
+}
+
+.header-menu-myaccount-anchor-level3.active {
+	color: $sc-theme-color-link-hover;
+}
+
+//container fix for maxi menu on desktop
+.header-menu-push-icon, .header-menu-pop-icon {
+	display: none;
+}
+
+.header-menu-level-container {
+	display: none;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	min-height: 150px;
+	z-index: 1003;
+
+	> li {
+		@extend .container;
+		background-color: $sc-theme-nav-bgr-color;
+		padding: $sc-base-padding * 5 $sc-base-padding * 7;
+		border-top: $sc-theme-border-light;
+		border-bottom-left-radius: $sc-theme-border-radius;
+		border-bottom-right-radius: $sc-theme-border-radius;
+		@include box-shadow(0 6px 12px transparentize($sc-color-overlay, 1-0.05));
+	}
+}
+
+//maxi menu opened
+.open .header-menu-level-container {
+	display: block;
+}
+
+.open .header-menu-level1-anchor:before{
+	position: absolute;
+	top: 67px;
+	left: 50%;
+	margin-left: -7.5px;
+	display: inline-block;
+	border-right: 7px solid transparent;
+	border-bottom: 7px solid $sc-theme-nav-bgr-color;
+	border-left: 7px solid transparent;
+	border-bottom-color: $sc-theme-border-color;
+	content: '';
+}
+
+.open .header-menu-level1-anchor:after{
+	position: absolute;
+	top: 68px;
+	left: 50%;
+	margin-left: -6.5px;
+	display: inline-block;
+	border-right: 6px solid transparent;
+	border-bottom: 6px solid $sc-theme-nav-bgr-color;
+	border-left: 6px solid transparent;
+	content: '';
+	z-index: 9999;
+}

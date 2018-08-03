@@ -1,0 +1,11 @@
+{
+    "gulp": {
+        "templates": [
+            "Templates/*.tpl"
+        ]
+    },
+    "overrides": {
+        "suitecommerce/OrderWizard.Module.Shipmethod@3.0.0/Templates/order_wizard_shipmethod_module.tpl": "Templates/order_wizard_shipmethod_module.tpl",
+        "suitecommerce/OrderWizard.Module.Shipmethod@3.0.0/Templates/order_wizard_showshipments_module.tpl": "Templates/order_wizard_showshipments_module.tpl"
+    }
+}
